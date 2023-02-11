@@ -1,0 +1,65 @@
+.content {
+  position: relative;
+  @include before {
+    background-image: url("../img/back-content.png");
+    width: 30px;
+    height: 100%;
+    left: 50%;
+    margin-left: -700px;
+    top: 8px;
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}
+
+.greetingSection {
+  position: relative;
+  background-image: url("../img/back-grettings.png");
+  background-position: left -135px;
+  background-repeat: no-repeat;
+}
+
+.greeting {
+  padding: 158px 11px;
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  min-height: 756px;
+  .caption {
+    font-size: 55px;
+    line-height: 65px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: $colorBlack;
+    &::before {
+      left: -66px;
+    }
+    .desc {
+      display: block;
+      font-weight: 300;
+      font-size: 45px;
+      letter-spacing: 0.3em;
+    }
+  }
+  .textSimple {
+    margin-top: 7px;
+    max-width: 475px;
+    line-height: 29px;
+  }
+  .btn {
+    margin-top: 30px;
+    min-width: 232px;
+  }
+  .picture {
+  }
+  .leftSide {
+    width: 50%;
+  }
+  .rightSide {
+    position: absolute;
+    right: -71px;
+    top: 20px;
+    img {
+    }
+  }
+}

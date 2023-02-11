@@ -93,6 +93,7 @@ input {
     color: $colorSite1;
     top: 0;
     left: -56px;
+    font-size: 31px;
   }
 }
 
@@ -138,7 +139,7 @@ input {
   font-weight: 400;
   font-size: 18px;
   line-height: 25px;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.1em;
   color: $colorBlack;
   p {
     & + p {
