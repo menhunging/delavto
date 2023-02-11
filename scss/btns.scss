@@ -1,0 +1,51 @@
+.btn {
+  position: relative;
+  cursor: pointer;
+  @include transition(all 0.3s);
+  @include border-radius(30px);
+  display: inline-block;
+  padding: 13px 13px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  min-width: 168px;
+  color: $colorWhite;
+
+  &.btnPrimary {
+    background-color: $colorSite1;
+    &:hover {
+      background-color: #ff7123;
+    }
+  }
+  &.btnDark {
+    background-color: $colorSite2;
+    &:hover {
+      background-color: #e95a0c;
+    }
+  }
+  &.btnArrow {
+    background-color: $colorSite1;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.1em;
+    &.rotate {
+      background-color: $colorSite2;
+      &::after {
+        @include transform(rotate(180deg));
+      }
+      &:hover {
+        background-color: $colorSite1;
+      }
+    }
+    @include afterIcMoon {
+      content: "\e903";
+      position: relative;
+      margin-left: 12px;
+    }
+    &:hover {
+      background-color: $colorSite2;
+    }
+  }
+}
