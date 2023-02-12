@@ -22,7 +22,88 @@ $(document).ready(function () {
   }
 
   if ($(".tabs").length > 0) {
-    $(".tabs").tabslet();
+    $(".tabs").tabslet({
+      mouseevent: "click",
+      attribute: "href",
+    });
+  }
+
+  if ($(".tabsInformation").length > 0) {
+    $(".tabsInformation").tabslet({
+      mouseevent: "click",
+      attribute: "href",
+    });
+  }
+
+  if ($(".whyBlock").length > 0) {
+    let scrollOff = false;
+    var block_show = null;
+    let animationAll = $(".animation");
+    let lastDeferr = 0;
+    if ($(window).width() > 768) {
+      scrollTracking();
+    }
+
+    function scrollTracking() {
+      var wt = $(window).scrollTop();
+      var wh = $(window).height();
+      var et = $(".whyBlock").offset().top;
+      var eh = $(".whyBlock").outerHeight();
+
+      if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)) {
+        if (block_show == null || (block_show == false && !scrollOff)) {
+          let promise = new $.Deferred(),
+            fn = () => {
+              animationAll.map(function (index, item) {
+                setTimeout(() => {
+                  $(this).addClass("active");
+                }, 700 * index);
+              });
+              return promise;
+            };
+          lastDeferr ? lastDeferr.then(fn) : fn();
+          //запоминаем последнее звено цепочки обещаний
+          lastDeferr = promise;
+        }
+        block_show = true;
+      } else {
+        block_show = false;
+      }
+    }
+
+    $(window).scroll(function () {
+      if ($(window).width() > 768) {
+        scrollTracking();
+      }
+    });
+  }
+
+  if ($(".youPartnerSlider").length > 0) {
+    const swiper = new Swiper(".youPartnerSlider", {
+      slidesPerView: 4,
+      slidesPerGroup: 4,
+      loop: true,
+      navigation: {
+        nextEl: ".youPartners .swiper-button-next",
+        prevEl: ".youPartners .swiper-button-prev",
+      },
+      pagination: {
+        el: ".youPartners .swiper-pagination",
+        clickable: true,
+      },
+      // breakpoints: {
+      //   320: {
+      //     slidesPerView: 1,
+      //     slidesPerGroup: 1,
+      //     spaceBetween: 20,
+      //     pagination: {
+      //       el: ".yourPools .dots",
+      //       clickable: true,
+      //       renderBullet: null,
+      //     },
+      //   },
+      // },
+    });
   }
 
   // --------------------------------------
@@ -37,71 +118,6 @@ $(document).ready(function () {
     $("select").selectric({
       onInit: function () {
         // $(".selectric .button").addClass("btnSelectric");
-      },
-    });
-  }
-
-  if ($(".sliderPools").length > 0) {
-    const swiper = new Swiper(".sliderPools", {
-      slidesPerView: 4,
-      slidesPerGroup: 4,
-      spaceBetween: 40,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        renderBullet: function (index, className) {
-          return '<span class="' + className + '">' + (index + 1) + "</span>";
-        },
-      },
-      breakpoints: {
-        320: {
-          slidesPerView: 1,
-          slidesPerGroup: 1,
-          spaceBetween: 20,
-          pagination: {
-            el: ".yourPools .dots",
-            clickable: true,
-            renderBullet: null,
-          },
-        },
-        640: {
-          slidesPerView: 1,
-          slidesPerGroup: 2,
-          spaceBetween: 20,
-          pagination: {
-            el: ".yourPools .dots",
-            clickable: true,
-            renderBullet: null,
-          },
-        },
-        750: {
-          slidesPerView: 2,
-          slidesPerGroup: 3,
-          spaceBetween: 20,
-          pagination: {
-            el: ".yourPools .dots",
-            clickable: true,
-            renderBullet: null,
-          },
-        },
-        1024: {
-          slidesPerView: 3,
-          slidesPerGroup: 3,
-          spaceBetween: 20,
-        },
-        1400: {
-          slidesPerView: 3,
-          slidesPerGroup: 3,
-          spaceBetween: 40,
-        },
-        1800: {
-          slidesPerView: 4,
-          slidesPerGroup: 4,
-        },
       },
     });
   }
