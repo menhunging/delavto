@@ -39,6 +39,13 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".tabsWithLeft").length > 0) {
+    $(".tabsWithLeft").tabslet({
+      mouseevent: "click",
+      attribute: "href",
+    });
+  }
+
   if ($(".tabsInformation").length > 0) {
     $(".tabsInformation").tabslet({
       mouseevent: "click",
@@ -114,6 +121,42 @@ $(document).ready(function () {
       //     },
       //   },
       // },
+    });
+  }
+
+  if ($(".offersSlider").length > 0) {
+    $(".offersSlider").map(function () {
+      let carousel = $(this);
+      new Swiper(carousel[0], {
+        slidesPerView: 4,
+        slidesPerGroup: 4,
+        navigation: {
+          nextEl: carousel
+            .parents(".offersSliderWrapper")
+            .find(".swiper-button-next")[0],
+          prevEl: carousel
+            .parents(".offersSliderWrapper")
+            .find(".swiper-button-prev")[0],
+        },
+      });
+    });
+  }
+
+  if ($(".sliderReviews").length > 0) {
+    $(".sliderReviews").map(function () {
+      let carousel = $(this);
+      new Swiper(carousel[0], {
+        slidesPerView: 2,
+        slidesPerGroup: 2,
+        // navigation: {
+        //   nextEl: carousel
+        //     .parents(".offersSliderWrapper")
+        //     .find(".swiper-button-next")[0],
+        //   prevEl: carousel
+        //     .parents(".offersSliderWrapper")
+        //     .find(".swiper-button-prev")[0],
+        // },
+      });
     });
   }
 

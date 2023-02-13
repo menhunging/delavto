@@ -131,6 +131,15 @@ input {
   }
 }
 
+.captionDesctiption {
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.05em;
+  color: #000000;
+  margin-top: -15px;
+  display: block;
+}
+
 .captionOne {
   position: relative;
   font-weight: 500;
@@ -453,7 +462,6 @@ input {
   @include transition(all 0.3s);
   color: #acb6c1;
   position: absolute;
-  margin-top: 7px;
   &:hover {
     color: $colorSite1;
   }
@@ -546,6 +554,56 @@ input {
 
 .cur {
   font-size: 21px;
+}
+
+.tabsWithLeft {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  .tabsLeftSide {
+    max-width: 275px;
+    padding-top: 82px;
+    li {
+      @include transition(all 0.3s);
+      & + li {
+        margin-top: 73px;
+      }
+      &.active {
+        a {
+          font-weight: 700;
+          color: $colorSite1;
+          padding-left: 55px;
+          &::before {
+            width: 97px;
+            background-color: $colorSite1;
+          }
+        }
+      }
+      a {
+        position: relative;
+        font-size: 16px;
+        line-height: 25px;
+        letter-spacing: 0.15em;
+        color: #4c535b;
+        padding-left: 35px;
+        display: block;
+        @include transition(all 0.3s);
+        @include before {
+          width: 69px;
+          height: 3px;
+          left: -54px;
+          top: 50%;
+          margin-top: -1.5px;
+          background-color: #d9dfe3;
+        }
+      }
+    }
+  }
+  .tabsContent {
+    width: calc(100% - 275px);
+    position: relative;
+    right: -13px;
+  }
 }
 
 // --------------------------------------------------------
