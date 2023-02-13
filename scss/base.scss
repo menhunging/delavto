@@ -14,9 +14,19 @@ body {
   }
 }
 
+.innerPage {
+  .content {
+    background-image: url("../img/back-content2.png");
+    background-position: center calc(100% - 244px);
+    background-repeat: no-repeat;
+  }
+}
+
 .container {
-  width: 1290px;
+  // width: 1290px;
+  width: 1340px;
   margin: 0px auto;
+  @include transform(translateX(24px));
 }
 
 label,
@@ -34,18 +44,51 @@ input {
   .footer {
     margin-top: auto;
   }
-  &.innerPage {
-    .footer {
-      padding-top: 97px;
-    }
-  }
 }
 
 .logoWrapper {
+  position: relative;
   @include invisLink;
   @include transition(all 0.3s);
-  &:hover {
-    opacity: 0.75;
+  & > a {
+    z-index: auto;
+  }
+  // &:hover {
+  //   opacity: 0.75;
+  // }
+}
+
+.logoBurger {
+  position: absolute;
+  left: 30px;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  z-index: 5;
+  .line {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #e85b0d;
+    @include transition(all 0.3s);
+    & + .line {
+      margin-top: 12px;
+    }
+  }
+  &.open {
+    left: 31px;
+    .line {
+      &:nth-child(1) {
+        @include transform(rotate(45deg) translate(9px, 12px));
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        @include transform(rotate(-45deg) translate(8px, -11px));
+      }
+    }
   }
 }
 
@@ -147,7 +190,7 @@ input {
   font-weight: 400;
   font-size: 18px;
   line-height: 25px;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   color: $colorBlack;
   p {
     & + p {
@@ -174,6 +217,9 @@ input {
     & + p {
       margin-top: 36px;
     }
+  }
+  img {
+    @include border-radius(10px);
   }
 }
 
@@ -321,9 +367,10 @@ input {
   .tabsHead {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     margin: 0 -7.5px;
     li {
-      margin: 0 7.5px;
+      margin: 0 7.5px 19px;
       &.active {
         a {
           color: $colorWhite;
@@ -342,7 +389,7 @@ input {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 5px 45px;
+      padding: 5px 29px;
       @include border-radius(30px);
       @include transition(all 0.3s);
       background-color: #cad1d9;
@@ -353,7 +400,7 @@ input {
     }
   }
   .tabsBody {
-    margin-top: 73px;
+    margin-top: 21px;
   }
 }
 
@@ -378,7 +425,7 @@ input {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
-  margin-top: 43px;
+  margin-top: 100px;
   .swiper-pagination-bullet {
     position: relative;
     width: 10px;
@@ -419,7 +466,7 @@ input {
 
 .swiper-button-next {
   @extend %swiper-button;
-  right: -135px;
+  right: -99px;
 }
 
 .selectric {
@@ -437,6 +484,7 @@ input {
     padding: 7px 14px;
   }
   .button {
+    width: 62px;
     height: 100%;
     background: transparent;
     &::after {
@@ -479,6 +527,25 @@ input {
       }
     }
   }
+}
+
+.socialDark {
+  display: flex;
+  align-items: center;
+  margin: 0 -5.5px;
+  li {
+    margin: 0 5.5px;
+    a {
+      @include transition(all 0.3s);
+      &:hover {
+        @include filter(invert(1));
+      }
+    }
+  }
+}
+
+.cur {
+  font-size: 21px;
 }
 
 // --------------------------------------------------------

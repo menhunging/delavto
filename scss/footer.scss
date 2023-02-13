@@ -114,21 +114,6 @@
   }
 }
 
-.footerSocial {
-  display: flex;
-  align-items: center;
-  margin: 0 -5.5px;
-  li {
-    margin: 0 5.5px;
-    a {
-      @include transition(all 0.3s);
-      &:hover {
-        @include filter(invert(1));
-      }
-    }
-  }
-}
-
 .footerTextDeveloper {
   font-size: 14px;
   line-height: 25px;

@@ -48,4 +48,12 @@
       background-color: $colorSite2;
     }
   }
+  &.btnGray {
+    background-color: #cad1d9;
+    color: #474a51;
+    &:hover {
+      background-color: $colorSite1;
+      color: $colorWhite;
+    }
+  }
 }
