@@ -1046,6 +1046,12 @@
 }
 
 .sliderReviewsWrapper {
+  .swiper-button-next {
+    right: -87px;
+  }
+  .swiper-button-prev {
+    left: -420px;
+  }
 }
 
 .sliderReviews {

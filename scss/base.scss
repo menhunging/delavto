@@ -601,8 +601,7 @@ input {
   }
   .tabsContent {
     width: calc(100% - 275px);
-    position: relative;
-    right: -13px;
+    @include transform(translateX(13px));
   }
 }
 

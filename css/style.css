@@ -897,8 +897,11 @@ input {
 }
 .tabsWithLeft .tabsContent {
   width: calc(100% - 275px);
-  position: relative;
-  right: -13px;
+  -moz-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  -webkit-transform: translateX(13px);
+  -o-transform: translateX(13px);
+  transform: translateX(13px);
 }
 
 .pagination {
@@ -2864,6 +2867,13 @@ input {
 
 .reviews {
   padding: 17px 0;
+}
+
+.sliderReviewsWrapper .swiper-button-next {
+  right: -87px;
+}
+.sliderReviewsWrapper .swiper-button-prev {
+  left: -420px;
 }
 
 .sliderReviews .item {

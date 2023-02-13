@@ -148,14 +148,14 @@ $(document).ready(function () {
       new Swiper(carousel[0], {
         slidesPerView: 2,
         slidesPerGroup: 2,
-        // navigation: {
-        //   nextEl: carousel
-        //     .parents(".offersSliderWrapper")
-        //     .find(".swiper-button-next")[0],
-        //   prevEl: carousel
-        //     .parents(".offersSliderWrapper")
-        //     .find(".swiper-button-prev")[0],
-        // },
+        navigation: {
+          nextEl: carousel
+            .parents(".sliderReviewsWrapper")
+            .find(".swiper-button-next")[0],
+          prevEl: carousel
+            .parents(".sliderReviewsWrapper")
+            .find(".swiper-button-prev")[0],
+        },
       });
     });
   }
