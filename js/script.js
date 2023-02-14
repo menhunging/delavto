@@ -143,17 +143,102 @@ $(document).ready(function () {
   }
 
   if ($(".sliderReviews").length > 0) {
-    $(".sliderReviews").map(function () {
+    const swiper = new Swiper(".sliderReviews", {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      navigation: {
+        nextEl: ".sliderReviewsWrapper .swiper-button-next",
+        prevEl: ".sliderReviewsWrapper .swiper-button-prev",
+      },
+      pagination: {
+        el: ".sliderReviewsWrapper .swiper-pagination",
+        clickable: true,
+      },
+      // breakpoints: {
+      //   320: {
+      //     slidesPerView: 1,
+      //     slidesPerGroup: 1,
+      //     spaceBetween: 20,
+      //     pagination: {
+      //       el: ".yourPools .dots",
+      //       clickable: true,
+      //       renderBullet: null,
+      //     },
+      //   },
+      // },
+    });
+  }
+
+  if ($(".sliderDocuments").length > 0) {
+    const swiper = new Swiper(".sliderDocuments", {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      navigation: {
+        nextEl: ".sliderDocumentsWrapper .swiper-button-next",
+        prevEl: ".sliderDocumentsWrapper .swiper-button-prev",
+      },
+      pagination: {
+        el: ".sliderDocumentsWrapper .swiper-pagination",
+        clickable: true,
+      },
+      // breakpoints: {
+      //   320: {
+      //     slidesPerView: 1,
+      //     slidesPerGroup: 1,
+      //     spaceBetween: 20,
+      //     pagination: {
+      //       el: ".yourPools .dots",
+      //       clickable: true,
+      //       renderBullet: null,
+      //     },
+      //   },
+      // },
+    });
+  }
+
+  if ($(".sliderTeam").length > 0) {
+    const swiper = new Swiper(".sliderTeam", {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      navigation: {
+        nextEl: ".sliderTeamWrapper .swiper-button-next",
+        prevEl: ".sliderTeamWrapper .swiper-button-prev",
+      },
+      pagination: {
+        el: ".sliderTeamWrapper .swiper-pagination",
+        clickable: true,
+      },
+      // breakpoints: {
+      //   320: {
+      //     slidesPerView: 1,
+      //     slidesPerGroup: 1,
+      //     spaceBetween: 20,
+      //     pagination: {
+      //       el: ".yourPools .dots",
+      //       clickable: true,
+      //       renderBullet: null,
+      //     },
+      //   },
+      // },
+    });
+  }
+
+  if ($(".sliderMedia").length > 0) {
+    $(".sliderMedia").map(function () {
       let carousel = $(this);
       new Swiper(carousel[0], {
         slidesPerView: 2,
         slidesPerGroup: 2,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
         navigation: {
           nextEl: carousel
-            .parents(".sliderReviewsWrapper")
+            .parents(".sliderMediaWrapper")
             .find(".swiper-button-next")[0],
           prevEl: carousel
-            .parents(".sliderReviewsWrapper")
+            .parents(".sliderMediaWrapper")
             .find(".swiper-button-prev")[0],
         },
       });

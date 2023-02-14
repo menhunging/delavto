@@ -1,7 +1,4 @@
 body {
-  max-width: 2560px;
-  margin-left: auto;
-  margin-right: auto;
   font-family: $fontMain;
   color: $colorBlack;
 }
@@ -425,6 +422,9 @@ input {
   width: 1358px;
   height: 167px;
   z-index: -1;
+  &.gray {
+    background-image: url("../img/caption-invis-gray.svg");
+  }
 }
 
 .swiper-pagination {
@@ -558,15 +558,14 @@ input {
 
 .tabsWithLeft {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
+  justify-content: space-between;
   .tabsLeftSide {
     max-width: 275px;
-    padding-top: 82px;
     li {
       @include transition(all 0.3s);
       & + li {
-        margin-top: 73px;
+        margin-top: 74px;
       }
       &.active {
         a {
@@ -594,7 +593,7 @@ input {
           left: -54px;
           top: 50%;
           margin-top: -1.5px;
-          background-color: #d9dfe3;
+          background-color: #dcd1cd;
         }
       }
     }
@@ -602,123 +601,6 @@ input {
   .tabsContent {
     width: calc(100% - 275px);
     @include transform(translateX(13px));
-  }
-}
-
-// --------------------------------------------------------
-
-.pagination {
-  position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    background-image: url("../img/blick_pagination.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 1035px;
-    height: 1311px;
-    margin-left: -335px;
-    margin-top: -635px;
-    z-index: -1;
-    pointer-events: none;
-  }
-  ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    li {
-      margin: 0 10px;
-      a {
-        position: relative;
-        @include transition(all 0.3s);
-        @include box-shadow(0px 0px 75px rgba(0, 0, 0, 0.07));
-        width: 40px;
-        height: 40px;
-        font-size: 17px;
-        font-weight: 600;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: $colorWhite;
-        border: solid 2px $colorWhite;
-        background-position: center;
-        background-repeat: no-repeat;
-        &.active,
-        &:hover {
-        }
-      }
-      &.arrowPrev {
-        a {
-          border-color: #dceaff;
-          background-color: #dceaff;
-          background-image: url("../img/arrow_left_dark.png");
-        }
-      }
-      &.arrowNext {
-        a {
-          border-color: #dceaff;
-          background-color: #dceaff;
-          background-image: url("../img/arrow_right_dark.png");
-        }
-      }
-    }
-  }
-}
-
-.table {
-  display: table;
-  width: 100%;
-  border: 0;
-  .thead {
-    display: table-row-group;
-    .tr {
-      display: table-row;
-      .th {
-        display: table-cell;
-        vertical-align: middle;
-      }
-    }
-  }
-  .tbody {
-    display: table-row-group;
-    .tr {
-      display: table-row;
-      .td {
-        display: table-cell;
-        vertical-align: middle;
-      }
-    }
-  }
-}
-
-.copyMessage {
-  position: absolute;
-  display: none;
-  right: -11px;
-  top: -23px;
-  font-size: 10px;
-  background-color: $colorWhite;
-  padding: 5px;
-  width: 80px;
-  text-align: center;
-  font-family: $fontMain;
-  line-height: 12px;
-  @include box-shadow(0px 0px 11px rgba(0, 0, 0, 0.15));
-  &::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    bottom: -10px;
-    background-image: url("../img/arrow_small_cabinet.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 22px;
-    height: 13px;
-    z-index: 1;
-    margin-left: -11px;
   }
 }
 
@@ -737,34 +619,38 @@ input {
   label {
     cursor: pointer;
     font-size: 14px;
-    font-weight: 300;
-    padding-left: 41px;
+    line-height: 30px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
     position: relative;
     height: 37px;
     display: flex;
     align-items: center;
+    padding-left: 30px;
     &::before {
       content: "";
       position: absolute;
       left: 0;
-      top: 4px;
-      width: 30px;
-      height: 30px;
+      top: 9px;
+      width: 19px;
+      height: 19px;
       background-color: $colorWhite;
-      border: solid 2px #dfe8f6;
+      border: solid 2px #eeeeee;
+      @include border-radius(50%);
     }
     &::after {
       content: "";
       position: absolute;
-      left: 0;
-      top: 4px;
-      width: 30px;
-      height: 30px;
+      left: 5px;
+      top: 14px;
+      width: 9px;
+      height: 9px;
       background-position: center;
       background-repeat: no-repeat;
-      background-image: url("../img/check.png");
       opacity: 0;
       @include transition(all 0.3s);
+      background-color: $colorSite1;
+      @include border-radius(50%);
     }
   }
   & + .checkBlock {
