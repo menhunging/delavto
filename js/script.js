@@ -414,6 +414,60 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".waitingLoad").length) {
+    $(window).scrollTop(0);
+
+    let logoPosLeft = $(".header .logoWrapper").offset().left;
+    let logoPosTop = $(".header .logoWrapper").offset().top;
+    console.log(logoPosLeft, logoPosTop);
+
+    let preloader = $(".preloader");
+    let preloaderCheck = $(".preloaderCheck");
+    let preloaderText = $(".preloader .text");
+    let preloaderLogo = $(".preloaderLogo");
+
+    preloaderCheck.mouseover(function () {
+      preloaderText.addClass("hover");
+    });
+
+    preloaderCheck.mouseout(function () {
+      preloaderText.removeClass("hover");
+    });
+
+    preloaderCheck.click(function () {
+      $(this).addClass("active");
+      preloaderCheck.off("mouseover");
+      preloaderCheck.off("mouseout");
+      preloader.addClass("animation");
+      preloaderText.removeClass("hover");
+      preloader.addClass("invisText");
+      setTimeout(function () {
+        // через 1 сек
+        preloaderText.removeClass("hover");
+        preloader.addClass("invisText");
+
+        preloaderLogo.addClass("position").css("left", logoPosLeft);
+        preloaderLogo.addClass("position").css("top", logoPosTop);
+      }, 500);
+      setTimeout(function () {
+        // через 2 сек
+        preloaderCheck.addClass("animation");
+      }, 1500);
+      setTimeout(function () {
+        // через 3 сек
+        $(".siteWrapper")
+          .addClass("preloaderLoad")
+          .stop()
+          .removeClass("loader");
+        $("body").removeClass("waitingLoad");
+      }, 3000);
+      setTimeout(function () {
+        // через 4 сек
+        preloader.remove();
+      }, 4000);
+    });
+  }
+
   // --------------------------------------
 
   if ($(".cabinetHead").length > 0) {

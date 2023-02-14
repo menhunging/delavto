@@ -202,6 +202,9 @@ body {
   font-family: "Avenir Next Cyr";
   color: rgb(0, 0, 0);
 }
+body.waitingLoad {
+  overflow: hidden;
+}
 
 .indexPage .content {
   background-image: url("../img/back-content1.png");
@@ -237,6 +240,21 @@ input {
   flex-wrap: wrap;
   min-height: 100vh;
   overflow: hidden;
+}
+.siteWrapper.loader .header .logoWrapper {
+  width: 208px;
+  height: 46px;
+  opacity: 0;
+}
+.siteWrapper.preloaderLoad .header .logoWrapper {
+  opacity: 1;
+}
+.siteWrapper.preloaderLoad .preloader {
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0;
 }
 .siteWrapper .footer {
   margin-top: auto;
@@ -1307,6 +1325,193 @@ input {
 }
 .modalThank .caption {
   margin-bottom: 13px;
+}
+
+.modal__overlay {
+  background-color: rgba(71, 74, 81, 0.95);
+}
+
+.preloader {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(71, 74, 81, 0.95);
+  text-align: center;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  z-index: 15;
+}
+.preloader.animation {
+  pointer-events: none;
+  background-color: rgba(71, 74, 81, 0.55);
+}
+.preloader.finish {
+  background-color: rgba(71, 74, 81, 0);
+}
+.preloader.invisText .text {
+  opacity: 0;
+}
+.preloader .text {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 65px;
+  text-transform: uppercase;
+  color: #ffffff;
+  position: relative;
+  opacity: 0.7;
+  margin-bottom: 320px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.preloader .text::before {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  background-image: url(../img/arrow-preloader.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 80px;
+  height: 131px;
+  top: calc(100% - 3px);
+  right: 151px;
+}
+.preloader .text.hover {
+  opacity: 1;
+}
+.preloader .preloaderLogo {
+  position: fixed;
+  left: calc(50% - 205px);
+  top: calc(50% - 33px);
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+  width: 365px;
+}
+.preloader .preloaderLogo img {
+  width: 100%;
+  object-fit: contain;
+}
+.preloader .preloaderLogo.position {
+  width: 208px;
+  height: 46px;
+}
+.preloader .preloaderLogo.position .logoBurger {
+  left: 30px;
+  top: 0;
+  width: 32px;
+  height: 32px;
+  z-index: 5;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+.preloader .preloaderLogo.position .logoBurger .line {
+  height: 2px;
+}
+.preloader .preloaderLogo.position .logoBurger .line + .line {
+  margin-top: 12px;
+}
+.preloader .preloaderLogo.position .preloaderCheck {
+  left: calc(100% - 25px);
+  top: 3px;
+  width: 70px;
+  height: 26px;
+  border-width: 2px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+.preloader .preloaderLogo.position .preloaderCheck .circle {
+  left: calc(100% - 22px);
+  height: 20px;
+  width: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+.preloader .logoBurger {
+  left: 56px;
+  top: 5px;
+  width: 42px;
+  height: 45px;
+}
+.preloader .logoBurger .line {
+  height: 4px;
+}
+.preloader .logoBurger .line + .line {
+  margin-top: 14px;
+}
+.preloader .preloaderCheck {
+  cursor: pointer;
+  position: absolute;
+  left: calc(100% - 54px);
+  top: 3px;
+  width: 100px;
+  height: 50px;
+  border: solid 3px rgb(255, 255, 255);
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  border-radius: 50px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.preloader .preloaderCheck .circle {
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  width: 41px;
+  height: 41px;
+  border: solid 3px #e95a0c;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.preloader .preloaderCheck.animation {
+  width: 25px !important;
+  border-width: 2px;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  -ms-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
+.preloader .preloaderCheck.animation .circle {
+  opacity: 0;
+}
+.preloader .preloaderCheck.active .circle {
+  left: calc(100% - 43px);
 }
 
 .btn {

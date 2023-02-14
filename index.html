@@ -20,8 +20,24 @@
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
-<body>
-  <div class="siteWrapper indexPage">
+<body class="waitingLoad">
+  <div class="siteWrapper indexPage loader">
+
+    <div class="preloader">
+      <span class="text">активировать автоматизацию</span>
+      <div class="preloaderLogo">
+        <img src="img/logo-preloader.svg" alt="logo">
+        <button class="logoBurger ">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+        <div class="preloaderCheck">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+
     <header class="header">
       <div class="headerContent">
         <div class="logoWrapper">
@@ -748,6 +764,7 @@
         </div>
       </div>
     </div>
+
   </div>
 
   <script src="js/jquery-3.6.0.min.js"></script>

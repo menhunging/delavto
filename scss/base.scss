@@ -1,6 +1,9 @@
 body {
   font-family: $fontMain;
   color: $colorBlack;
+  &.waitingLoad {
+    overflow: hidden;
+  }
 }
 
 .indexPage {
@@ -38,6 +41,27 @@ input {
   flex-wrap: wrap;
   min-height: 100vh;
   overflow: hidden;
+  &.loader {
+    .header {
+      .logoWrapper {
+        width: 208px;
+        height: 46px;
+        opacity: 0;
+      }
+    }
+  }
+  &.preloaderLoad {
+    .header {
+      .logoWrapper {
+        opacity: 1;
+      }
+    }
+    .preloader {
+      @include transition(all 0.3s);
+      opacity: 0;
+    }
+  }
+
   .footer {
     margin-top: auto;
   }
@@ -993,5 +1017,153 @@ input {
   min-height: 422px;
   .caption {
     margin-bottom: 13px;
+  }
+}
+
+.modal__overlay {
+  background-color: rgba(71, 74, 81, 0.95);
+}
+
+.preloader {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(71, 74, 81, 0.95);
+  text-align: center;
+  @include transition(all 1s);
+  z-index: 15;
+  &.animation {
+    pointer-events: none;
+    background-color: rgba(71, 74, 81, 0.55);
+  }
+  &.finish {
+    background-color: rgba(71, 74, 81, 0);
+  }
+  &.invisText {
+    .text {
+      opacity: 0;
+    }
+  }
+  .text {
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 65px;
+    text-transform: uppercase;
+    color: #ffffff;
+    position: relative;
+    opacity: 0.7;
+    margin-bottom: 320px;
+    @include transition(all 0.3s);
+    @include before {
+      background-image: url(../img/arrow-preloader.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 80px;
+      height: 131px;
+      top: calc(100% - 3px);
+      right: 151px;
+    }
+    &.hover {
+      opacity: 1;
+    }
+  }
+  .preloaderLogo {
+    position: fixed;
+    left: calc(50% - 205px);
+    top: calc(50% - 33px);
+    @include transition(all 1s);
+    width: 365px;
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+    &.position {
+      width: 208px;
+      height: 46px;
+      .logoBurger {
+        left: 30px;
+        top: 0;
+        width: 32px;
+        height: 32px;
+        z-index: 5;
+        @include transition(all 1s);
+        .line {
+          height: 2px;
+          & + .line {
+            margin-top: 12px;
+          }
+        }
+      }
+      .preloaderCheck {
+        left: calc(100% - 25px);
+        top: 3px;
+        width: 70px;
+        height: 26px;
+        border-width: 2px;
+        @include border-radius(20px);
+        @include transition(all 1s);
+        .circle {
+          left: calc(100% - 22px);
+          height: 20px;
+          width: 20px;
+          @include border-radius(20px);
+          @include transition(all 1s);
+        }
+      }
+    }
+    &.finish {
+    }
+  }
+  .logoBurger {
+    left: 56px;
+    top: 5px;
+    width: 42px;
+    height: 45px;
+    .line {
+      height: 4px;
+      & + .line {
+        margin-top: 14px;
+      }
+    }
+  }
+  .preloaderCheck {
+    cursor: pointer;
+    position: absolute;
+    left: calc(100% - 54px);
+    top: 3px;
+    width: 100px;
+    height: 50px;
+    border: solid 3px $colorWhite;
+    @include border-radius(50px);
+    @include transition(all 0.3s);
+    .circle {
+      position: absolute;
+      left: 1px;
+      top: 1px;
+      width: 41px;
+      height: 41px;
+      border: solid 3px $colorSite1;
+      @include border-radius(50%);
+      @include transition(all 0.3s);
+    }
+    &.animation {
+      width: 25px !important;
+      border-width: 2px;
+      @include border-radius(50%!important);
+      .circle {
+        opacity: 0;
+      }
+    }
+    &.active {
+      .circle {
+        left: calc(100% - 43px);
+      }
+    }
   }
 }
