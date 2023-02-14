@@ -16,21 +16,268 @@
   <link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
   <link rel="stylesheet" type="text/css" href="css/micromodal.css" />
   <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/fancybox.css" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
 <body>
   <div class="siteWrapper innerPage">
 
+    <header class="header">
+      <div class="headerContent">
+        <div class="logoWrapper">
+          <a href="index.html"></a>
+          <img src="img/logo.svg" alt="logo">
+          <button class="logoBurger ">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </button>
+        </div>
+        <div class="clientCity">
+          <span class="title">Ваш город:</span>
+          <span class="city">Москва</span>
+        </div>
+        <form class="search">
+          <span class="text">поиск</span>
+          <input type="text" placeholder="Введите для поиска...">
+          <button type="submit" class="btnSearch icon-search"></button>
+        </form>
+        <div class="headerPhone">
+          <a href="tel:84957777583">8 (495) 7777-583</a>
+          <span class="city">(Москва)</span>
+        </div>
+        <nav class="menu">
+          <ul>
+            <li><a class="linkPage" href="solutions.html">Решения</a></il>
+            <li><a class="linkPage" href="services.html">Услуги</a></li>
+            <li><a class="linkPage" href="developments.html">Собственные разработки</a></li>
+            <li><a class="linkPage" href="offers.html">Спецпредложения</a></li>
+            <li><a class="linkPage" href="about.html">О нас</a></li>
+            <li><a class="linkPage" href="media.html">Медиацентр</a></li>
+            <li><a class="linkPage" href="contacts.html">Контакты</a></li>
+          </ul>
+        </nav>
+        <button class="menuArrow"></button>
+      </div>
+      <div class="menuDropWrapper">
+        <div class="menuDrop">
+          <div class="leftSide">
+            <div class="col">
+              <a href="solutions.html" class="link">Решения</a>
+              <ul>
+                <li><a href="#">Автоматизация ресторана</a></li>
+                <li><a href="#">Автоматизация кафе</a></li>
+                <li><a href="#">Автоматизация бара</a></li>
+                <li><a href="#">Автоматизация столовой</a></li>
+                <li><a href="#">Автоматизация фудкорта</a></li>
+                <li><a href="#">Автоматизация доставки</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <a href="services.html" class="link">Услуги</a>
+              <ul>
+                <li><a href="#">Обслуживание r-keeper</a></li>
+                <li><a href="#">ЕГАИС</a></li>
+                <li><a href="#">Честный знак</a></li>
+                <li><a href="#">Обслуживание ККТ</a></li>
+                <li><a href="#">Обучение</a></li>
+                <li><a href="#">Облачный сервер</a></li>
+                <li><a href="#">Ремонт оборудования</a></li>
+                <li><a href="#">Режим работы сервис-центра</a></li>
+              </ul>
+            </div>
+            <div class="col">
+              <ul class="links">
+                <li><a href="developments.html" class="link">Собственные разработки</a></li>
+                <li><a href="offers.html" class="link">Спецпредложения</a></li>
+                <li><a href="about.html" class="link">О нас</a></li>
+                <li><a href="media.html" class="link">Медиацентр</a></li>
+                <li><a href="contacts.html" class="link">Контакты</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="rightSide">
+            <div class="info">
+              <div class="item">
+                <img src="img/phone.svg" alt="" class="icon">
+                <span class="title">(Москва)</span>
+                <a href="tel:84957777583" class="link">8 (495) 7777-583</a>
+              </div>
+              <div class="item">
+                <img src="img/phone.svg" alt="" class="icon">
+                <span class="title">(Многоканальный)</span>
+                <a href="tel:84957279600" class="link">8 (495) 7279-600</a>
+              </div>
+              <div class="item">
+                <ul class="socialDark">
+                  <li><a href="#"><img src="img/footer-telegram.svg" alt=""></a></li>
+                  <li><a href="#"><img src="img/footer-vk.svg" alt=""></a></li>
+                </ul>
+              </div>
+              <div class="item">
+                <img src="img/mail.svg" alt="" class="icon">
+                <span class="title">E-mail</span>
+                <a href="mailto:delavto@info.ru" class="link">delavto@info.ru</a>
+              </div>
+            </div>
+            <div class="controls">
+              <ul>
+                <li>
+                  <a href="#" class="btn btnPrimary">Заказать звонок</a>
+                </li>
+                <li>
+                  <a href="index.html" class="btn btnGray">На главную</a>
+                </li>
+              </ul>
+            </div>
+            <div class="dropPartner">
+              <span class="title">Официальный патрнёр:</span>
+              <img src="img/partner.png" alt="partner">
+            </div>
+          </div>
+          <button class="menuClose">
+            <span class="line"></span>
+            <span class="line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
     <div class="content">
       <div class="container" style="padding: 50px 0">
-        <a href="#" class="linkSite" data-custom-open="modalMessage1">
-          Message1
+        <a href="#" class="linkSite" data-custom-open="modalText">
+          Медиацентр
+        </a>
+        <br />
+        <br />
+        <a href="#" class="linkSite" data-custom-open="modalProduct">
+          Спецпредложения
+        </a>
+        <br />
+        <br />
+        <a href="#" class="linkSite" data-custom-open="modalAbout">
+          О компании
+        </a>
+        <br />
+        <br />
+        <a href="#" class="linkSite" data-custom-open="modalCall">
+          Заказать звонок
+        </a>
+        <br />
+        <br />
+        <a href="#" class="linkSite" data-custom-open="modalThank">
+          Спасибо
         </a>
       </div>
     </div>
 
-    <div class="micromodal-slide modal" id="modalMessage1" aria-hidden="true">
+    <footer class="footer">
+      <div class="footerContent">
+        <div class="logoWrapper">
+          <a href="index.html"></a>
+          <img src="img/logo_primary.svg" alt="logo">
+        </div>
+        <div class="footerInfo">
+          <ul class="info">
+            <li>
+              <img src="img/location.svg" alt="" class="icon">
+              <span class="title">Адрес</span>
+              <span class="data">г. Москва, ул. Кржижановского<br /> д. 20/30, корпус 5</span>
+            </li>
+            <li>
+              <img src="img/mail.svg" alt="" class="icon">
+              <span class="title">E-mail</span>
+              <a href="mailto:delavto@info.ru" class="link">delavto@info.ru</a>
+            </li>
+            <li>
+              <img src="img/phone.svg" alt="" class="icon">
+              <span class="title">(Москва)</span>
+              <a href="tel:84957279600" class="link">8 (495) 7279-600</a>
+            </li>
+            <li>
+              <img src="img/phone.svg" alt="" class="icon">
+              <span class="title">(Многоканальный)</span>
+              <a href="tel:84957279600" class="link">8 (495) 7279-600</a>
+            </li>
+          </ul>
+        </div>
+        <div class="copyRight">
+          <p>Деловая автоматизация,<br />
+            <span class="year">2022</span> &copy;
+          </p>
+        </div>
+        <div class="footerBottom">
+          <div class="footerMenu">
+            <div class="col">
+              <span class="title">Товары</span>
+              <ul>
+                <li>
+                  <a href="#">Товар 1</a>
+                </li>
+                <li>
+                  <a href="#">Товар 2</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col">
+              <span class="title">Услуги</span>
+              <ul>
+                <li>
+                  <a href="#">Услуга 1</a>
+                </li>
+                <li>
+                  <a href="#">Услуга 2</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col">
+              <span class="title">Обслуживание</span>
+              <ul>
+                <li>
+                  <a href="#">Обслуживание 1</a>
+                </li>
+                <li>
+                  <a href="#">Обслуживание 2</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col">
+              <span class="title">Решения</span>
+              <ul>
+                <li>
+                  <a href="#">Решения 1</a>
+                </li>
+                <li>
+                  <a href="#">Решения 2</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col">
+              <span class="title">О компании</span>
+              <ul>
+                <li>
+                  <a href="#">Контакты</a>
+                </li>
+                <li>
+                  <a href="#">О нас</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <ul class="socialDark">
+            <li><a href="#"><img src="img/footer-telegram.svg" alt=""></a></li>
+            <li><a href="#"><img src="img/footer-vk.svg" alt=""></a></li>
+          </ul>
+        </div>
+        <div class="footerTextDeveloper">
+          <p>Разработка сайта <a href="#">InternetTeam</a></p>
+        </div>
+
+      </div>
+    </footer>
+
+    <div class="micromodal-slide modal" id="modalText" aria-hidden="true">
       <div class="modal__overlay" tabindex="-1" data-micromodal-close="">
         <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modalCall-title">
           <div class="modalWrap">
@@ -39,36 +286,225 @@
               <span></span>
             </button>
             <div class="modal__content" id="modalCall-content" autocomplete="off">
-              <form class="sendMessage">
-                <h2 class="titleBlock">Leave a request</h2>
-                <span class="txt">if you are a private user</span>
-                <div class="inputList">
-                  <div class="inputLine">
-                    <label for="">Your name:</label>
-                    <input type="text" />
+              <div class="modalText scroll">
+                <div class="textSimple">
+                  <img src="img/logo-media-big.png" alt="">
+
+                  <h2 class="caption captionThree">pir expo<br />
+                    2022</h2>
+                  <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех
+                    живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль
+                    журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна,
+                    в которой жаренные члены предложения залетают прямо в рот.</p>
+                  <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех
+                    живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль
+                    журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна,
+                    в которой жаренные члены предложения залетают прямо в рот.</p>
+
+                  <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех
+                    живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль
+                    журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна,
+                    в которой жаренные члены предложения залетают прямо в рот.</p>
+
+                  <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех
+                    живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль
+                    журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна,
+                    в которой жаренные члены предложения залетают прямо в рот.</p>
+                  <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех
+                    живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль
+                    журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна,
+                    в которой жаренные члены предложения залетают прямо в рот.</p>
+
+                  <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех
+                    живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль
+                    журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна,
+                    в которой жаренные члены предложения залетают прямо в рот.</p>
+                </div>
+              </div>
+              <div class="controls">
+                <a href="#" class="link">читать полностью</a>
+                <div class="date">
+                  <span class="title">Дата проведения:</span>
+                  <span class="data">01.10.2022</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="micromodal-slide modal" id="modalProduct" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close="">
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modalCall-title">
+          <div class="modalWrap">
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close="">
+              <span></span>
+              <span></span>
+            </button>
+            <div class="modal__content" id="modalCall-content" autocomplete="off">
+              <div class="modalProduct scroll">
+                <div class="leftSide">
+                  <div class="textSimple">
+                    <h2 class="caption captionThree">Smart Scanner</h2>
+                    <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от
+                      всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек
+                      Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая
+                      страна, в которой жаренные члены предложения залетают прямо в рот. </p>
                   </div>
-                  <div class="inputLine">
-                    <label for="">Email<span class="imp">*</span>:</label>
-                    <input type="text" />
+                  <div class="characteristics">
+                    <h2 class="captione captionFour">Характеристики</h2>
+                    <ul>
+                      <li>
+                        <span class="title">Характеристика </span>
+                        <span class="data">Очень важная характеристика</span>
+                      </li>
+                      <li>
+                        <span class="title">Характеристика </span>
+                        <span class="data">Очень важная характеристика</span>
+                      </li>
+                      <li>
+                        <span class="title">Характеристика </span>
+                        <span class="data">Очень важная характеристика</span>
+                      </li>
+                      <li>
+                        <span class="title">Характеристика </span>
+                        <span class="data">Очень важная характеристика</span>
+                      </li>
+                      <li>
+                        <span class="title">Характеристика </span>
+                        <span class="data">Очень важная характеристика</span>
+                      </li>
+                    </ul>
                   </div>
-                  <div class="inputLine">
-                    <label for="">Your message<span class="imp">*</span>:</label>
-                    <textarea></textarea>
+                  <div class="priceBlock">
+                    <ul>
+                      <li>
+                        <span class="price">35 000 <span class="cur">₽</span></span>
+                        <span class="desc">цена</span>
+                      </li>
+                      <li class="sale">
+                        <span class="price">45 000 <span class="cur">₽</span></span>
+                        <span class="desc">цена</span>
+                      </li>
+                    </ul>
                   </div>
+                  <a href="#" class="btn btnPrimary">Заказать</a>
+                </div>
+                <div class="picture">
+                  <img src="img/pack4.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="micromodal-slide modal" id="modalAbout" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close="">
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modalCall-title">
+          <div class="modalWrap">
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close="">
+              <span></span>
+              <span></span>
+            </button>
+            <div class="modal__content" id="modalCall-content" autocomplete="off">
+              <div class="modalText scroll">
+                <div class="textSimple">
+                  <div class="userName">
+                    <span class="title">Генеральный директор</span>
+                    <span class="name">Иванов Иван Иванович</span>
+                  </div>
+                  <h2 class="caption captionThree">«дЖАМП рЕСТОРАНТС ЮНАЙТЕД ГРУПП»</h2>
+                  <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех
+                    живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль
+                    журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна,
+                    в которой жаренные члены предложения залетают прямо в рот.</p>
+                  <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех
+                    живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль
+                    журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна,
+                    в которой жаренные члены предложения залетают прямо в рот.</p>
+
+                  <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех
+                    живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль
+                    журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна,
+                    в которой жаренные члены предложения залетают прямо в рот.</p>
+
+                  <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех
+                    живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль
+                    журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна,
+                    в которой жаренные члены предложения залетают прямо в рот.</p>
+                  <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех
+                    живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль
+                    журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна,
+                    в которой жаренные члены предложения залетают прямо в рот.</p>
+
+                  <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех
+                    живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль
+                    журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна,
+                    в которой жаренные члены предложения залетают прямо в рот.</p>
+                </div>
+              </div>
+              <div class="controls">
+                <div class="date">
+                  <span class="title">Дата проведения:</span>
+                  <span class="data">01.10.2022</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="micromodal-slide modal" id="modalCall" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close="">
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modalCall-title">
+          <div class="modalWrap">
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close="">
+              <span></span>
+              <span></span>
+            </button>
+            <div class="modal__content" id="modalCall-content" autocomplete="off">
+              <form class="modalForm">
+                <h2 class="caption captionThree">Заказать звонок</h2>
+                <div class="inputWrapper">
+                  <label for="">укажите имя</label>
+                  <input type="text" placeholder="Иванов Иван..">
+                </div>
+                <div class="inputWrapper">
+                  <label for="">укажите телефон</label>
+                  <input type="text" placeholder="+ 7 (99.....">
+                </div>
+                <div class="checkBlock">
+                  <input type="checkbox" id="personal">
+                  <label for="personal">Согласен на обработку персональных данных</label>
                 </div>
                 <div class="controls">
-                  <div class="checkBlock">
-                    <input type="checkbox" id="agree1" />
-                    <label for="agree1">
-                      Agree with the
-                      <a href="#" class="linkSite"> Rules and agreements </a>
-                    </label>
-                  </div>
-                  <button type="submit" class="btn btnGreen">
-                    Send message
-                  </button>
+                  <button class="btn btnPrimary">Отправить</button>
                 </div>
               </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="micromodal-slide modal" id="modalThank" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close="">
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modalCall-title">
+          <div class="modalWrap">
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close="">
+              <span></span>
+              <span></span>
+            </button>
+            <div class="modal__content" id="modalCall-content" autocomplete="off">
+              <div class="modalThank">
+                <h2 class="caption captionThree">спасибо!</h2>
+                <p>Ваша заявка принята.<br />
+                  Ожидайте звонка</p>
+              </div>
             </div>
           </div>
         </div>
@@ -81,9 +517,10 @@
   <script src="js/jquery-ui.js"></script>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/jquery.selectric.min.js"></script>
-  <script src="js/clipboard.js"></script>
   <script src="js/masonry.pkgd.min.js"></script>
   <script src="js/micromodal.min.js"></script>
+  <script src="js/jquery.tabslet.min.js"></script>
+  <script src="js/fancybox.umd.js"></script>
   <script src="js/script.js"></script>
 </body>
 

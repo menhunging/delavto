@@ -545,8 +545,7 @@
       line-height: 20px;
       padding: 10px 5px;
     }
-    .priceBlock {
-    }
+
     .price {
       font-size: 20px;
       line-height: 20px;
@@ -724,10 +723,29 @@
       color: #818181;
     }
   }
-  .btn {
+  .controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-top: 15px;
-    padding: 5px 13px;
+  }
+
+  .btn {
+    padding: 5px 10px;
     font-size: 14px;
+    min-width: 150px;
+  }
+  .link {
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-decoration-line: underline;
+    @include transition(all 0.3s);
+    color: #4c535b;
+    &:hover {
+      text-decoration-color: transparent;
+    }
   }
 }
 
@@ -1492,17 +1510,17 @@
   }
   .captionInvis {
     top: auto;
-    bottom: -130px;
+    bottom: -105px;
     left: 32px;
   }
 }
 
 .sliderMediaWrapper {
   .swiper-button-next {
-    right: -87px;
+    right: -100px;
   }
   .swiper-button-prev {
-    left: -420px;
+    left: -120px;
   }
   .swiper-pagination {
     margin-top: 67px;
@@ -1568,4 +1586,286 @@
       }
     }
   }
+}
+
+.calendarWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% - 26px);
+  background: $colorWhite;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
+  @include border-radius(10px);
+  margin-left: auto;
+  padding-bottom: 28px;
+  .calendarPrev {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 48px;
+    top: 50%;
+    left: -120px;
+    @include transition(all 0.3s);
+    color: #acb6c1;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include after {
+      content: "prev";
+      font-family: swiper-icons;
+      font-size: var(--swiper-navigation-size);
+      text-transform: none !important;
+      letter-spacing: 0;
+      text-transform: none;
+      font-variant: initial;
+      line-height: 1;
+    }
+  }
+  .calendarNext {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 48px;
+    top: 50%;
+    right: -100px;
+    @include transition(all 0.3s);
+    color: #acb6c1;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include after {
+      content: "next";
+      font-family: swiper-icons;
+      font-size: var(--swiper-navigation-size);
+      text-transform: none !important;
+      letter-spacing: 0;
+      text-transform: none;
+      font-variant: initial;
+      line-height: 1;
+    }
+  }
+  .calendarTitle {
+    margin-bottom: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 24px;
+    line-height: 25px;
+    letter-spacing: 0.05em;
+    color: $colorWhite;
+    padding: 19px 43px 11px 40px;
+    height: 55px;
+    background-color: $colorSite1;
+    @include border-radius(10px 10px 0px 0px);
+    .month {
+      text-transform: uppercase;
+    }
+  }
+}
+
+.calendar {
+  width: 630px;
+  border-collapse: collapse;
+  border: 0;
+  .thead {
+    display: flex;
+    align-items: center;
+    margin: -17px 0 -3px;
+  }
+  .tbody {
+    font-weight: 750;
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: 0.05em;
+    color: $colorBlack;
+  }
+  .td {
+    cursor: pointer;
+    text-align: center;
+    @include border-radius(50%);
+    width: 37px;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: lowercase;
+    margin: 10px 25px;
+    @include transition(all 0.3s);
+  }
+  .tr {
+    display: flex;
+    align-items: center;
+  }
+
+  thead {
+  }
+
+  .tbody {
+    .td {
+      &:hover {
+        background-color: rgba(233, 90, 12, 0.4);
+      }
+    }
+  }
+
+  .calendarHead {
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: 0.05em;
+    color: #747d88;
+  }
+
+  .weekend {
+    color: $colorSite1;
+  }
+
+  .today {
+    background-color: #e95a0c;
+    color: $colorWhite;
+  }
+}
+
+.listEvent {
+  width: 331px;
+  padding-left: 25px;
+  border-left: 1px solid #aeaeae;
+  .head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: 0.05em;
+    color: $colorBlack;
+    font-weight: 700;
+    border-bottom: 1px solid #aeaeae;
+    padding-bottom: 15px;
+    margin-bottom: 24px;
+  }
+  .line {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 25px;
+    letter-spacing: 0.05em;
+    color: $colorBlack;
+    font-weight: 700;
+    .link {
+      @include transition(all 0.3s);
+      color: #4c535b;
+      text-decoration: underline;
+      &:hover {
+        text-decoration-color: transparent;
+      }
+    }
+    & + .line {
+      margin-top: 44px;
+    }
+  }
+}
+
+.listMount {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 27px;
+  margin-bottom: 32px;
+  li {
+    cursor: pointer;
+    position: relative;
+    padding-left: 22px;
+    @include transition(all 0.3s);
+    @include before {
+      width: 12px;
+      height: 12px;
+      left: 0;
+      top: 50%;
+      margin-top: -6px;
+      background-color: #4c535b;
+      @include border-radius(50%);
+    }
+    &.active,
+    &:hover {
+      color: $colorSite1;
+      &::before {
+        background-color: $colorSite1;
+      }
+    }
+  }
+}
+
+.solutionItem {
+  position: relative;
+  z-index: 3;
+  padding-bottom: 50px;
+  .head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .picture {
+      @include border-radius(10px);
+      overflow: hidden;
+    }
+    .title {
+      display: block;
+      font-weight: 500;
+      line-height: 30px;
+      margin-bottom: 10px;
+    }
+    .info {
+      width: 50%;
+      padding: 10px;
+    }
+    .row {
+      & + .row {
+        margin-top: 15px;
+      }
+    }
+  }
+  .textSimple {
+    margin-top: 30px;
+    .caption {
+      margin-bottom: 15px;
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  .priceBlock {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .title {
+      margin-right: 16px;
+      margin-bottom: 0;
+    }
+    .price {
+      font-size: 20px;
+      line-height: 20px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #e95a0c;
+    }
+  }
+  .btn {
+    min-width: 210px;
+    margin-top: 15px;
+  }
+}
+
+.solution {
+  padding-bottom: 160px;
 }

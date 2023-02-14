@@ -16,6 +16,7 @@
   <link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
   <link rel="stylesheet" type="text/css" href="css/micromodal.css" />
   <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/fancybox.css" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
@@ -134,6 +135,10 @@
               <img src="img/partner.png" alt="partner">
             </div>
           </div>
+          <button class="menuClose">
+            <span class="line"></span>
+            <span class="line"></span>
+          </button>
         </div>
       </div>
     </header>
@@ -142,7 +147,7 @@
         <div class="container">
           <div class="breadCrumbs">
             <ul>
-              <li><a href="/">Главная</a></li>
+              <li><a href="index.html">Главная</a></li>
               <li><span>Медиацентр</span></li>
             </ul>
           </div>
@@ -180,7 +185,7 @@
                               «Крокус Экспо».</p>
                             <div class="controls">
                               <span class="date">01.10.2022</span>
-                              <a href="#" class="link">подробнее</a>
+                              <a href="#" class="link" data-custom-open="modalText" >подробнее</a>
                             </div>
                           </div>
                         </div>
@@ -198,7 +203,7 @@
                               «Крокус Экспо».</p>
                             <div class="controls">
                               <span class="date">01.10.2022</span>
-                              <a href="#" class="link">подробнее</a>
+                              <a href="#" class="link" data-custom-open="modalText" >подробнее</a>
                             </div>
                           </div>
                         </div>
@@ -216,7 +221,7 @@
                               «Крокус Экспо».</p>
                             <div class="controls">
                               <span class="date">01.10.2022</span>
-                              <a href="#" class="link">подробнее</a>
+                              <a href="#" class="link" data-custom-open="modalText" >подробнее</a>
                             </div>
                           </div>
                         </div>
@@ -234,7 +239,7 @@
                               «Крокус Экспо».</p>
                             <div class="controls">
                               <span class="date">01.10.2022</span>
-                              <a href="#" class="link">подробнее</a>
+                              <a href="#" class="link" data-custom-open="modalText" >подробнее</a>
                             </div>
                           </div>
                         </div>
@@ -263,7 +268,7 @@
                               «Крокус Экспо».</p>
                             <div class="controls">
                               <span class="date">01.10.2022</span>
-                              <a href="#" class="link">подробнее</a>
+                              <a href="#" class="link" data-custom-open="modalText" >подробнее</a>
                             </div>
                           </div>
                         </div>
@@ -281,7 +286,7 @@
                               «Крокус Экспо».</p>
                             <div class="controls">
                               <span class="date">01.10.2022</span>
-                              <a href="#" class="link">подробнее</a>
+                              <a href="#" class="link" data-custom-open="modalText" >подробнее</a>
                             </div>
                           </div>
                         </div>
@@ -299,7 +304,7 @@
                               «Крокус Экспо».</p>
                             <div class="controls">
                               <span class="date">01.10.2022</span>
-                              <a href="#" class="link">подробнее</a>
+                              <a href="#" class="link" data-custom-open="modalText" >подробнее</a>
                             </div>
                           </div>
                         </div>
@@ -317,7 +322,7 @@
                               «Крокус Экспо».</p>
                             <div class="controls">
                               <span class="date">01.10.2022</span>
-                              <a href="#" class="link">подробнее</a>
+                              <a href="#" class="link" data-custom-open="modalText" >подробнее</a>
                             </div>
                           </div>
                         </div>
@@ -330,7 +335,60 @@
                 </div>
               </div>
               <div class="tabsContent" id="tab3">
-                тут будет календарь
+                <ul class="listMount">
+                  <li>Январь</li>
+                  <li>Февраль</li>
+                  <li>Март</li>
+                  <li>Апрель</li>
+                  <li>Май</li>
+                  <li>Июнь</li>
+                  <li>Июль</li>
+                  <li>Август</li>
+                  <li>Сентябрь</li>
+                  <li>Октябрь</li>
+                  <li>Ноябрь</li>
+                  <li>Декабрь</li>
+                </ul>
+                <div class="calendarWrapper">
+                  <div class="calendarTitle">
+                    <span class="month"></span>
+                    <span class="year"></span>
+                  </div>
+                  <div class="calendar table" id="calendar">
+                    <div class="thead">
+                      <div class="td">Пн</div>
+                      <div class="td">Вт</div>
+                      <div class="td">Ср</div>
+                      <div class="td">Чт</div>
+                      <div class="td">Пт</div>
+                      <div class="td weekend">Сб</div>
+                      <div class="td weekend">Вс</div>
+                    </div>
+                    <div class="tbody">
+
+                    </div>
+                    <span class="calendarPrev"></span>
+                    <span class="calendarNext"></span>
+                  </div>
+                  <div class="listEvent">
+                    <div class="head">
+                      <span>Список мероприятий</span>
+                      <span class="day">12 января</span>
+                    </div>
+                    <div class="line">
+                      <span class="name">Pir Expo 2023</span>
+                      <a href="#" class="link" data-custom-open="modalText" >подробнее</a>
+                    </div>
+                    <div class="line">
+                      <span class="name">Pir Expo 2023</span>
+                      <a href="#" class="link" data-custom-open="modalText" >подробнее</a>
+                    </div>
+                    <div class="line">
+                      <span class="name">Pir Expo 2023</span>
+                      <a href="#" class="link" data-custom-open="modalText" >подробнее</a>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="tabsContent" id="tab4">
                 <div class="sliderMediaWrapper">
@@ -345,11 +403,12 @@
                             <img src="img/logo-media.png" alt="">
                             <p>PIR EXPO — крупнейшее в России профессиональное мероприятие для специалистов индустрии
                               HoReCa.
-                              25 юбилейная выставка индустрии гостеприимства пройдет с 17 по 20 октября 2022 года в МВЦ
+                              25 юбилейная выставка индустрии гостеприимства пройдет с 17 по 20 октября 2022 года в
+                              МВЦ
                               «Крокус Экспо».</p>
                             <div class="controls">
                               <span class="date">01.10.2022</span>
-                              <a href="#" class="link">подробнее</a>
+                              <a href="#" class="link" data-custom-open="modalText" >подробнее</a>
                             </div>
                           </div>
                         </div>
@@ -363,11 +422,12 @@
                             <img src="img/logo-media.png" alt="">
                             <p>PIR EXPO — крупнейшее в России профессиональное мероприятие для специалистов индустрии
                               HoReCa.
-                              25 юбилейная выставка индустрии гостеприимства пройдет с 17 по 20 октября 2022 года в МВЦ
+                              25 юбилейная выставка индустрии гостеприимства пройдет с 17 по 20 октября 2022 года в
+                              МВЦ
                               «Крокус Экспо».</p>
                             <div class="controls">
                               <span class="date">01.10.2022</span>
-                              <a href="#" class="link">подробнее</a>
+                              <a href="#" class="link" data-custom-open="modalText" >подробнее</a>
                             </div>
                           </div>
                         </div>
@@ -381,11 +441,12 @@
                             <img src="img/logo-media.png" alt="">
                             <p>PIR EXPO — крупнейшее в России профессиональное мероприятие для специалистов индустрии
                               HoReCa.
-                              25 юбилейная выставка индустрии гостеприимства пройдет с 17 по 20 октября 2022 года в МВЦ
+                              25 юбилейная выставка индустрии гостеприимства пройдет с 17 по 20 октября 2022 года в
+                              МВЦ
                               «Крокус Экспо».</p>
                             <div class="controls">
                               <span class="date">01.10.2022</span>
-                              <a href="#" class="link">подробнее</a>
+                              <a href="#" class="link" data-custom-open="modalText" >подробнее</a>
                             </div>
                           </div>
                         </div>
@@ -399,11 +460,12 @@
                             <img src="img/logo-media.png" alt="">
                             <p>PIR EXPO — крупнейшее в России профессиональное мероприятие для специалистов индустрии
                               HoReCa.
-                              25 юбилейная выставка индустрии гостеприимства пройдет с 17 по 20 октября 2022 года в МВЦ
+                              25 юбилейная выставка индустрии гостеприимства пройдет с 17 по 20 октября 2022 года в
+                              МВЦ
                               «Крокус Экспо».</p>
                             <div class="controls">
                               <span class="date">01.10.2022</span>
-                              <a href="#" class="link">подробнее</a>
+                              <a href="#" class="link" data-custom-open="modalText" >подробнее</a>
                             </div>
                           </div>
                         </div>
@@ -428,11 +490,12 @@
                             <img src="img/logo-media.png" alt="">
                             <p>PIR EXPO — крупнейшее в России профессиональное мероприятие для специалистов индустрии
                               HoReCa.
-                              25 юбилейная выставка индустрии гостеприимства пройдет с 17 по 20 октября 2022 года в МВЦ
+                              25 юбилейная выставка индустрии гостеприимства пройдет с 17 по 20 октября 2022 года в
+                              МВЦ
                               «Крокус Экспо».</p>
                             <div class="controls">
                               <span class="date">01.10.2022</span>
-                              <a href="#" class="link">подробнее</a>
+                              <a href="#" class="link" data-custom-open="modalText" >подробнее</a>
                             </div>
                           </div>
                         </div>
@@ -446,11 +509,12 @@
                             <img src="img/logo-media.png" alt="">
                             <p>PIR EXPO — крупнейшее в России профессиональное мероприятие для специалистов индустрии
                               HoReCa.
-                              25 юбилейная выставка индустрии гостеприимства пройдет с 17 по 20 октября 2022 года в МВЦ
+                              25 юбилейная выставка индустрии гостеприимства пройдет с 17 по 20 октября 2022 года в
+                              МВЦ
                               «Крокус Экспо».</p>
                             <div class="controls">
                               <span class="date">01.10.2022</span>
-                              <a href="#" class="link">подробнее</a>
+                              <a href="#" class="link" data-custom-open="modalText" >подробнее</a>
                             </div>
                           </div>
                         </div>
@@ -464,11 +528,12 @@
                             <img src="img/logo-media.png" alt="">
                             <p>PIR EXPO — крупнейшее в России профессиональное мероприятие для специалистов индустрии
                               HoReCa.
-                              25 юбилейная выставка индустрии гостеприимства пройдет с 17 по 20 октября 2022 года в МВЦ
+                              25 юбилейная выставка индустрии гостеприимства пройдет с 17 по 20 октября 2022 года в
+                              МВЦ
                               «Крокус Экспо».</p>
                             <div class="controls">
                               <span class="date">01.10.2022</span>
-                              <a href="#" class="link">подробнее</a>
+                              <a href="#" class="link" data-custom-open="modalText" >подробнее</a>
                             </div>
                           </div>
                         </div>
@@ -482,11 +547,12 @@
                             <img src="img/logo-media.png" alt="">
                             <p>PIR EXPO — крупнейшее в России профессиональное мероприятие для специалистов индустрии
                               HoReCa.
-                              25 юбилейная выставка индустрии гостеприимства пройдет с 17 по 20 октября 2022 года в МВЦ
+                              25 юбилейная выставка индустрии гостеприимства пройдет с 17 по 20 октября 2022 года в
+                              МВЦ
                               «Крокус Экспо».</p>
                             <div class="controls">
                               <span class="date">01.10.2022</span>
-                              <a href="#" class="link">подробнее</a>
+                              <a href="#" class="link" data-custom-open="modalText" >подробнее</a>
                             </div>
                           </div>
                         </div>
@@ -503,7 +569,7 @@
           </div>
         </div>
       </div>
-      <div class="educationSection">
+      <div class="educationSection" id="education">
         <div class="container">
           <div class="tabSection">
             <h2 class="caption captionOne">обучение</h2>
@@ -685,6 +751,240 @@
 
       </div>
     </footer>
+
+    <div class="micromodal-slide modal" id="modalText" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close="">
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modalCall-title">
+          <div class="modalWrap">
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close="">
+              <span></span>
+              <span></span>
+            </button>
+            <div class="modal__content" id="modalCall-content" autocomplete="off">
+              <div class="modalText scroll">
+                <div class="textSimple">
+                  <img src="img/logo-media-big.png" alt="">
+
+                  <h2 class="caption captionThree">pir expo<br />
+                    2022</h2>
+                  <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех
+                    живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль
+                    журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна,
+                    в которой жаренные члены предложения залетают прямо в рот.</p>
+                  <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех
+                    живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль
+                    журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна,
+                    в которой жаренные члены предложения залетают прямо в рот.</p>
+
+                  <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех
+                    живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль
+                    журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна,
+                    в которой жаренные члены предложения залетают прямо в рот.</p>
+
+                  <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех
+                    живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль
+                    журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна,
+                    в которой жаренные члены предложения залетают прямо в рот.</p>
+                  <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех
+                    живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль
+                    журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна,
+                    в которой жаренные члены предложения залетают прямо в рот.</p>
+
+                  <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех
+                    живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль
+                    журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна,
+                    в которой жаренные члены предложения залетают прямо в рот.</p>
+                </div>
+              </div>
+              <div class="controls">
+                <a href="#" class="link">читать полностью</a>
+                <div class="date">
+                  <span class="title">Дата проведения:</span>
+                  <span class="data">01.10.2022</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="micromodal-slide modal" id="modalProduct" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close="">
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modalCall-title">
+          <div class="modalWrap">
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close="">
+              <span></span>
+              <span></span>
+            </button>
+            <div class="modal__content" id="modalCall-content" autocomplete="off">
+              <div class="modalProduct scroll">
+                <div class="leftSide">
+                  <div class="textSimple">
+                    <h2 class="caption captionThree">Smart Scanner</h2>
+                    <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от
+                      всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек
+                      Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая
+                      страна, в которой жаренные члены предложения залетают прямо в рот. </p>
+                  </div>
+                  <div class="characteristics">
+                    <h2 class="captione captionFour">Характеристики</h2>
+                    <ul>
+                      <li>
+                        <span class="title">Характеристика </span>
+                        <span class="data">Очень важная характеристика</span>
+                      </li>
+                      <li>
+                        <span class="title">Характеристика </span>
+                        <span class="data">Очень важная характеристика</span>
+                      </li>
+                      <li>
+                        <span class="title">Характеристика </span>
+                        <span class="data">Очень важная характеристика</span>
+                      </li>
+                      <li>
+                        <span class="title">Характеристика </span>
+                        <span class="data">Очень важная характеристика</span>
+                      </li>
+                      <li>
+                        <span class="title">Характеристика </span>
+                        <span class="data">Очень важная характеристика</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="priceBlock">
+                    <ul>
+                      <li>
+                        <span class="price">35 000 <span class="cur">₽</span></span>
+                        <span class="desc">цена</span>
+                      </li>
+                      <li class="sale">
+                        <span class="price">45 000 <span class="cur">₽</span></span>
+                        <span class="desc">цена</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <a href="#" class="btn btnPrimary">Заказать</a>
+                </div>
+                <div class="picture">
+                  <img src="img/pack4.png" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="micromodal-slide modal" id="modalAbout" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close="">
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modalCall-title">
+          <div class="modalWrap">
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close="">
+              <span></span>
+              <span></span>
+            </button>
+            <div class="modal__content" id="modalCall-content" autocomplete="off">
+              <div class="modalText scroll">
+                <div class="textSimple">
+                  <div class="userName">
+                    <span class="title">Генеральный директор</span>
+                    <span class="name">Иванов Иван Иванович</span>
+                  </div>
+                  <h2 class="caption captionThree">«дЖАМП рЕСТОРАНТС ЮНАЙТЕД ГРУПП»</h2>
+                  <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех
+                    живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль
+                    журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна,
+                    в которой жаренные члены предложения залетают прямо в рот.</p>
+                  <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех
+                    живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль
+                    журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна,
+                    в которой жаренные члены предложения залетают прямо в рот.</p>
+
+                  <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех
+                    живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль
+                    журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна,
+                    в которой жаренные члены предложения залетают прямо в рот.</p>
+
+                  <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех
+                    живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль
+                    журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна,
+                    в которой жаренные члены предложения залетают прямо в рот.</p>
+                  <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех
+                    живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль
+                    журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна,
+                    в которой жаренные члены предложения залетают прямо в рот.</p>
+
+                  <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех
+                    живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль
+                    журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна,
+                    в которой жаренные члены предложения залетают прямо в рот.</p>
+                </div>
+              </div>
+              <div class="controls">
+                <div class="date">
+                  <span class="title">Дата проведения:</span>
+                  <span class="data">01.10.2022</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="micromodal-slide modal" id="modalCall" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close="">
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modalCall-title">
+          <div class="modalWrap">
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close="">
+              <span></span>
+              <span></span>
+            </button>
+            <div class="modal__content" id="modalCall-content" autocomplete="off">
+              <form class="modalForm">
+                <h2 class="caption captionThree">Заказать звонок</h2>
+                <div class="inputWrapper">
+                  <label for="">укажите имя</label>
+                  <input type="text" placeholder="Иванов Иван..">
+                </div>
+                <div class="inputWrapper">
+                  <label for="">укажите телефон</label>
+                  <input type="text" placeholder="+ 7 (99.....">
+                </div>
+                <div class="checkBlock">
+                  <input type="checkbox" id="personal">
+                  <label for="personal">Согласен на обработку персональных данных</label>
+                </div>
+                <div class="controls">
+                  <button class="btn btnPrimary">Отправить</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="micromodal-slide modal" id="modalThank" aria-hidden="true">
+      <div class="modal__overlay" tabindex="-1" data-micromodal-close="">
+        <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modalCall-title">
+          <div class="modalWrap">
+            <button class="modal__close" aria-label="Close modal" data-micromodal-close="">
+              <span></span>
+              <span></span>
+            </button>
+            <div class="modal__content" id="modalCall-content" autocomplete="off">
+              <div class="modalThank">
+                <h2 class="caption captionThree">спасибо!</h2>
+                <p>Ваша заявка принята.<br />
+                  Ожидайте звонка</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <script src="js/jquery-3.6.0.min.js"></script>
@@ -694,6 +994,7 @@
   <script src="js/masonry.pkgd.min.js"></script>
   <script src="js/micromodal.min.js"></script>
   <script src="js/jquery.tabslet.min.js"></script>
+  <script src="js/fancybox.umd.js"></script>
   <script src="js/script.js"></script>
 </body>
 

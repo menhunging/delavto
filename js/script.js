@@ -16,17 +16,24 @@ $(document).ready(function () {
     let menuArrow = $(".menuArrow");
     let menuDrop = $(".menuDropWrapper");
     let logoBurger = $(".logoBurger");
+    let menuClose = $(".menuClose");
 
     menuArrow.click(function (e) {
       e.preventDefault();
       $(this).toggleClass("open");
-      logoBurger.toggleClass("open");
+      // logoBurger.toggleClass("open");
       menuDrop.toggleClass("open").stop().slideToggle();
     });
 
     logoBurger.click(function (e) {
       e.preventDefault();
-      $(this).toggleClass("open");
+      // $(this).toggleClass("open");
+      menuArrow.toggleClass("open");
+      menuDrop.toggleClass("open").stop().slideToggle();
+    });
+
+    menuClose.click(function (e) {
+      e.preventDefault();
       menuArrow.toggleClass("open");
       menuDrop.toggleClass("open").stop().slideToggle();
     });
@@ -36,6 +43,8 @@ $(document).ready(function () {
     $(".tabs").tabslet({
       mouseevent: "click",
       attribute: "href",
+      animation: true,
+      // deeplinking: true, // для hash надо попробовать
     });
   }
 
@@ -43,6 +52,7 @@ $(document).ready(function () {
     $(".tabsWithLeft").tabslet({
       mouseevent: "click",
       attribute: "href",
+      animation: true,
     });
   }
 
@@ -246,10 +256,161 @@ $(document).ready(function () {
   }
 
   if ($("select").length > 0) {
-    $("select").selectric({
-      onInit: function () {
-        // $(".selectric .button").addClass("btnSelectric");
+    $("select").selectric();
+  }
+
+  if ($(".calendar").length > 0) {
+    function Calendar(id, year, month) {
+      var Dlast = new Date(year, month + 1, 0).getDate(),
+        D = new Date(year, month, Dlast),
+        DNlast = new Date(D.getFullYear(), D.getMonth(), Dlast).getDay(),
+        DNfirst = new Date(D.getFullYear(), D.getMonth(), 1).getDay(),
+        calendar = "<div class='tr'>",
+        month = [
+          "Январь",
+          "Февраль",
+          "Март",
+          "Апрель",
+          "Май",
+          "Июнь",
+          "Июль",
+          "Август",
+          "Сентябрь",
+          "Октябрь",
+          "Ноябрь",
+          "Декабрь",
+        ];
+
+      if (DNfirst != 0) {
+        for (var i = 1; i < DNfirst; i++) calendar += "<div class='td'></div>";
+      } else {
+        for (var i = 0; i < 6; i++) calendar += "<div class='td'></div>";
+      }
+
+      for (var i = 1; i <= Dlast; i++) {
+        if (
+          i == new Date().getDate() &&
+          D.getFullYear() == new Date().getFullYear() &&
+          D.getMonth() == new Date().getMonth()
+        ) {
+          calendar += "<div class='td today'>" + i + "</div>";
+        } else {
+          calendar += "<div class='td'>" + i + "</div>";
+        }
+        if (new Date(D.getFullYear(), D.getMonth(), i).getDay() == 0) {
+          calendar += "</div><div class='tr'>";
+        }
+      }
+
+      for (var i = DNlast; i < 7; i++) calendar += "<div class='td'>&nbsp;";
+
+      document.querySelector("#" + id + " .tbody").innerHTML =
+        calendar + "</div>";
+
+      document.querySelector(".calendarTitle .month").innerHTML =
+        month[D.getMonth()];
+
+      document.querySelector(".calendarTitle .year").innerHTML =
+        D.getFullYear() + " г";
+
+      document.querySelector(".calendarTitle .month").dataset.month =
+        D.getMonth();
+
+      document.querySelector(".calendarTitle .year").dataset.year =
+        D.getFullYear();
+
+      // if (document.querySelectorAll("#" + id + " .tbody .tr").length < 6) {
+      //   // чтобы при перелистывании месяцев не "подпрыгивала" вся страница, добавляется ряд пустых клеток. Итог: всегда 6 строк для цифр
+      //   document.querySelector(
+      //     "#" + id + " .tbody"
+      //   ).innerHTML += `<div class='tr'>
+      //     <div class='td'>&nbsp;</div>
+      //     <div class='td'>&nbsp;</div>
+      //     <div class='td'>&nbsp;</div>
+      //     <div class='td'>&nbsp;</div>
+      //     <div class='td'>&nbsp;</div>
+      //     <div class='td'>&nbsp;</div>
+      //     <div class='td'>&nbsp;</div>
+      //     </div>`;
+      // }
+
+      // переключение месяцев
+      if ($(".listMount").length > 0) {
+        $(".listMount li").eq(D.getMonth()).addClass("active");
+        $(".listMount li").click(function () {
+          $(".listMount li").removeClass("active");
+          $(this).addClass("active");
+          let current = $(this).index();
+          Calendar(
+            "calendar",
+            document.querySelector(".calendarTitle .year").dataset.year,
+            current
+          );
+        });
+      }
+    }
+
+    Calendar("calendar", new Date().getFullYear(), new Date().getMonth());
+
+    // переключатель минус месяц
+    document.querySelector(".calendarPrev").onclick = function () {
+      $(".listMount li").removeClass("active");
+      Calendar(
+        "calendar",
+        document.querySelector(".calendarTitle .year").dataset.year,
+        parseFloat(
+          document.querySelector(".calendarTitle .month").dataset.month
+        ) - 1
+      );
+    };
+
+    // переключатель плюс месяц
+    document.querySelector(".calendarNext").onclick = function () {
+      $(".listMount li").removeClass("active");
+      Calendar(
+        "calendar",
+        document.querySelector(".calendarTitle .year").dataset.year,
+        parseFloat(
+          document.querySelector(".calendarTitle .month").dataset.month
+        ) + 1
+      );
+    };
+  }
+
+  if ($(".modal").length > 0) {
+    MicroModal.init({
+      openTrigger: "data-custom-open",
+      disableScroll: true,
+      awaitCloseAnimation: true,
+    });
+
+    $("a[data-custom-open]").map(function () {
+      $(this).click((e) => e.preventDefault());
+    });
+  }
+
+  if (location.hash != "" && $(".tabs").length) {
+    let scroll = 0;
+    let hash = window.location.hash;
+
+    window.location.hash = "";
+    history.pushState("", document.title, window.location.pathname);
+
+    scroll = $(hash).parents(".tabs").offset().top - 100;
+    $(hash).parents(".tabs").trigger("show", hash);
+
+    $("html, body").animate(
+      {
+        scrollTop: scroll,
       },
+      300
+    );
+  }
+
+  if ($(".linkFancyBox").length > 0) {
+    Fancybox.bind("[data-fancybox]", {
+      speedIn: 600,
+      speedOut: 600,
     });
   }
 
@@ -282,18 +443,6 @@ $(document).ready(function () {
           $(document).off("mouseup");
         }
       });
-    });
-  }
-
-  if ($(".modal").length > 0) {
-    MicroModal.init({
-      openTrigger: "data-custom-open",
-      disableScroll: true,
-      awaitCloseAnimation: true,
-    });
-
-    $("a[data-custom-open]").map(function () {
-      $(this).click((e) => e.preventDefault());
     });
   }
 });

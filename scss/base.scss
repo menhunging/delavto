@@ -135,6 +135,7 @@ input {
   color: #000000;
   margin-top: -15px;
   display: block;
+  position: relative;
 }
 
 .captionOne {
@@ -600,7 +601,6 @@ input {
   }
   .tabsContent {
     width: calc(100% - 275px);
-    @include transform(translateX(13px));
   }
 }
 
@@ -658,30 +658,50 @@ input {
   }
 }
 
+.menuClose {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 30px;
+  height: 30px;
+  .line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 1px;
+    background-color: $colorWhite;
+    &:nth-child(1) {
+      @include transform(rotate(45deg) translateX(1px));
+    }
+    &:nth-child(2) {
+      @include transform(rotate(-45deg) translateX(1px));
+    }
+  }
+}
+
 // modals base
 
 .modal {
   font-family: $fontMain;
   display: none;
+  width: 100%;
 }
 
 .modal.is-open {
   display: block;
   z-index: 15;
+  position: fixed;
 }
 
 .modal__container {
-  overflow: visible;
+  overflow: auto;
   background: transparent;
   padding: 0;
   margin: 0;
-  max-width: 1105px;
   width: 100%;
-  background-color: $colorWhite;
-  @include border-radius(0);
-  .modalWrap {
-    padding: 44px 66px 80px;
-  }
+  max-width: 100%;
+  padding: 50px 0;
 }
 
 .modalBlock {
@@ -692,25 +712,286 @@ input {
 .modal__content {
   padding: 0;
   margin: 0;
+  .link {
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-decoration-line: underline;
+    @include transition(all 0.3s);
+    color: #4c535b;
+    &:hover {
+      text-decoration-color: transparent;
+    }
+  }
 }
 
 .modal__close {
-  width: 25px;
-  height: 25px;
+  width: 33px;
+  height: 33px;
+  padding: 10px;
+  background-color: $colorSite1;
+  @include border-radius(50%);
   position: absolute;
   right: -32px;
   top: -32px;
   display: block;
+  @include transition(all 0.3s);
   span {
     position: relative;
     display: block;
     width: 100%;
-    height: 3px;
+    height: 2px;
     background-color: $colorWhite;
     @include transform(rotate(45deg));
     &:nth-child(2) {
       @include transform(rotate(-45deg));
-      top: -3px;
+      top: -2px;
     }
+  }
+  &:hover {
+    background-color: $colorSite2;
+  }
+}
+
+.modal__content {
+  .scroll {
+    &::-webkit-scrollbar {
+      width: 5px;
+      @include border-radius(10px);
+      margin-right: 12px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: #d9d9d9;
+      @include border-radius(10px);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $colorSite1;
+      @include border-radius(10px);
+    }
+  }
+}
+
+#modalAbout {
+  .caption {
+    max-width: 426px;
+  }
+}
+#modalAbout,
+#modalText {
+  max-height: 669px;
+  .modal__content {
+    padding: 50px 0;
+  }
+}
+
+.modalText {
+  max-height: 547px;
+  overflow: auto;
+  padding: 0 72px 0 84px;
+  margin-right: 12px;
+  .textSimple {
+    padding-bottom: 20px;
+  }
+
+  .caption {
+    max-width: 317px;
+    margin-bottom: 18px;
+  }
+  img {
+    float: right;
+    margin-left: 35px;
+  }
+  .userName {
+    float: right;
+  }
+}
+
+.modalWrap {
+  position: relative;
+  max-width: 1345px;
+  margin: 0 auto;
+  width: 100%;
+  background-color: $colorWhite;
+  @include border-radius(10px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  .controls {
+    padding: 0 84px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    bottom: 18px;
+    left: 0;
+    position: absolute;
+  }
+  .date {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+    color: #000000;
+    margin-left: auto;
+    .data {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 25px;
+      display: inline-block;
+      vertical-align: middle;
+      padding: 0 5px;
+      color: $colorWhite;
+      background-color: $colorSite1;
+      margin-left: 14px;
+    }
+  }
+}
+
+#modalProduct {
+  max-height: 669px;
+  .modal__content {
+    padding: 50px 0;
+  }
+}
+
+.modalProduct {
+  padding: 0 72px 0 84px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-height: 760px;
+  overflow: auto;
+  .leftSide {
+    width: 100%;
+    max-width: 860px;
+  }
+  .picture {
+    width: 320px;
+    img {
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+  .caption {
+    margin-bottom: 10px;
+  }
+  .characteristics {
+    margin-top: 16px;
+    ul {
+      max-width: 665px;
+      li {
+        font-size: 18px;
+        line-height: 25px;
+        color: $colorBlack;
+        padding: 14px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & + li {
+          border-top: 1px solid #d7d7d7;
+        }
+      }
+    }
+    .title {
+    }
+    .data {
+    }
+  }
+  .priceBlock {
+    margin-top: 34px;
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      li {
+        margin-right: 19px;
+        &.sale {
+          .price {
+            color: #4c535b;
+            font-size: 20px;
+            text-decoration: line-through;
+            font-weight: 400;
+            .cur {
+              font-size: 13px;
+            }
+          }
+        }
+        & + li {
+          margin-left: 64px;
+        }
+      }
+    }
+    .price {
+      font-weight: 700;
+      font-size: 25px;
+      line-height: 20px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: #e95a0c;
+      display: block;
+      .cur {
+        font-size: 20px;
+      }
+    }
+    .desc {
+      font-size: 16px;
+      line-height: 12px;
+      color: #818181;
+      display: block;
+    }
+  }
+  .btn {
+    min-width: 232px;
+    margin-top: 29px;
+  }
+}
+
+.modalForm {
+  padding: 33px 30px;
+  .caption {
+    margin-bottom: 30px;
+    white-space: nowrap;
+  }
+  .inputWrapper {
+    & + .inputWrapper {
+      margin-top: 17px;
+    }
+  }
+  .checkBlock {
+    margin-top: 14px;
+    label {
+      line-height: 20px;
+    }
+  }
+  .controls {
+    position: static;
+    margin-top: 17px;
+    display: flex;
+    justify-content: center;
+  }
+  .btn {
+    min-width: 232px;
+  }
+}
+
+#modalThank,
+#modalCall {
+  .modalWrap {
+    max-width: 370px;
+  }
+}
+
+.modalThank {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  color: #000000;
+  min-height: 422px;
+  .caption {
+    margin-bottom: 13px;
   }
 }
