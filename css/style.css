@@ -1713,6 +1713,11 @@ input {
   left: 3px;
   top: 0;
   font-size: 21px;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .headerPhone {
