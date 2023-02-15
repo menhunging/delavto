@@ -5903,6 +5903,9 @@ input {
   .preloader .preloaderLogo.position {
     transform: scale(1);
   }
+  .greeting .textSimple {
+    max-width: 280px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
