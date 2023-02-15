@@ -1,1 +1,400 @@
-@media (max-width: 639px) {}
+@media (max-width: 639px) {
+  .captionOne {
+    font-size: 20px;
+    line-height: 30px;
+    padding-left: 45px;
+    &::before {
+      font-size: 24px;
+    }
+  }
+
+  .greeting {
+    .caption {
+      font-size: 30px;
+      line-height: 40px;
+      .desc {
+        font-size: 20px;
+        line-height: 25px;
+      }
+    }
+    .btn {
+      min-width: 180px;
+    }
+    .textSimple {
+      padding-left: 45px;
+    }
+  }
+
+  .btn {
+    padding: 10px 10px;
+    min-width: 180px;
+  }
+
+  .textSimple {
+    font-size: 15px;
+    line-height: 23px;
+  }
+
+  .whyList {
+    .item {
+      width: 50%;
+      .icon {
+        font-size: 60px;
+      }
+    }
+  }
+  .txt {
+    font-size: 15px;
+  }
+
+  .tabsInformation {
+    .tabsHead {
+      width: calc(100% + 10px);
+      li {
+        margin: 0 5px;
+        width: calc(50% - 10px);
+        margin-bottom: 10px;
+      }
+    }
+    .tabsBody {
+      margin-top: 0;
+    }
+  }
+
+  .listOurDev {
+    .title {
+      font-size: 15px;
+      line-height: 23px;
+    }
+  }
+
+  .configurator {
+    .desc {
+      padding-left: 45px;
+    }
+    .listInputWrapper {
+      margin: 20px 0 -20px;
+    }
+    .inputWrapper {
+      width: 100%;
+      margin: 0 0 20px;
+    }
+    .btn {
+      margin-top: 30px;
+      margin-left: 0;
+    }
+  }
+
+  .map {
+    height: 320px;
+    margin-top: 30px;
+  }
+
+  .greeting .btn {
+    margin-left: 45px;
+  }
+
+  .menuDrop {
+    .leftSide {
+      flex-wrap: wrap;
+    }
+    .col {
+      width: 50%;
+      margin-bottom: 10px;
+      ul {
+        max-width: 100% !important;
+        li + li {
+          margin-top: 10px;
+        }
+      }
+      &:nth-child(3) {
+        width: 100%;
+      }
+      .links {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 10px;
+        li {
+          width: 50%;
+          margin-bottom: 10px;
+          & + li {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    .info {
+      grid-template-columns: 1fr 1fr;
+      .item:nth-child(3) {
+        grid-column: 1/3;
+        grid-row: 2/3;
+      }
+    }
+    .controls {
+      padding: 15px 0;
+      justify-content: center;
+      margin: 0;
+      width: 100%;
+      li {
+        text-align: center;
+      }
+      .btn {
+        margin: 0;
+      }
+    }
+  }
+
+  .dropPartner {
+    margin-top: 20x;
+    text-align: center;
+    img {
+      margin: 0 auto;
+    }
+  }
+  .solutionsList {
+    .item {
+      padding: 15px;
+      width: 100%;
+    }
+
+    .controls {
+      margin-top: 15px;
+    }
+    .btn {
+      margin-left: 0;
+      margin-top: 0;
+    }
+    .priceBlock {
+      margin-top: 15px;
+    }
+  }
+
+  .titlePage {
+    .caption {
+      margin-top: 10px;
+    }
+  }
+
+  .solutionsSection {
+    padding: 5px 0 50px;
+  }
+
+  .packList {
+    .item {
+      width: calc(50% - 20px);
+      min-height: 200px;
+      margin-bottom: 15px;
+      &:nth-child(3) {
+        width: 60%;
+      }
+    }
+    .head {
+      padding: 20px 14px;
+      font-size: 16px;
+      line-height: 20px;
+      min-height: 100px;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+    .info {
+    }
+    .controls {
+      margin-top: auto;
+    }
+    .btn {
+      margin-left: 0;
+    }
+  }
+
+  .solutionsPackSection {
+    .textSimple {
+      margin-top: 10px;
+    }
+  }
+
+  .tabs .tabsHead {
+    margin: 15px -5px 0;
+    li {
+      margin: 0 5px 10px;
+    }
+    a {
+      padding: 5px 15px;
+    }
+  }
+
+  .packages {
+    .item {
+      width: 100%;
+    }
+  }
+
+  .developersSection {
+    padding: 10px 0 120px;
+  }
+
+  .developerBlock {
+    padding: 20px 15px;
+
+    .picture {
+      right: -70px;
+      bottom: -41px;
+      width: 250px;
+    }
+    .caption {
+      line-height: 24px;
+      margin-bottom: 10px;
+    }
+    .controls {
+      max-width: 280px;
+    }
+  }
+
+  .offersSliderWrapper {
+    max-width: 73%;
+  }
+
+  .contacts {
+    .leftSide {
+      width: 100%;
+    }
+    .contactsInfo {
+      grid-template-columns: 1fr;
+    }
+    .contactsForm {
+      width: 100%;
+      .inputWrapper {
+        width: 100%;
+      }
+    }
+  }
+
+  .contactsInfo li:nth-child(3),
+  .contactsInfo li:nth-child(4) {
+    grid-column: 1/2;
+  }
+
+  .notPage {
+    font-size: 16px;
+    line-height: 23px;
+    padding: 50px 0;
+    .error {
+      font-size: 100px;
+      @include transform(translate(9px));
+    }
+    p {
+      margin-top: 20px;
+    }
+    .btn {
+      margin-top: 20px;
+      min-width: inherit;
+      max-width: 90%;
+      width: 100%;
+    }
+  }
+
+  .captionDesctiption {
+    margin-top: 10px;
+  }
+
+  .aboutBlock {
+    .textSimple {
+      img {
+        margin: 0 0 15px;
+      }
+    }
+  }
+
+  .stepSection {
+    .stepList {
+      margin-top: 20px;
+    }
+    .stepItem {
+      width: 100%;
+      margin-bottom: 20px;
+      text-align: left;
+      line-height: 20px;
+      br {
+        display: none;
+      }
+    }
+    .name {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+
+  .stepSection .stepItem:nth-child(2n)::before,
+  .stepSection .stepItem:nth-child(2n)::after {
+    display: none !important;
+  }
+
+  .sliderReviews {
+    .reviewHead {
+      padding: 15px;
+    }
+    .reviewBody {
+      padding: 15px 15px 20px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  .team {
+    padding: 15px;
+    font-size: 14px;
+    line-height: 20px;
+    .picture {
+      right: -20px;
+      top: -42px;
+      width: 130px;
+    }
+    .exp {
+      margin-bottom: 10px;
+    }
+  }
+
+  .teamWrapper {
+    .desc {
+      padding-left: 45px;
+      margin-top: 0;
+    }
+  }
+
+  .modalWrap {
+    .controls {
+      padding: 0 20px;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+  }
+
+  .modal__content .link {
+    & + .date {
+      margin-left: 0;
+      margin-top: 10px;
+    }
+  }
+
+  #modalAbout .modal__content,
+  #modalText .modal__content {
+    padding: 50px 0 90px;
+  }
+
+  .modalProduct {
+    padding: 0 15px;
+  }
+
+  .preloader .text {
+    font-size: 30px;
+    line-height: 35px;
+    margin-bottom: 150px;
+    &::before {
+      display: none;
+    }
+  }
+}

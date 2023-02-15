@@ -1,1 +1,248 @@
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+  .container {
+    width: 100%;
+  }
+
+  .search {
+    margin-left: auto;
+    margin-right: 10px;
+  }
+
+  .greeting {
+    .rightSide {
+      display: none;
+    }
+  }
+
+  .greeting {
+    padding: 70px 0;
+    .caption {
+      font-size: 35px;
+      line-height: 45px;
+      .desc {
+        font-size: 25px;
+        line-height: 30px;
+      }
+    }
+    .textSimple {
+      line-height: 24px;
+    }
+    .btn {
+      margin-top: 20px;
+    }
+  }
+
+  .textSimple {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .captionOne {
+    font-size: 25px;
+    line-height: 55px;
+  }
+
+  .tabsInformation {
+    flex-wrap: wrap;
+    .tabsHead {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -5px;
+      li {
+        margin: 0 5px;
+        & + li {
+          margin-top: 0;
+        }
+      }
+    }
+    .tabsBody {
+      margin-top: 30px;
+      width: 100%;
+    }
+  }
+
+  .configurator {
+    padding: 20px;
+  }
+
+  .footerContent {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footerInfo {
+    top: 0;
+    margin-top: 15px;
+  }
+
+  .footerBottom {
+    padding-top: 0;
+  }
+
+  .footer {
+    .socialDark {
+      margin-top: 0;
+    }
+  }
+
+  .copyRight {
+    order: 3;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    br {
+      display: none;
+    }
+  }
+
+  .footerTextDeveloper {
+    margin-top: 0;
+  }
+
+  .mapSection {
+    padding: 50px 0;
+  }
+
+  .solutionsList {
+    .text {
+      margin-top: 15px;
+      .name {
+        font-size: 16px;
+        line-height: 20px;
+      }
+    }
+    .complectBlock {
+      margin-top: 10px;
+      font-size: 15px;
+      line-height: 18px;
+    }
+  }
+
+  .serviceText {
+    padding: 15px;
+  }
+
+  .packages {
+    .packSet {
+      min-height: 100px;
+    }
+  }
+
+  .developerBlock {
+    .controls {
+      margin-top: 20px;
+      flex-direction: column;
+      max-width: 300px;
+      .btn {
+        padding: 13px 15px;
+      }
+    }
+  }
+
+  .offersSliderWrapper {
+    max-width: 78%;
+  }
+
+  .offersSlider {
+    .controls {
+      flex-direction: row;
+    }
+  }
+
+  .offersSliderWrapper {
+    .caption {
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+
+  .offersSection {
+    padding: 30px 0;
+  }
+
+  .contacts {
+    .leftSide {
+      width: 100%;
+    }
+    .contactsInfo {
+      grid-template-columns: 1fr 1fr;
+    }
+    .contactsForm {
+      width: 100%;
+      .inputWrapper {
+        width: calc(50% - 40px);
+      }
+    }
+    .btn {
+      margin-top: 20px;
+    }
+  }
+
+  .contactsInfo li:nth-child(3),
+  .contactsInfo li:nth-child(4) {
+    grid-column: 1/3;
+  }
+  .captionDesctiption {
+    margin-top: 0;
+  }
+
+  .tabsWithLeft {
+    .tabsLeftSide {
+      max-width: 100%;
+      li + li {
+        margin-top: 25px;
+      }
+      br {
+        display: none;
+      }
+    }
+    .tabsContent {
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+
+  .reviews .tabsWithLeft .tabsLeftSide {
+    padding-top: 30px;
+  }
+
+  .solution {
+    padding-bottom: 50px;
+  }
+
+  .educationSection .tabs .tabsHead a {
+    padding: 0px 20px;
+  }
+
+  .education .rightSide {
+    width: 100%;
+    padding-top: 42px;
+  }
+
+  .mediaWrap .tabsWithLeft {
+    margin-top: 0;
+  }
+
+  .calendar .td {
+    margin: 0;
+    width: calc(100% / 7);
+    @include border-radius(50px);
+  }
+  .calendarWrapper,
+  .listMount {
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .preloader {
+    min-height: 450px;
+    .text {
+      font-size: 40px;
+      line-height: 45px;
+      &::before {
+        right: 31px;
+      }
+    }
+  }
+}

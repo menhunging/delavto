@@ -1,5 +1,6 @@
 .content {
   position: relative;
+  width: 100%;
   @include before {
     background-image: url("../img/back-content.png");
     width: 30px;
@@ -297,6 +298,7 @@
     line-height: 25px;
     letter-spacing: 0.05em;
     color: $colorBlack;
+    display: block;
   }
   .listInputWrapper {
     display: flex;
@@ -1068,10 +1070,10 @@
 .reviews {
   padding: 17px 0;
   .swiper-button-next {
-    right: -87px;
+    right: -100px;
   }
   .swiper-button-prev {
-    left: -420px;
+    left: -135px;
   }
   .swiper-pagination {
     margin-top: 30px;
@@ -1414,8 +1416,9 @@
   }
   .picture {
     position: absolute;
-    right: 0;
+    left: calc(50% + 285px);
     bottom: -83px;
+    z-index: -1;
   }
 }
 
@@ -1869,4 +1872,3 @@
 .solution {
   padding-bottom: 160px;
 }
-

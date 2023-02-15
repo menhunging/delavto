@@ -1,1 +1,447 @@
-@media (max-width: 1199px) {}
+@media (max-width: 991px) {
+  .container {
+    width: 768px;
+  }
+  .menu {
+    display: none;
+  }
+
+  .header {
+    .logoWrapper {
+      width: 170px;
+    }
+    .logoBurger {
+      left: 24px;
+      width: 25px;
+      height: 25px;
+      .line {
+        & + .line {
+          margin-top: 9px;
+        }
+      }
+    }
+  }
+
+  .clientCity {
+    font-size: 14px;
+    .city {
+      font-size: 14px;
+    }
+  }
+
+  .headerPhone {
+    display: none;
+  }
+  .search {
+    border: 0;
+    margin-right: 0;
+    width: 80px;
+    .text {
+      display: block;
+      text-align: right;
+    }
+  }
+
+  .menuDrop {
+    .col {
+      ul li + li {
+        margin-top: 15px;
+      }
+      .links li + li {
+        margin-top: 20px;
+      }
+    }
+
+    .leftSide {
+      width: 100%;
+    }
+    .rightSide {
+      width: 100%;
+      margin-top: 25px;
+    }
+  }
+
+  .menuDrop {
+    .info {
+      grid-template-columns: 1fr 1fr 1fr;
+      display: grid;
+      .item {
+        & + .item {
+          margin-top: 0;
+        }
+        &:nth-child(3) {
+          grid-column: 1/4;
+          grid-row: 2/3;
+        }
+      }
+    }
+    .controls {
+      margin-top: 0;
+    }
+  }
+  .greeting {
+    padding: 100px 0;
+    .leftSide {
+      width: 100%;
+    }
+    .rightSide {
+      width: 350px;
+      top: auto;
+      bottom: -20px;
+      right: -50px;
+    }
+    .textSimple {
+      max-width: 470px;
+    }
+  }
+
+  .whyList {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    .item {
+      width: calc(100% / 3);
+      margin-bottom: 30px;
+      & + .item {
+        margin-top: 0;
+      }
+      .line {
+        display: none;
+      }
+    }
+    .icon {
+      font-size: 70px;
+    }
+    .txt {
+      margin-top: 20px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  .ourDeveloperSection {
+    padding: 0;
+  }
+
+  .tabsInformation {
+    .picture {
+      display: none;
+    }
+    .btn {
+      margin-top: 30px;
+    }
+  }
+
+  .listOurDev p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .youPartnersSection {
+    padding: 50px 0;
+  }
+
+  .youPartnerSlider {
+    max-width: 620px;
+  }
+
+  .configurator {
+    .listInputWrapper {
+      margin-bottom: -20px;
+    }
+    .inputWrapper {
+      width: calc(50% - 60px);
+      margin-bottom: 20px;
+    }
+  }
+
+  .map {
+    height: 410px;
+  }
+
+  .footerContent {
+    padding: 30px 15px 20px;
+    grid-template-columns: 255px 1fr;
+    grid-template-rows: 80px 1fr;
+  }
+
+  .footerBottom {
+    padding-top: 50px;
+  }
+
+  .footerMenu {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    .col {
+      width: calc(100% / 3);
+      margin-bottom: 30px;
+    }
+  }
+  .footerTextDeveloper {
+    margin-top: 30px;
+  }
+
+  .packList {
+    justify-content: center;
+    .item {
+      width: calc(50% - 20px);
+      min-height: 180px;
+    }
+    .head {
+      .desc {
+        font-size: 14px;
+      }
+    }
+    .info {
+      min-height: inherit;
+      li {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .serviceText {
+    padding: 30px;
+  }
+
+  .developerBlock {
+    padding: 0 15px 30px;
+    .side {
+      max-width: 100% !important;
+      width: 100%;
+    }
+    .picture {
+      right: -50px;
+      bottom: -61px;
+      width: 320px;
+    }
+  }
+  .developerBlock .controls {
+    margin-top: 40px;
+    margin: 40px -10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    .btn {
+      margin-bottom: 15px;
+      & + .btn {
+      }
+    }
+  }
+
+  .developerBlock:nth-child(2n) .picture {
+    left: auto;
+    right: 0px;
+    width: 160px;
+    bottom: -50px;
+  }
+
+  .offersSliderWrapper {
+    max-width: 628px;
+  }
+
+  .offersSlider {
+    .controls {
+      flex-direction: column;
+    }
+  }
+
+  .contactsForm {
+    padding: 30px;
+
+    .picture {
+      display: none;
+    }
+    .caption {
+      display: block;
+      text-align: center;
+      font-size: 24px;
+      line-height: 28px;
+      margin: 0;
+      padding: 0;
+    }
+    .listInputWrapper {
+      margin-top: 20px;
+    }
+    .inputWrapper {
+      margin: 0 17px;
+      width: 100%;
+    }
+  }
+
+  .checkBlock label {
+    line-height: 20px;
+  }
+
+  .notPage {
+    padding: 100px 0;
+    .error {
+      @include transform(translateX(14px));
+    }
+  }
+
+  .aboutBlock {
+    .textSimple {
+      display: flex;
+      flex-direction: column;
+      .caption {
+        order: -1px;
+        margin: 0;
+      }
+      img {
+        margin: 0 0 30px;
+        order: 0;
+      }
+    }
+  }
+
+  .stepSection {
+    .stepItem {
+      width: calc(100% / 2 - 72px);
+      &:nth-child(2n) {
+        &::before,
+        &::after {
+          display: block !important;
+        }
+      }
+      &:nth-child(2n + 1) {
+        &::before,
+        &::after {
+          display: none !important;
+        }
+      }
+    }
+  }
+
+  .sliderTeamWrapper {
+    max-width: 80%;
+  }
+
+  .solutionItem {
+    .head {
+      flex-wrap: wrap;
+      .picture {
+        width: 100%;
+      }
+      .info {
+        padding: 15px 0;
+        width: 100%;
+      }
+    }
+  }
+
+  .sliderMediaWrapper .swiper-pagination {
+    margin-top: 30px;
+  }
+
+  .calendar {
+    min-width: 100%;
+    width: 100%;
+    .td {
+      margin: 13px;
+    }
+  }
+
+  .listEvent {
+    border: 0;
+    max-width: 100%;
+    border-top: 1px solid #aeaeae;
+    margin-top: 10px;
+    padding: 0;
+    .head {
+      padding: 10px;
+    }
+    .line {
+      padding: 0 10px;
+      & + .line {
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .modalProduct {
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    .leftSide {
+      max-width: 100%;
+      width: 100%;
+    }
+    .picture {
+      width: 100%;
+      margin: 0 0 20px;
+
+      img {
+        max-width: 180px;
+        margin: 0;
+      }
+    }
+  }
+
+  .preloader {
+    .text {
+      &::before {
+        top: calc(100% - 23px);
+        right: 81px;
+      }
+    }
+  }
+
+  .preloader {
+    .preloaderLogo {
+      &.position {
+        width: 170px;
+        height: 38px;
+        .logoBurger {
+          left: 25px;
+          top: 1px;
+          width: 24px;
+          height: 24px;
+          .line {
+            height: 2px;
+            & + .line {
+              margin-top: 9px;
+            }
+          }
+        }
+        .preloaderCheck {
+          left: calc(100% - 20px);
+          top: 3px;
+          height: 21px;
+          width: 50px;
+          .circle {
+            left: calc(100% - 15px);
+            height: 14px;
+            width: 14px;
+          }
+        }
+      }
+      &.finish {
+      }
+    }
+    .logoBurger {
+      left: 56px;
+      top: 5px;
+      width: 42px;
+      height: 45px;
+      .line {
+        height: 4px;
+        & + .line {
+          margin-top: 14px;
+        }
+      }
+    }
+    .preloaderCheck {
+      &.animation {
+        width: 20px !important;
+      }
+      &.active {
+        .circle {
+          left: calc(100% - 43px);
+        }
+      }
+    }
+  }
+
+  .siteWrapper.loader .header .logoWrapper {
+    width: 170px;
+    height: 38px;
+  }
+}

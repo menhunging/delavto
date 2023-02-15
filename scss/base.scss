@@ -120,6 +120,7 @@ input {
     display: inline-block;
     vertical-align: middle;
     position: relative;
+    margin-right: 24px;
     @include before {
       top: 50%;
       width: 13px;
@@ -129,7 +130,6 @@ input {
       margin-top: 1px;
     }
     & + li {
-      margin-left: 24px;
     }
     &:last-child {
       &::before {
@@ -856,6 +856,9 @@ input {
     line-height: 25px;
     color: #000000;
     margin-left: auto;
+    .title {
+      margin-right: 14px;
+    }
     .data {
       font-weight: 700;
       font-size: 16px;
@@ -865,7 +868,6 @@ input {
       padding: 0 5px;
       color: $colorWhite;
       background-color: $colorSite1;
-      margin-left: 14px;
     }
   }
 }
@@ -903,6 +905,7 @@ input {
     ul {
       max-width: 665px;
       li {
+        flex-wrap: wrap;
         font-size: 18px;
         line-height: 25px;
         color: $colorBlack;
@@ -1037,6 +1040,7 @@ input {
   background-color: rgba(71, 74, 81, 0.95);
   text-align: center;
   @include transition(all 1s);
+  min-height: 515px;
   z-index: 15;
   &.animation {
     pointer-events: none;

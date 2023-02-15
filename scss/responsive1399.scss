@@ -1,1 +1,238 @@
-@media (max-width: 1399px) {}
+@media (max-width: 1399px) {
+  .container {
+    width: 1170px;
+    @include transform(translateX(0));
+  }
+
+  .menu {
+    .linkPage {
+      font-size: 18px;
+    }
+  }
+  .search.open {
+    input {
+      width: 400px;
+    }
+  }
+
+  .menuDrop {
+    .leftSide {
+      width: calc(100% - 350px);
+    }
+    .rightSide {
+      position: relative;
+      top: 0;
+      padding-left: 0;
+      width: 290px;
+    }
+    .info {
+      display: block;
+      .item {
+        & + .item {
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+
+  .content::before {
+    display: none;
+  }
+
+  .captionOne {
+    padding-left: 55px;
+    &::before {
+      left: 0 !important;
+    }
+  }
+
+  .greeting {
+    padding: 150px 0;
+    .leftSide {
+      width: calc(100% - 590px);
+    }
+    .rightSide {
+      width: 590px;
+    }
+    .caption {
+      font-size: 45px;
+      line-height: 55px;
+      .desc {
+        font-size: 35px;
+      }
+    }
+    .textSimple {
+      padding-left: 55px;
+    }
+    .btn {
+      margin-left: 55px;
+    }
+  }
+
+  .whyList {
+    .line {
+      width: 125px;
+      left: calc(100% - 73px);
+    }
+  }
+
+  .youPartnerSlider {
+    max-width: 1060px;
+  }
+
+  .captionInvis {
+    left: 0 !important;
+    width: 100%;
+    background-size: contain;
+  }
+
+  .swiper-pagination {
+    margin-top: 50px;
+  }
+
+  .configurator {
+    padding: 40px;
+    .desc {
+      padding-left: 55px;
+    }
+    .listInputWrapper {
+      margin: 30px -30px -30px;
+    }
+    .inputWrapper {
+      width: calc(100% / 3 - 60px);
+      margin: 0 30px 40px;
+    }
+  }
+
+  .footerMenu {
+    width: 85%;
+  }
+
+  .footerInfo .info li:first-child {
+    width: auto;
+  }
+
+  .packages {
+    .head {
+      min-height: 100px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 20px 15px;
+      .name {
+        line-height: 20px;
+      }
+    }
+    .info {
+      padding: 15px;
+    }
+    .controls {
+      justify-content: center;
+      flex-wrap: wrap;
+      flex-direction: column;
+      .link {
+        margin-top: 5px;
+      }
+    }
+    .packSet {
+      width: 100%;
+    }
+  }
+
+  .developerBlock {
+    padding: 30px 30px 50px;
+    .picture {
+      right: -130px;
+      bottom: -31px;
+    }
+    &:nth-child(2n) {
+      .picture {
+        left: -70px;
+      }
+    }
+  }
+
+  .offersSliderWrapper {
+    max-width: 1060px;
+  }
+
+  .contacts .contactsForm {
+    max-width: inherit;
+    width: calc(100% - 505px);
+  }
+
+  .reviews {
+    .swiper-button-next {
+      display: none;
+    }
+    .swiper-button-prev {
+      display: none;
+    }
+  }
+
+  .sliderTeamWrapper {
+    max-width: 1060px;
+  }
+
+  .teamWrapper {
+    .desc {
+      padding-left: 55px;
+    }
+  }
+
+  .education {
+    .leftSide {
+      min-width: inherit;
+      max-width: 60%;
+    }
+  }
+
+  .calendar {
+    width: auto;
+    flex: 1;
+    min-width: 50%;
+    .td {
+      margin: 10px;
+    }
+  }
+
+  .listEvent {
+    width: auto;
+    padding-left: 25px;
+    flex: 1;
+    padding-right: 25px;
+  }
+  .listMount {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 0 -5px 20px;
+    li {
+      margin: 0 5px 5px;
+    }
+  }
+
+  .modalText {
+    .textSimple {
+      display: flex;
+      flex-direction: column;
+    }
+    .caption {
+      margin-bottom: 10px;
+      order: -1;
+    }
+    img {
+      order: 0;
+      float: none;
+      margin: 30px 0;
+      width: 50%;
+    }
+  }
+
+  .modalProduct {
+    padding: 0 50px;
+    .leftSide {
+      max-width: 530px;
+    }
+  }
+}

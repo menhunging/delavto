@@ -119,18 +119,24 @@ $(document).ready(function () {
         el: ".youPartners .swiper-pagination",
         clickable: true,
       },
-      // breakpoints: {
-      //   320: {
-      //     slidesPerView: 1,
-      //     slidesPerGroup: 1,
-      //     spaceBetween: 20,
-      //     pagination: {
-      //       el: ".yourPools .dots",
-      //       clickable: true,
-      //       renderBullet: null,
-      //     },
-      //   },
-      // },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+        },
+        768: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+        },
+        992: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+        },
+        1200: {
+          slidesPerView: 4,
+          slidesPerGroup: 4,
+        },
+      },
     });
   }
 
@@ -148,6 +154,28 @@ $(document).ready(function () {
             .parents(".offersSliderWrapper")
             .find(".swiper-button-prev")[0],
         },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            pagination: {
+              el: ".offersSliderWrapper .swiper-pagination",
+              clickable: true,
+            },
+          },
+          768: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+          },
+          1200: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+          },
+          1500: {
+            slidesPerView: 4,
+            slidesPerGroup: 4,
+          },
+        },
       });
     });
   }
@@ -164,18 +192,16 @@ $(document).ready(function () {
         el: ".sliderReviewsWrapper .swiper-pagination",
         clickable: true,
       },
-      // breakpoints: {
-      //   320: {
-      //     slidesPerView: 1,
-      //     slidesPerGroup: 1,
-      //     spaceBetween: 20,
-      //     pagination: {
-      //       el: ".yourPools .dots",
-      //       clickable: true,
-      //       renderBullet: null,
-      //     },
-      //   },
-      // },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+        },
+        1200: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+        },
+      },
     });
   }
 
@@ -191,18 +217,20 @@ $(document).ready(function () {
         el: ".sliderDocumentsWrapper .swiper-pagination",
         clickable: true,
       },
-      // breakpoints: {
-      //   320: {
-      //     slidesPerView: 1,
-      //     slidesPerGroup: 1,
-      //     spaceBetween: 20,
-      //     pagination: {
-      //       el: ".yourPools .dots",
-      //       clickable: true,
-      //       renderBullet: null,
-      //     },
-      //   },
-      // },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+        },
+        480: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+        },
+        1200: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+        },
+      },
     });
   }
 
@@ -218,18 +246,20 @@ $(document).ready(function () {
         el: ".sliderTeamWrapper .swiper-pagination",
         clickable: true,
       },
-      // breakpoints: {
-      //   320: {
-      //     slidesPerView: 1,
-      //     slidesPerGroup: 1,
-      //     spaceBetween: 20,
-      //     pagination: {
-      //       el: ".yourPools .dots",
-      //       clickable: true,
-      //       renderBullet: null,
-      //     },
-      //   },
-      // },
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+        },
+        992: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+        },
+        1500: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+        },
+      },
     });
   }
 
@@ -250,6 +280,16 @@ $(document).ready(function () {
           prevEl: carousel
             .parents(".sliderMediaWrapper")
             .find(".swiper-button-prev")[0],
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+          },
+          992: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+          },
         },
       });
     });
@@ -417,10 +457,6 @@ $(document).ready(function () {
   if ($(".waitingLoad").length) {
     $(window).scrollTop(0);
 
-    let logoPosLeft = $(".header .logoWrapper").offset().left;
-    let logoPosTop = $(".header .logoWrapper").offset().top;
-    console.log(logoPosLeft, logoPosTop);
-
     let preloader = $(".preloader");
     let preloaderCheck = $(".preloaderCheck");
     let preloaderText = $(".preloader .text");
@@ -446,6 +482,9 @@ $(document).ready(function () {
         preloaderText.removeClass("hover");
         preloader.addClass("invisText");
 
+        let logoPosLeft = $(".header .logoWrapper").offset().left;
+        let logoPosTop = $(".header .logoWrapper").offset().top;
+
         preloaderLogo.addClass("position").css("left", logoPosLeft);
         preloaderLogo.addClass("position").css("top", logoPosTop);
       }, 500);
@@ -460,45 +499,27 @@ $(document).ready(function () {
           .stop()
           .removeClass("loader");
         $("body").removeClass("waitingLoad");
+        setInitAOS();
       }, 3000);
       setTimeout(function () {
         // через 4 сек
         preloader.remove();
       }, 4000);
     });
-  }
-
-  // --------------------------------------
-
-  if ($(".cabinetHead").length > 0) {
-    let cabinetContent = $(".cabinetContent");
-    let payments = $(".cabinetHead .paymentBalance .title");
-    let userControl = $(".cabinetHead .userControls");
-    let rightBlock = $(".cabinetRight");
-
-    payments.click(function () {
-      $(".listPaymentBalance").stop().slideToggle();
-      $(this).stop().toggleClass("open");
-    });
-
-    userControl.click(function () {
-      cabinetContent.stop().toggleClass("opened");
-      rightBlock.stop().toggleClass("open");
-      $(this).stop().toggleClass("open");
-      $(document).mouseup(function (e) {
-        if (
-          !userControl.is(e.target) &&
-          !rightBlock.is(e.target) &&
-          rightBlock.has(e.target).length === 0
-        ) {
-          cabinetContent.stop().removeClass("opened");
-          rightBlock.stop().removeClass("open");
-          userControl.stop().removeClass("open");
-          $(document).off("mouseup");
-        }
-      });
-    });
+  } else {
+    setInitAOS();
   }
 });
 
-$(window).resize(function () {});
+const setInitAOS = () => {
+  if ($("[data-aos]").length) {
+    $("[data-aos]").each((i, el) => {
+      AOS.init({
+        offset: 0,
+        duration: 2000,
+      });
+    });
+  }
+};
+
+// $(window).resize(function () {});

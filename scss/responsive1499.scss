@@ -1,0 +1,90 @@
+@media (max-width: 1600px) {
+  .calendarWrapper {
+    position: relative;
+    .calendarPrev {
+      left: -35px;
+    }
+    .calendarNext {
+      right: -35px;
+    }
+  }
+}
+
+@media (max-width: 1499px) {
+  .headerContent {
+    padding: 21px 15px;
+  }
+  .footerContent {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .menuDrop {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .youPartnerSlider {
+    max-width: 1170px;
+  }
+  .swiper-button-prev {
+    left: 10px;
+  }
+  .swiper-button-next {
+    right: 10px;
+  }
+  .footerInfo .info li:first-child {
+    width: calc(30% + 5px);
+  }
+  .offersSliderWrapper {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0;
+    transform: translateX(0);
+    .swiper-button-prev {
+      left: -50px;
+    }
+    .swiper-button-next {
+      right: -50px;
+    }
+  }
+  .notPage {
+    .captionInvis {
+      margin-left: 0;
+      top: 105px;
+      width: 100%;
+    }
+  }
+  .sliderTeamWrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .calendarWrapper {
+    .calendarTitle {
+      padding: 15px 45px;
+    }
+    .calendarNext {
+      right: 15px;
+      top: 3px;
+      &::after {
+        font-size: 20px;
+        color: $colorWhite;
+      }
+    }
+    .calendarPrev {
+      left: 15px;
+      top: 3px;
+      &::after {
+        font-size: 20px;
+        color: $colorWhite;
+      }
+    }
+  }
+
+  .modalWrap {
+    max-width: 90%;
+  }
+
+  .modalProduct .leftSide {
+    width: 100%;
+    max-width: 630px;
+  }
+}

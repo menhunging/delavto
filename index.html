@@ -15,12 +15,13 @@
   <link rel="stylesheet" type="text/css" href="css/selectric.css" />
   <link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
   <link rel="stylesheet" type="text/css" href="css/micromodal.css" />
-  <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
   <link rel="stylesheet" type="text/css" href="css/fancybox.css" />
+  <link rel="stylesheet" type="text/css" href="css/aos.css" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 
 <body class="waitingLoad">
+
   <div class="siteWrapper indexPage loader">
 
     <div class="preloader">
@@ -163,17 +164,17 @@
         <div class="container">
           <div class="greeting">
             <div class="leftSide">
-              <h1 class="caption captionOne">АВТОМАТИЗИРУЙТЕ
+              <h1 class="caption captionOne" data-aos="fade-down-right">АВТОМАТИЗИРУЙТЕ
                 <span class="desc">СВОй ресторан</span>
               </h1>
-              <div class="textSimple">
+              <div class="textSimple" data-aos="fade-down-right">
                 <p>
                   Комплексные решения для ресторанов, кафе и других заведений
                 </p>
               </div>
-              <a href="#" class="btn btnPrimary" data-custom-open="modalCall">Заказать</a>
+              <a href="#" class="btn btnPrimary" data-custom-open="modalCall" data-aos="fade-up">Заказать</a>
             </div>
-            <div class="rightSide">
+            <div class="rightSide" data-aos="fade-left">
               <img src="img/pic-greeting.png" alt="picture" class="picture">
             </div>
           </div>
@@ -182,37 +183,37 @@
       <div class="whySection">
         <div class="container">
           <div class="whyBlock">
-            <h2 class="caption captionOne">почему выбирают нас</h2>
+            <h2 class="caption captionOne" data-aos="fade-left">почему выбирают нас</h2>
             <div class="whyList">
-              <div class="item">
+              <div class="item" data-aos="fade-up-left">
                 <span class="icon icon-why1 animation"></span>
                 <span class="txt">полный контроль<br />
                   персонала
                 </span>
                 <span class="line animation"></span>
               </div>
-              <div class="item">
+              <div class="item" data-aos="fade-up-left">
                 <span class="icon icon-why2 animation"></span>
                 <span class="txt">система<br /> автоматизации<br />
                   R-Keeper и Store House
                 </span>
                 <span class="line animation"></span>
               </div>
-              <div class="item">
+              <div class="item" data-aos="fade-up-left">
                 <span class="icon icon-why3 animation"></span>
                 <span class="txt">официальный<br />
                   партнер R-Keeper
                 </span>
                 <span class="line animation"></span>
               </div>
-              <div class="item">
+              <div class="item" data-aos="fade-up-left">
                 <span class="icon icon-why4 animation"></span>
                 <span class="txt">более 12 лет<br />
                   на рынке
                 </span>
                 <span class="line animation"></span>
               </div>
-              <div class="item">
+              <div class="item" data-aos="fade-up-left">
                 <span class="icon icon-why5 animation"></span>
                 <span class="txt">сертифицированное<br /> оборудование</span>
                 <span class="line"></span>
@@ -224,9 +225,9 @@
       <div class="ourDeveloperSection">
         <div class="container">
           <div class="ourDeveloper">
-            <h2 class="caption captionOne">наши разработки</h2>
+            <h2 class="caption captionOne" data-aos="fade-down-right">наши разработки</h2>
             <div class="tabsInformation">
-              <ul class="tabsHead">
+              <ul class="tabsHead" data-aos="fade-down-right">
                 <li>
                   <a href="#tab1">
                     <span class="name">SMART SCANNER</span>
@@ -240,7 +241,7 @@
                   </a>
                 </li>
               </ul>
-              <div class="tabsBody" id="tab1">
+              <div class="tabsBody" data-aos="zoom-in-left" id="tab1">
                 <img class="picture" src="img/cashbox.png" alt="cashbox">
                 <div class="listOurDev">
                   <div class="item">
@@ -271,7 +272,7 @@
                 </div>
                 <a href="#" class="btn btnDark">Узнать больше</a>
               </div>
-              <div class="tabsBody" id="tab2">
+              <div class="tabsBody" data-aos="zoom-in-left" id="tab2">
                 <img class="picture" src="img/cashbox.png" alt="cashbox">
                 <div class="listOurDev">
                   <div class="item">
@@ -309,9 +310,9 @@
       <div class="youPartnersSection">
         <div class="container">
           <div class="youPartners">
-            <h2 class="caption captionOne">наши партнёры</h2>
-            <h2 class="captionInvis"></h2>
-            <div class="youPartnerSlider swiper">
+            <h2 class="caption captionOne " data-aos="fade-down-right">наши партнёры</h2>
+            <h2 class="captionInvis" data-aos="flip-up"></h2>
+            <div class="youPartnerSlider swiper" data-aos="fade-up">
               <div class="swiper-wrapper">
                 <div class="item swiper-slide">
                   <a href="#"></a>
@@ -374,10 +375,10 @@
       <div class="configuratorSection">
         <div class="container">
           <div class="configurator">
-            <h2 class="caption captionOne">конфигуратор</h2>
-            <span class="desc">Заполните необходимую информацию</span>
+            <h2 class="caption captionOne" data-aos="fade-down-right">конфигуратор</h2>
+            <span class="desc" data-aos="fade-down-right">Заполните необходимую информацию</span>
             <div class="listInputWrapper">
-              <div class="inputWrapper">
+              <div class="inputWrapper" data-aos="fade-up">
                 <label for="">Проходимость заведения:</label>
                 <select>
                   <option value="">до 30 человек</option>
@@ -385,19 +386,19 @@
                   <option value="">до 30 человек</option>
                 </select>
               </div>
-              <div class="inputWrapper">
+              <div class="inputWrapper" data-aos="fade-up">
                 <label for="">кол-во официантов:</label>
                 <input type="text" value="10 официантов">
               </div>
-              <div class="inputWrapper">
+              <div class="inputWrapper" data-aos="fade-up">
                 <label for="">кол-во посадочных мест:</label>
                 <input type="text" value="20 мест">
               </div>
-              <div class="inputWrapper">
+              <div class="inputWrapper" data-aos="fade-up">
                 <label for="">кол-во столов кухни:</label>
                 <input type="text" value="10 столов">
               </div>
-              <div class="inputWrapper">
+              <div class="inputWrapper" data-aos="fade-up">
                 <label for="">Проходимость заведения:</label>
                 <select>
                   <option value="">до 30 человек</option>
@@ -405,19 +406,19 @@
                   <option value="">до 30 человек</option>
                 </select>
               </div>
-              <div class="inputWrapper">
+              <div class="inputWrapper" data-aos="fade-up">
                 <label for="">кол-во официантов:</label>
                 <input type="text" value="10 официантов">
               </div>
             </div>
-            <button class="btn btnDark">Рассчитать</button>
+            <button class="btn btnDark" data-aos="fade-up">Рассчитать</button>
           </div>
         </div>
       </div>
       <div class="mapSection">
         <div class="container">
-          <h2 class="caption captionOne">География присутствия</h2>
-          <div class="map">
+          <h2 class="caption captionOne" data-aos="fade-down-right">География присутствия</h2>
+          <div class="map" data-aos="fade-up">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d577317.9718771386!2d37.3855235!3d55.58202595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54afc73d4b0c9%3A0x3d44d6cc5757cf4c!2z0JzQvtGB0LrQstCwLCDQoNC-0YHRgdC40Y8!5e0!3m2!1sru!2sby!4v1676196973547!5m2!1sru!2sby"
               width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
@@ -775,6 +776,7 @@
   <script src="js/micromodal.min.js"></script>
   <script src="js/jquery.tabslet.min.js"></script>
   <script src="js/fancybox.umd.js"></script>
+  <script src="js/aos.js"></script>
   <script src="js/script.js"></script>
 </body>
 
