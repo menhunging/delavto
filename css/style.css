@@ -200,7 +200,12 @@ a {
 
 html {
   overflow-x: hidden;
+  overflow-y: hidden;
   margin-right: calc(-1 * (100vw - 100%)) !important;
+}
+html.fixScroll {
+  overflow-x: hidden;
+  overflow-y: visible;
 }
 
 body {

@@ -499,7 +499,7 @@ $(document).ready(function () {
           .stop()
           .removeClass("loader");
         $("body").removeClass("waitingLoad");
-        $("html").addClass("disable-fix");
+        $("html").addClass("fixScroll");
         setInitAOS();
       }, 3000);
       setTimeout(function () {
