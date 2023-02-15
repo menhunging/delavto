@@ -198,6 +198,11 @@ a {
   opacity: 0;
 }
 
+html {
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%)) !important;
+}
+
 body {
   font-family: "Avenir Next Cyr";
   color: rgb(0, 0, 0);
@@ -1660,8 +1665,9 @@ input {
   pointer-events: inherit;
 }
 .search.open input + .btnSearch {
-  left: calc(100% - 38px);
-  font-size: 20px;
+  width: 23px;
+  height: 23px;
+  top: -2px;
 }
 .search.open input .text {
   opacity: 0;

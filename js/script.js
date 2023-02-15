@@ -420,7 +420,7 @@ $(document).ready(function () {
   if ($(".modal").length > 0) {
     MicroModal.init({
       openTrigger: "data-custom-open",
-      disableScroll: true,
+      disableScroll: false,
       awaitCloseAnimation: true,
     });
 
@@ -499,6 +499,7 @@ $(document).ready(function () {
           .stop()
           .removeClass("loader");
         $("body").removeClass("waitingLoad");
+        $("html").addClass("disable-fix");
         setInitAOS();
       }, 3000);
       setTimeout(function () {
