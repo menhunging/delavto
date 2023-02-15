@@ -1181,3 +1181,40 @@ input {
     }
   }
 }
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 15%, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 15%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.sliderGrettings .swiper-slide-active .caption {
+  animation: fadeInUp 1s both 1s;
+}
+
+.sliderGrettings .swiper-slide-active .textSimple {
+  animation: fadeInUp 1s both 1.5s;
+}
+
+.sliderGrettings .swiper-slide-active .picture {
+  animation: fadeInUp 1s both 1.5s;
+}
+.sliderGrettings .swiper-slide-active .btn {
+  animation: fadeInUp 1s both 2s;
+}

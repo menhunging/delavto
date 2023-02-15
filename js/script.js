@@ -140,6 +140,34 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".sliderGrettings").length > 0) {
+    const swiper = new Swiper(".sliderGrettings", {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      speed: 1000,
+      effect: "fade",
+      fadeEffect: {
+        crossFade: true,
+      },
+
+      navigation: {
+        nextEl: ".greetingSection .swiper-button-next",
+        prevEl: ".greetingSection .swiper-button-prev",
+      },
+      on: {
+        // beforeSlideChangeStart: function () {
+        //
+        // },
+        slideChange: function () {},
+      },
+
+      pagination: {
+        el: ".greetingSection .swiper-pagination",
+        clickable: true,
+      },
+    });
+  }
+
   if ($(".offersSlider").length > 0) {
     $(".offersSlider").map(function () {
       let carousel = $(this);

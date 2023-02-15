@@ -20,6 +20,14 @@
   background-repeat: no-repeat;
 }
 
+.sliderGrettings {
+  .caption {
+    &::before {
+      display: none;
+    }
+  }
+}
+
 .greeting {
   padding: 158px 11px;
   display: flex;

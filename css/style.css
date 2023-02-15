@@ -1526,6 +1526,42 @@ input {
   left: calc(100% - 43px);
 }
 
+@keyframes fadeInDown {
+  0% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate3d(0, 15%, 0);
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 15%, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+.sliderGrettings .swiper-slide-active .caption {
+  animation: fadeInUp 1s both 1s;
+}
+
+.sliderGrettings .swiper-slide-active .textSimple {
+  animation: fadeInUp 1s both 1.5s;
+}
+
+.sliderGrettings .swiper-slide-active .picture {
+  animation: fadeInUp 1s both 1.5s;
+}
+
+.sliderGrettings .swiper-slide-active .btn {
+  animation: fadeInUp 1s both 2s;
+}
+
 .btn {
   position: relative;
   cursor: pointer;
@@ -2171,6 +2207,10 @@ input {
   background-image: url("../img/back-grettings.png");
   background-position: left -135px;
   background-repeat: no-repeat;
+}
+
+.sliderGrettings .caption::before {
+  display: none;
 }
 
 .greeting {
@@ -4220,6 +4260,12 @@ input {
     width: 100%;
     max-width: 630px;
   }
+  .sliderGrettings {
+    max-width: 1240px;
+  }
+  .greeting .rightSide {
+    right: -60px;
+  }
 }
 @media (max-width: 1399px) {
   .container {
@@ -4415,6 +4461,12 @@ input {
   }
   .modalProduct .leftSide {
     max-width: 530px;
+  }
+  .sliderGrettings {
+    max-width: 1130px;
+  }
+  .greeting .rightSide {
+    right: 0;
   }
 }
 @media (max-width: 1199px) {
@@ -5020,6 +5072,10 @@ input {
   .siteWrapper.loader .header .logoWrapper {
     width: 170px;
     height: 38px;
+  }
+  .sliderGrettings {
+    left: -15px;
+    width: calc(100% + 30px);
   }
 }
 @media (max-width: 767px) {
