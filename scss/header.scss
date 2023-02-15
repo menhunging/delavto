@@ -57,8 +57,9 @@
       width: 591px;
       pointer-events: inherit;
       & + .btnSearch {
-        left: calc(100% - 38px);
-        font-size: 20px;
+        width: 23px;
+        height: 23px;
+        top: -2px;
       }
       .text {
         opacity: 0;
