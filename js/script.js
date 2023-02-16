@@ -536,6 +536,7 @@ $(document).ready(function () {
       }, 4000);
     });
   } else {
+    $("html").addClass("fixScroll");
     setInitAOS();
   }
 });
