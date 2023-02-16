@@ -421,7 +421,15 @@ input {
   color: rgb(0, 0, 0);
   text-transform: uppercase;
 }
-.captionOne::before {
+.captionOne .icon {
+  position: absolute;
+  top: 0;
+  left: -55px;
+  width: 31px;
+  height: 31px;
+  display: block;
+}
+.captionOne .icon::before {
   content: "";
   position: absolute;
   -webkit-transition: all 0.3s;
@@ -432,7 +440,7 @@ input {
   content: "\e902";
   color: #e95a0c;
   top: 0;
-  left: -55px;
+  left: 0;
   font-size: 31px;
 }
 
@@ -850,6 +858,7 @@ input {
   -moz-border-radius: 30px;
   -ms-border-radius: 30px;
   border-radius: 30px;
+  z-index: 5;
 }
 
 .selectric-scroll {
@@ -1376,24 +1385,27 @@ input {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(71, 74, 81, 0.95);
+  background-color: rgba(71, 74, 81, 0.98);
   text-align: center;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: all 3s;
+  -moz-transition: all 3s;
+  -o-transition: all 3s;
+  transition: all 3s;
   min-height: 515px;
   z-index: 15;
 }
 .preloader.animation {
   pointer-events: none;
-  background-color: rgba(71, 74, 81, 0.55);
+  background-color: rgba(71, 74, 81, 0.89);
 }
-.preloader.finish {
-  background-color: rgba(71, 74, 81, 0);
+.preloader.invisText {
+  background-color: rgba(71, 74, 81, 0.65);
 }
 .preloader.invisText .text {
   opacity: 0;
+}
+.preloader.finish {
+  background-color: rgba(71, 74, 81, 0.15);
 }
 .preloader .text {
   font-weight: 700;
@@ -1404,10 +1416,10 @@ input {
   position: relative;
   opacity: 0.7;
   margin-bottom: 320px;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
 }
 .preloader .text::before {
   content: "";
@@ -1465,7 +1477,7 @@ input {
 .preloader .preloaderLogo.position .preloaderCheck {
   left: calc(100% - 25px);
   top: 3px;
-  width: 70px;
+  width: 26px !important;
   height: 26px;
   border-width: 2px;
   -webkit-border-radius: 20px;
@@ -1536,8 +1548,10 @@ input {
   transition: all 0.3s;
 }
 .preloader .preloaderCheck.animation {
-  width: 25px !important;
-  border-width: 2px;
+  width: 46px !important;
+  height: 46px;
+  top: 5px;
+  left: calc(100% - 53px);
   -webkit-border-radius: 50% !important;
   -moz-border-radius: 50% !important;
   -ms-border-radius: 50% !important;
@@ -1545,6 +1559,10 @@ input {
 }
 .preloader .preloaderCheck.animation .circle {
   opacity: 0;
+}
+.preloader .preloaderCheck.position {
+  width: 25px !important;
+  border-width: 2px;
 }
 .preloader .preloaderCheck.active .circle {
   left: calc(100% - 43px);
@@ -2265,6 +2283,30 @@ input {
   background-position: left -135px;
   background-repeat: no-repeat;
 }
+.greetingSection .icon {
+  display: block;
+  position: absolute;
+  left: -55px;
+  top: 174px;
+  width: 31px;
+  height: 31px;
+}
+.greetingSection .icon::before {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  font-family: "icomoon" !important;
+  content: "\e902";
+  color: #e95a0c;
+  top: 0;
+  left: 0;
+  font-size: 31px;
+  width: 100%;
+  height: 100%;
+}
 
 .sliderGrettings .caption::before {
   display: none;
@@ -2339,14 +2381,17 @@ input {
 .whyList .item:last-child .line {
   display: none;
 }
-.whyList .icon {
-  font-size: 80px;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
+.whyList .item.aos-animate .line::after {
+  width: 100%;
 }
-.whyList .icon.active {
+.whyList .icon {
+  -webkit-transition: all 1s 0.3s;
+  -moz-transition: all 1s 0.3s;
+  -o-transition: all 1s 0.3s;
+  transition: all 1s 0.3s;
+  font-size: 80px;
+}
+.whyList .icon.aos-animate {
   color: #e95a0c;
 }
 .whyList .txt {
@@ -2376,10 +2421,6 @@ input {
   height: 100%;
   background-position: left center;
   background-repeat: no-repeat;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
 }
 .whyList .line::after {
   content: "";
@@ -2393,12 +2434,8 @@ input {
   height: 100%;
   background-position: left center;
   background-repeat: no-repeat;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
-  transition: all 0.3s;
 }
-.whyList .line.active::after {
+.whyList .line.aos-animate::after {
   width: 100%;
 }
 
@@ -2496,6 +2533,12 @@ input {
   min-width: 230px;
   margin-top: 23px;
 }
+.tabsInformation.change .tabsBody .listOurDev {
+  animation: fadeInUp 1s both 0.3s;
+}
+.tabsInformation.change .btn {
+  animation: fadeInUp 1s both 0.3s;
+}
 
 .listOurDev {
   display: flex;
@@ -2503,6 +2546,7 @@ input {
   align-items: flex-start;
   flex-wrap: wrap;
   margin-bottom: -19px;
+  opacity: 1;
 }
 .listOurDev .item {
   position: relative;
@@ -2534,14 +2578,19 @@ input {
 }
 
 .youPartnersSection {
-  padding: 131px 0 80px;
+  padding: 130px 0 70px;
 }
 
 .youPartners {
   position: relative;
 }
 
+.youPartnerSliderWrapper {
+  position: relative;
+}
+
 .youPartnerSlider {
+  margin-bottom: 100px;
   margin-top: 38px;
 }
 .youPartnerSlider .item {
@@ -2578,7 +2627,7 @@ input {
 .configurator .caption {
   line-height: 40px;
 }
-.configurator .caption::before {
+.configurator .caption .icon {
   left: -115px;
 }
 .configurator .desc {
@@ -2614,8 +2663,8 @@ input {
 }
 
 .mapSection {
-  padding-top: 80px;
-  padding-bottom: 86px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .map {
@@ -2639,7 +2688,7 @@ input {
 }
 
 .solutionsSection {
-  padding-bottom: 102px;
+  padding-bottom: 158px;
   position: relative;
 }
 .solutionsSection::after {
@@ -2666,7 +2715,7 @@ input {
 }
 .solutions .captionInvis {
   left: 50px;
-  bottom: -90px;
+  bottom: -137px;
   top: auto;
 }
 
@@ -2773,7 +2822,7 @@ input {
 }
 
 .packList {
-  margin: 39px -10px 0;
+  margin: 80px -10px 30px;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -3313,7 +3362,7 @@ input {
 }
 
 .aboutBlock {
-  padding-bottom: 20px;
+  padding-bottom: 80px;
 }
 .aboutBlock .textSimple strong {
   color: #e95a0c;
@@ -3407,7 +3456,10 @@ input {
 }
 
 .reviewsSection {
-  padding-bottom: 5px;
+  padding-bottom: 0;
+}
+.reviewsSection + .contactsSection {
+  margin-top: 70px;
 }
 
 .reviews {
@@ -3500,7 +3552,7 @@ input {
 
 .teamSection {
   padding-top: 7px;
-  padding-bottom: 170px;
+  padding-bottom: 75px;
   position: relative;
 }
 .teamSection .contactsSection {
@@ -3524,9 +3576,12 @@ input {
   background-size: cover;
 }
 
+.teamWrapper {
+  padding-bottom: 100px;
+}
 .teamWrapper .captionInvis {
   top: auto;
-  bottom: -110px;
+  bottom: -125px;
 }
 .teamWrapper .swiper-pagination {
   margin-top: -12px;
@@ -3963,7 +4018,7 @@ input {
   transition: all 0.3s;
   color: #acb6c1;
   position: absolute;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
 }
@@ -3999,7 +4054,7 @@ input {
   transition: all 0.3s;
   color: #acb6c1;
   position: absolute;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
 }
@@ -4187,7 +4242,7 @@ input {
 .solutionItem {
   position: relative;
   z-index: 3;
-  padding-bottom: 50px;
+  padding-bottom: 58px;
 }
 .solutionItem .head {
   display: flex;
@@ -4215,7 +4270,7 @@ input {
   margin-top: 15px;
 }
 .solutionItem .textSimple {
-  margin-top: 30px;
+  margin-top: 50px;
 }
 .solutionItem .textSimple .caption {
   margin-bottom: 15px;
@@ -4247,6 +4302,13 @@ input {
 
 .solution {
   padding-bottom: 160px;
+}
+.solution .solutionsPackSection {
+  padding-top: 0;
+}
+
+.packagesWrapper {
+  padding-top: 86px;
 }
 
 @media (max-width: 1600px) {
@@ -4374,7 +4436,8 @@ input {
   .captionOne {
     padding-left: 55px;
   }
-  .captionOne::before {
+  .captionOne .icon {
+    display: block;
     left: 0 !important;
   }
   .greeting {
@@ -5674,6 +5737,9 @@ input {
   }
   .preloader .text::before {
     display: none;
+  }
+  .teamWrapper {
+    padding-bottom: 100px;
   }
 }
 @media (max-width: 479px) {

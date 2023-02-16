@@ -203,12 +203,20 @@ input {
   letter-spacing: 0.2em;
   color: $colorBlack;
   text-transform: uppercase;
-  @include beforeIcMoon {
-    content: "\e902";
-    color: $colorSite1;
+  .icon {
+    position: absolute;
     top: 0;
     left: -55px;
-    font-size: 31px;
+    width: 31px;
+    height: 31px;
+    display: block;
+    @include beforeIcMoon {
+      content: "\e902";
+      color: $colorSite1;
+      top: 0;
+      left: 0;
+      font-size: 31px;
+    }
   }
 }
 
@@ -574,7 +582,10 @@ input {
   background-color: $colorWhite;
   border: 2px solid #eeeeee;
   @include border-radius(30px);
+  z-index: 5;
 }
+
+
 
 .selectric-scroll {
   border: 0;
@@ -1070,22 +1081,23 @@ input {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(71, 74, 81, 0.95);
+  background-color: rgba(71, 74, 81, 0.98);
   text-align: center;
-  @include transition(all 1s);
+  @include transition(all 3s);
   min-height: 515px;
   z-index: 15;
   &.animation {
     pointer-events: none;
-    background-color: rgba(71, 74, 81, 0.55);
-  }
-  &.finish {
-    background-color: rgba(71, 74, 81, 0);
+    background-color: rgba(71, 74, 81, 0.89);
   }
   &.invisText {
+    background-color: rgba(71, 74, 81, 0.65);
     .text {
       opacity: 0;
     }
+  }
+  &.finish {
+    background-color: rgba(71, 74, 81, 0.15);
   }
   .text {
     font-weight: 700;
@@ -1096,7 +1108,7 @@ input {
     position: relative;
     opacity: 0.7;
     margin-bottom: 320px;
-    @include transition(all 0.3s);
+    @include transition(all 1s);
     @include before {
       background-image: url(../img/arrow-preloader.svg);
       background-position: center;
@@ -1140,7 +1152,7 @@ input {
       .preloaderCheck {
         left: calc(100% - 25px);
         top: 3px;
-        width: 70px;
+        width: 26px !important;
         height: 26px;
         border-width: 2px;
         @include border-radius(20px);
@@ -1153,8 +1165,6 @@ input {
           @include transition(all 1s);
         }
       }
-    }
-    &.finish {
     }
   }
   .logoBurger {
@@ -1190,12 +1200,18 @@ input {
       @include transition(all 0.3s);
     }
     &.animation {
-      width: 25px !important;
-      border-width: 2px;
+      width: 46px !important;
+      height: 46px;
+      top: 5px;
+      left: calc(100% - 53px);
       @include border-radius(50%!important);
       .circle {
         opacity: 0;
       }
+    }
+    &.position {
+      width: 25px !important;
+      border-width: 2px;
     }
     &.active {
       .circle {
@@ -1226,6 +1242,7 @@ input {
     transform: translate3d(0, 0, 0);
   }
 }
+
 
 .sliderGrettings .swiper-slide-active .caption {
   animation: fadeInUp 1s both 1s;
@@ -1282,3 +1299,4 @@ input {
     }
   }
 }
+

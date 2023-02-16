@@ -57,59 +57,69 @@ $(document).ready(function () {
   }
 
   if ($(".tabsInformation").length > 0) {
-    $(".tabsInformation").tabslet({
+    let tabsInformation = $(".tabsInformation");
+
+    tabsInformation.tabslet({
       mouseevent: "click",
       attribute: "href",
+      animation: true,
+      delay: 100,
     });
+
+    tabsInformation.on("_before", function () {
+      $(this).addClass("change");
+    });
+
+    tabsInformation.on("_after", function () {});
   }
 
-  if ($(".whyList").length > 0) {
-    let scrollOff = false;
-    var block_show = null;
-    let animationAll = $(".animation");
-    let lastDeferr = 0;
-    if ($(window).width() > 768) {
-      scrollTracking();
-    }
+  // if ($(".whyList").length > 0) {
+  //   let scrollOff = false;
+  //   var block_show = null;
+  //   let animationAll = $(".animation");
+  //   let lastDeferr = 0;
+  //   if ($(window).width() > 768) {
+  //     scrollTracking();
+  //   }
 
-    function scrollTracking() {
-      var wt = $(window).scrollTop();
-      var wh = $(window).height();
-      var et = $(".whyList").offset().top;
-      var eh = $(".whyList").outerHeight();
+  //   function scrollTracking() {
+  //     var wt = $(window).scrollTop();
+  //     var wh = $(window).height();
+  //     var et = $(".whyList").offset().top;
+  //     var eh = $(".whyList").outerHeight();
 
-      if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)) {
-        if (block_show == null || (block_show == false && !scrollOff)) {
-          let promise = new $.Deferred(),
-            fn = () => {
-              animationAll.map(function (index, item) {
-                setTimeout(() => {
-                  $(this).addClass("active");
-                }, 700 * index);
-              });
-              return promise;
-            };
-          lastDeferr ? lastDeferr.then(fn) : fn();
-          //запоминаем последнее звено цепочки обещаний
-          lastDeferr = promise;
-        }
-        block_show = true;
-      } else {
-        block_show = false;
-      }
-    }
+  //     if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)) {
+  //       if (block_show == null || (block_show == false && !scrollOff)) {
+  //         let promise = new $.Deferred(),
+  //           fn = () => {
+  //             animationAll.map(function (index, item) {
+  //               setTimeout(() => {
+  //                 $(this).addClass("active");
+  //               }, 700 * index);
+  //             });
+  //             return promise;
+  //           };
+  //         lastDeferr ? lastDeferr.then(fn) : fn();
+  //         //запоминаем последнее звено цепочки обещаний
+  //         lastDeferr = promise;
+  //       }
+  //       block_show = true;
+  //     } else {
+  //       block_show = false;
+  //     }
+  //   }
 
-    $(window).scroll(function () {
-      if ($(window).width() > 768) {
-        scrollTracking();
-      }
-    });
-  }
+  //   $(window).scroll(function () {
+  //     if ($(window).width() > 768) {
+  //       scrollTracking();
+  //     }
+  //   });
+  // }
 
   if ($(".youPartnerSlider").length > 0) {
     const swiper = new Swiper(".youPartnerSlider", {
       slidesPerView: 4,
-      slidesPerGroup: 4,
+      slidesPerGroup: 1,
       loop: true,
       navigation: {
         nextEl: ".youPartners .swiper-button-next",
@@ -126,15 +136,15 @@ $(document).ready(function () {
         },
         768: {
           slidesPerView: 2,
-          slidesPerGroup: 2,
+          slidesPerGroup: 1,
         },
         992: {
           slidesPerView: 3,
-          slidesPerGroup: 3,
+          slidesPerGroup: 1,
         },
         1200: {
           slidesPerView: 4,
-          slidesPerGroup: 4,
+          slidesPerGroup: 1,
         },
       },
     });
@@ -265,7 +275,7 @@ $(document).ready(function () {
   if ($(".sliderTeam").length > 0) {
     const swiper = new Swiper(".sliderTeam", {
       slidesPerView: 3,
-      slidesPerGroup: 3,
+      slidesPerGroup: 1,
       navigation: {
         nextEl: ".sliderTeamWrapper .swiper-button-next",
         prevEl: ".sliderTeamWrapper .swiper-button-prev",
@@ -281,11 +291,11 @@ $(document).ready(function () {
         },
         992: {
           slidesPerView: 2,
-          slidesPerGroup: 2,
+          slidesPerGroup: 1,
         },
         1500: {
           slidesPerView: 3,
-          slidesPerGroup: 3,
+          slidesPerGroup: 1,
         },
       },
     });
@@ -328,6 +338,15 @@ $(document).ready(function () {
   }
 
   if ($(".calendar").length > 0) {
+    $(".linkCalendar .link").click(function () {
+      let pos;
+      $(".tabsWithLeft .tabsLeftSide a").map(function () {
+        $(this).attr("href") == "#calendarTab" &&
+          (pos = $(this).parents("li").index());
+      });
+      $(".tabsWithLeft .tabsLeftSide li").eq(pos).find("a").trigger("click");
+    });
+
     function Calendar(id, year, month) {
       var Dlast = new Date(year, month + 1, 0).getDate(),
         D = new Date(year, month, Dlast),
@@ -506,9 +525,13 @@ $(document).ready(function () {
       preloaderText.removeClass("hover");
       preloader.addClass("invisText");
       setTimeout(function () {
-        // через 1 сек
+        // через 1.5 сек
         preloaderText.removeClass("hover");
         preloader.addClass("invisText");
+        preloaderCheck.addClass("animation");
+      }, 1500);
+      setTimeout(function () {
+        // через 2 сек
 
         let logoPosLeft = $(".header .logoWrapper").offset().left;
         let logoPosTop = $(".header .logoWrapper").offset().top;
@@ -532,11 +555,8 @@ $(document).ready(function () {
 
         preloaderLogo.addClass("position").css("left", logoPosLeft);
         preloaderLogo.addClass("position").css("top", logoPosTop);
-      }, 500);
-      setTimeout(function () {
-        // через 2 сек
-        preloaderCheck.addClass("animation");
-      }, 1500);
+        preloader.addClass("finish");
+      }, 3000);
       setTimeout(function () {
         // через 3 сек
         $(".siteWrapper")
@@ -546,27 +566,50 @@ $(document).ready(function () {
         $("body").removeClass("waitingLoad");
         $("html").addClass("fixScroll");
         setInitAOS();
-      }, 3000);
+      }, 4000);
       setTimeout(function () {
         // через 4 сек
         // preloader.remove();
-      }, 4000);
+      }, 5000);
     });
   } else {
     $("html").addClass("fixScroll");
     setInitAOS();
   }
+
+  if ($(".nameInput").length > 0) {
+    $(".nameInput").map(function () {
+      $(this).inputmask({
+        mask: "*{3,20}",
+        showMaskOnHover: false,
+        showMaskOnFocus: true,
+        placeholder: " ",
+        clearIncomplete: true,
+      });
+    });
+  }
+
+  if ($(".phoneInput").length > 0) {
+    $(".phoneInput").map(function () {
+      $(this).inputmask({
+        mask: "+7(999) 999-99-99",
+        placeholder: "*",
+        showMaskOnHover: false,
+        showMaskOnFocus: true,
+        clearIncomplete: true,
+      });
+    });
+  }
 });
 
 const setInitAOS = () => {
   if ($("[data-aos]").length) {
-    const ratio = window.devicePixelRatio * 100;
-
     if ($(window).width() <= 1200) {
       $("[data-aos]").each((i, el) => {
         $(el).attr("data-aos-offset", 0);
         AOS.init({
           duration: 2000,
+          once: true,
         });
       });
     } else {
@@ -574,6 +617,7 @@ const setInitAOS = () => {
         AOS.init({
           offset: -200,
           duration: 2000,
+          once: true,
         });
       });
     }

@@ -9,6 +9,7 @@
       font-size: 18px;
     }
   }
+
   .search.open {
     input {
       width: 400px;
@@ -41,8 +42,9 @@
 
   .captionOne {
     padding-left: 55px;
-    &::before {
-      left: 0 !important;
+    .icon{
+      display: block;
+      left:0!important;
     }
   }
 

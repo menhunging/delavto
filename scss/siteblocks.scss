@@ -19,6 +19,23 @@
   background-image: url("../img/back-grettings.svg");
   background-position: left -135px;
   background-repeat: no-repeat;
+  .icon {
+    display: block;
+    position: absolute;
+    left: -55px;
+    top: 174px;
+    width: 31px;
+    height: 31px;
+    @include beforeIcMoon {
+      content: "\e902";
+      color: $colorSite1;
+      top: 0;
+      left: 0;
+      font-size: 31px;
+      width: 100%;
+      height: 100%;
+    }
+  }
 }
 
 .sliderGrettings {
@@ -108,11 +125,20 @@
         display: none;
       }
     }
+    &.aos-animate {
+      .icon {
+      }
+      .line {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
   }
   .icon {
+    @include transition(all 1s 0.3s);
     font-size: 80px;
-    @include transition(all 0.3s);
-    &.active {
+    &.aos-animate {
       color: $colorSite1;
     }
   }
@@ -136,7 +162,6 @@
       height: 100%;
       background-position: left center;
       background-repeat: no-repeat;
-      @include transition(all 0.3s);
     }
     @include after {
       background-image: url(../img/whyline2.svg);
@@ -144,9 +169,8 @@
       height: 100%;
       background-position: left center;
       background-repeat: no-repeat;
-      @include transition(all 0.3s);
     }
-    &.active {
+    &.aos-animate {
       &::after {
         width: 100%;
       }
@@ -230,6 +254,16 @@
     min-width: 230px;
     margin-top: 23px;
   }
+  &.change {
+    .tabsBody {
+      .listOurDev {
+        animation: fadeInUp 1s both 0.3s;
+      }
+    }
+    .btn {
+      animation: fadeInUp 1s both 0.3s;
+    }
+  }
 }
 
 .listOurDev {
@@ -238,6 +272,7 @@
   align-items: flex-start;
   flex-wrap: wrap;
   margin-bottom: -19px;
+  opacity: 1;
   .item {
     position: relative;
     width: calc(50% - 2px);
@@ -269,14 +304,19 @@
 }
 
 .youPartnersSection {
-  padding: 131px 0 80px;
+  padding: 130px 0 70px;
 }
 
 .youPartners {
   position: relative;
 }
 
+.youPartnerSliderWrapper {
+  position: relative;
+}
+
 .youPartnerSlider {
+  margin-bottom: 100px;
   margin-top: 38px;
   .item {
     @include invisLink;
@@ -298,7 +338,7 @@
   padding: 60px 60px 55px;
   .caption {
     line-height: 40px;
-    &::before {
+    .icon {
       left: -115px;
     }
   }
@@ -336,8 +376,8 @@
 }
 
 .mapSection {
-  padding-top: 80px;
-  padding-bottom: 86px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .map {
@@ -364,7 +404,7 @@
 }
 
 .solutionsSection {
-  padding-bottom: 102px;
+  padding-bottom: 158px;
   position: relative;
   // @include after {
   //   background-image: url("../img/back-content1.svg");
@@ -396,7 +436,7 @@
   position: relative;
   .captionInvis {
     left: 50px;
-    bottom: -90px;
+    bottom: -137px;
     top: auto;
   }
 }
@@ -495,7 +535,7 @@
 }
 
 .packList {
-  margin: 39px -10px 0;
+  margin: 80px -10px 30px;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -1011,7 +1051,7 @@
 }
 
 .aboutBlock {
-  padding-bottom: 20px;
+  padding-bottom: 80px;
   .textSimple {
     strong {
       color: $colorSite1;
@@ -1093,7 +1133,10 @@
 }
 
 .reviewsSection {
-  padding-bottom: 5px;
+  padding-bottom: 0;
+  & + .contactsSection {
+    margin-top: 70px;
+  }
 }
 
 .reviews {
@@ -1196,7 +1239,7 @@
 
 .teamSection {
   padding-top: 7px;
-  padding-bottom: 170px;
+  padding-bottom: 75px;
   position: relative;
   .contactsSection {
     margin-top: 33px;
@@ -1215,9 +1258,10 @@
 }
 
 .teamWrapper {
+  padding-bottom: 100px;
   .captionInvis {
     top: auto;
-    bottom: -110px;
+    bottom: -125px;
   }
   .swiper-pagination {
     margin-top: -12px;
@@ -1642,7 +1686,7 @@
     @include transition(all 0.3s);
     color: #acb6c1;
     position: absolute;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     @include after {
@@ -1669,7 +1713,7 @@
     @include transition(all 0.3s);
     color: #acb6c1;
     position: absolute;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     @include after {
@@ -1840,7 +1884,7 @@
 .solutionItem {
   position: relative;
   z-index: 3;
-  padding-bottom: 50px;
+  padding-bottom: 58px;
   .head {
     display: flex;
     align-items: center;
@@ -1866,7 +1910,7 @@
     }
   }
   .textSimple {
-    margin-top: 30px;
+    margin-top: 50px;
     .caption {
       margin-bottom: 15px;
       &::before {
@@ -1900,4 +1944,11 @@
 
 .solution {
   padding-bottom: 160px;
+  .solutionsPackSection {
+    padding-top: 0;
+  }
+}
+
+.packagesWrapper {
+  padding-top: 86px;
 }
