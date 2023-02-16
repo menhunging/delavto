@@ -543,12 +543,23 @@ $(document).ready(function () {
 
 const setInitAOS = () => {
   if ($("[data-aos]").length) {
-    $("[data-aos]").each((i, el) => {
-      AOS.init({
-        offset: 0,
-        duration: 2000,
+    const ratio = window.devicePixelRatio * 100;
+
+    if (ratio == 100) {
+      $("[data-aos]").each((i, el) => {
+        $(el).attr("data-aos-offset", 0);
+        AOS.init({
+          duration: 2000,
+        });
       });
-    });
+    } else {
+      $("[data-aos]").each((i, el) => {
+        AOS.init({
+          offset: -200,
+          duration: 2000,
+        });
+      });
+    }
   }
 };
 

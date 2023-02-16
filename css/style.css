@@ -201,7 +201,6 @@ a {
 html {
   overflow-x: hidden;
   overflow-y: hidden;
-  margin-right: calc(-1 * (100vw - 100%)) !important;
 }
 html.fixScroll {
   overflow-x: hidden;
@@ -1598,6 +1597,19 @@ input {
     -o-transition: all 0.3s;
     transition: all 0.3s;
     bottom: 0;
+  }
+}
+@media (max-width: 3000px) and (min-width: 1601px) {
+  html {
+    zoom: 90%;
+  }
+  @-moz-document url-prefix() {
+    html {
+      transform: scale(0.9);
+      transform-origin: left top;
+      width: 111.1111111111%;
+      height: 111.1111111111%;
+    }
   }
 }
 .btn {
