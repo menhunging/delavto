@@ -545,7 +545,7 @@ const setInitAOS = () => {
   if ($("[data-aos]").length) {
     const ratio = window.devicePixelRatio * 100;
 
-    if (ratio == 100) {
+    if ($(window).width() <= 1600 ) {
       $("[data-aos]").each((i, el) => {
         $(el).attr("data-aos-offset", 0);
         AOS.init({
