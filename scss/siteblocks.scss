@@ -1,6 +1,7 @@
 .content {
   position: relative;
   width: 100%;
+  flex: 1;
   @include before {
     background-image: url("../img/back-content.png");
     width: 30px;
@@ -15,7 +16,7 @@
 
 .greetingSection {
   position: relative;
-  background-image: url("../img/back-grettings.png");
+  background-image: url("../img/back-grettings.svg");
   background-position: left -135px;
   background-repeat: no-repeat;
 }
@@ -365,18 +366,33 @@
 .solutionsSection {
   padding-bottom: 102px;
   position: relative;
-  @include after {
-    background-image: url("../img/back-content1.png");
-    background-position: center;
+  // @include after {
+  //   background-image: url("../img/back-content1.svg");
+  //   background-position: center;
+  //   background-repeat: no-repeat;
+  //   width: 1920px;
+  //   height: 1921px;
+  //   left: 50%;
+  //   top: 46px;
+  //   margin-left: -960px;
+  //   z-index: -1;
+  //   pointer-events: none;
+  // }
+    @include after {
+    background-image: url("../img/back-content1.svg");
+    background-position: center top;
     background-repeat: no-repeat;
-    width: 1920px;
-    height: 1921px;
-    left: 50%;
-    top: 46px;
-    margin-left: -960px;
+    width: 100%;
+    height: 1920px;
+    left: 0;
+    top: 0;
     z-index: -1;
     pointer-events: none;
+    background-size: cover;
   }
+
+
+
 }
 
 .solutions {
@@ -824,9 +840,17 @@
 
 .offersSection {
   padding-bottom: 134px;
-  background-image: url(../img/offer-page.png);
-  background-position: bottom center;
-  background-repeat: no-repeat;
+  @include after{
+    left:0;
+    bottom:0;
+    width: 100%;
+    height: 918px;
+    background-image: url(../img/offer-page.svg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
 }
 
 .offersSliderWrapper {
@@ -1007,16 +1031,16 @@
 .stepSection {
   position: relative;
   @include after {
-    background-image: url("../img/back-content1.png");
-    background-position: center;
+    background-image: url("../img/back-content1.svg");
+    background-position: center top;
     background-repeat: no-repeat;
-    width: 1920px;
+    width: 100%;
     height: 1921px;
-    left: 50%;
+    left: 0;
     top: 46px;
-    margin-left: -960px;
     z-index: -1;
     pointer-events: none;
+    background-size: cover;
   }
   .caption {
   }
@@ -1181,15 +1205,15 @@
     margin-top: 33px;
   }
   @include before {
-    background-image: url(../img/offer-page.png);
-    background-position: bottom center;
+    background-image: url(../img/offer-page.svg);
+    background-position: center top;
     background-repeat: no-repeat;
-    left: 50%;
+    left: 0;
     top: 145px;
-    width: 1920px;
+    width: 100%;
     height: 918px;
-    margin-left: -960px;
     z-index: -1;
+    background-size: cover;
   }
 }
 
@@ -1383,15 +1407,15 @@
   color: $colorBlack;
   position: relative;
   @include before {
-    background-image: url(../img/offer-page.png);
-    background-position: bottom center;
+    background-image: url(../img/offer-page.svg);
+    background-position: center top;
     background-repeat: no-repeat;
-    left: 50%;
-    top: -110px;
-    width: 1920px;
+    left: 0;
+    top: 145px;
+    width: 100%;
     height: 918px;
-    margin-left: -960px;
     z-index: -1;
+    background-size: cover;
   }
   strong {
     color: $colorSite1;
