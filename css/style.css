@@ -201,6 +201,7 @@ a {
 html {
   overflow-x: hidden;
   overflow-y: hidden;
+  margin-right: calc(-1 * (100vw - 100%)) !important;
 }
 html.fixScroll {
   overflow-x: hidden;
@@ -1602,6 +1603,7 @@ input {
 @media (max-width: 3000px) and (min-width: 1200px) {
   html {
     zoom: 90%;
+    margin-right: calc(-1 * (100vw - 90%)) !important;
   }
   @-moz-document url-prefix() {
     html {

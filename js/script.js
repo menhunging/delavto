@@ -524,9 +524,8 @@ $(document).ready(function () {
           return nIdx;
         }
 
-        console.log(getBrowserId());
-
-        if ($(window).width() > 1200 && getBrowserId() == 1) { // если firefox
+        if ($(window).width() > 1200 && getBrowserId() == 1) {
+          // если firefox
           logoPosLeft = logoPosLeft + logoPosLeft * 0.112;
           logoPosTop = logoPosTop + logoPosTop * 0.1;
         }
