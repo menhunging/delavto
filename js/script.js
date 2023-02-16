@@ -513,6 +513,24 @@ $(document).ready(function () {
         let logoPosLeft = $(".header .logoWrapper").offset().left;
         let logoPosTop = $(".header .logoWrapper").offset().top;
 
+        function getBrowserId() {
+          // определяем браузер: 1 - FireFox, 3- Chrome
+          var aKeys = ["MSIE", "Firefox", "Safari", "Chrome", "Opera"],
+            sUsrAg = navigator.userAgent,
+            nIdx = aKeys.length - 1;
+
+          for (nIdx; nIdx > -1 && sUsrAg.indexOf(aKeys[nIdx]) === -1; nIdx--);
+
+          return nIdx;
+        }
+
+        console.log(getBrowserId());
+
+        if ($(window).width() > 1200 && getBrowserId() == 1) { // если firefox
+          logoPosLeft = logoPosLeft + logoPosLeft * 0.112;
+          logoPosTop = logoPosTop + logoPosTop * 0.1;
+        }
+
         preloaderLogo.addClass("position").css("left", logoPosLeft);
         preloaderLogo.addClass("position").css("top", logoPosTop);
       }, 500);
@@ -532,7 +550,7 @@ $(document).ready(function () {
       }, 3000);
       setTimeout(function () {
         // через 4 сек
-        preloader.remove();
+        // preloader.remove();
       }, 4000);
     });
   } else {
@@ -545,7 +563,7 @@ const setInitAOS = () => {
   if ($("[data-aos]").length) {
     const ratio = window.devicePixelRatio * 100;
 
-    if ($(window).width() <= 1200 ) {
+    if ($(window).width() <= 1200) {
       $("[data-aos]").each((i, el) => {
         $(el).attr("data-aos-offset", 0);
         AOS.init({

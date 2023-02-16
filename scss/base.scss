@@ -1182,7 +1182,7 @@ input {
     .circle {
       position: absolute;
       left: 1px;
-      top: 1px;
+      top: 2px;
       width: 41px;
       height: 41px;
       border: solid 3px $colorSite1;
@@ -1267,11 +1267,17 @@ input {
 
   @-moz-document url-prefix() {
     html {
-      transform: scale(0.90);
+      transform: scale(0.9);
       transform-origin: left top;
-      width: calc(100% / 0.90);
-      height: calc(100% / 0.90);
+      width: calc(100% / 0.9);
+      height: calc(100% / 0.9);
+    }
+    .preloader {
+      .preloaderCheck {
+        .circle {
+          top: 1px;
+        }
+      }
     }
   }
 }
-

@@ -1521,7 +1521,7 @@ input {
 .preloader .preloaderCheck .circle {
   position: absolute;
   left: 1px;
-  top: 1px;
+  top: 2px;
   width: 41px;
   height: 41px;
   border: solid 3px #e95a0c;
@@ -1609,6 +1609,9 @@ input {
       transform-origin: left top;
       width: 111.1111111111%;
       height: 111.1111111111%;
+    }
+    .preloader .preloaderCheck .circle {
+      top: 1px;
     }
   }
 }
