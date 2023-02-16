@@ -1599,7 +1599,7 @@ input {
     bottom: 0;
   }
 }
-@media (max-width: 3000px) and (min-width: 1601px) {
+@media (max-width: 3000px) and (min-width: 1200px) {
   html {
     zoom: 90%;
   }
