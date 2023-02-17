@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *:before,
 *:after {
@@ -854,10 +855,10 @@ input {
   overflow: hidden;
   background-color: rgb(255, 255, 255);
   border: 2px solid #eeeeee;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  border-radius: 30px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  border-radius: 15px;
   z-index: 5;
 }
 
@@ -1635,6 +1636,34 @@ input {
     }
   }
 }
+.btnArrowUp {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #474a51;
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+.btnArrowUp::before {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  content: "⮝";
+  position: relative;
+}
+
 .btn {
   position: relative;
   cursor: pointer;
@@ -1781,7 +1810,11 @@ input {
 .search.open input + .btnSearch {
   width: 23px;
   height: 23px;
-  top: -2px;
+  top: -3px;
+  left: calc(100% - 35px);
+}
+.search.open input + .btnSearch::before {
+  content: "✖";
 }
 .search.open input .text {
   opacity: 0;
@@ -2036,6 +2069,7 @@ input {
   font-size: 14px;
   line-height: 20px;
   color: rgb(255, 255, 255);
+  display: block;
 }
 .menuDrop .col ul li + li {
   margin-top: 24px;
@@ -2536,8 +2570,83 @@ input {
 .tabsInformation.change .tabsBody .listOurDev {
   animation: fadeInUp 1s both 0.3s;
 }
+.tabsInformation.change .picture,
 .tabsInformation.change .btn {
   animation: fadeInUp 1s both 0.3s;
+}
+.tabsInformation .controls {
+  display: none;
+  width: 100%;
+}
+.tabsInformation .controls .prev {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 48px;
+  top: 0;
+  left: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #acb6c1;
+  align-items: center;
+  justify-content: center;
+}
+.tabsInformation .controls .prev::after {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  content: "prev";
+  font-family: swiper-icons;
+  font-size: var(--swiper-navigation-size);
+  text-transform: none !important;
+  letter-spacing: 0;
+  text-transform: none;
+  font-variant: initial;
+  line-height: 1;
+  position: relative;
+}
+.tabsInformation .controls .next {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 48px;
+  top: 0;
+  right: 0;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  color: #acb6c1;
+  align-items: center;
+  justify-content: center;
+}
+.tabsInformation .controls .next::after {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  content: "next";
+  font-family: swiper-icons;
+  font-size: var(--swiper-navigation-size);
+  text-transform: none !important;
+  letter-spacing: 0;
+  text-transform: none;
+  font-variant: initial;
+  line-height: 1;
+  position: relative;
 }
 
 .listOurDev {
@@ -2681,7 +2790,7 @@ input {
 }
 
 .titlePage {
-  padding: 20px 0 6px;
+  padding: 47px 0 10px;
 }
 .titlePage + .contactsSection .leftSide {
   padding-top: 60px;
@@ -4665,6 +4774,15 @@ input {
     margin-bottom: 20px;
     padding-left: 75px;
   }
+  .listOurDev .item:nth-child(2n) {
+    padding-left: 0;
+    padding-right: 75px;
+    text-align: right;
+  }
+  .listOurDev .item:nth-child(2n) .icon {
+    right: 0;
+    left: auto;
+  }
   .listOurDev .item .title {
     width: 100%;
   }
@@ -4948,7 +5066,8 @@ input {
     padding: 0;
   }
   .tabsInformation .picture {
-    display: none;
+    width: 210px;
+    bottom: -30px;
   }
   .tabsInformation .btn {
     margin-top: 30px;
@@ -4958,7 +5077,7 @@ input {
     line-height: 20px;
   }
   .youPartnersSection {
-    padding: 50px 0;
+    padding: 50px 0 0;
   }
   .youPartnerSlider {
     max-width: 620px;
@@ -5178,7 +5297,7 @@ input {
     left: calc(100% - 20px);
     top: 3px;
     height: 21px;
-    width: 50px;
+    width: 20px !important;
   }
   .preloader .preloaderLogo.position .preloaderCheck .circle {
     left: calc(100% - 15px);
@@ -5197,9 +5316,6 @@ input {
   .preloader .logoBurger .line + .line {
     margin-top: 14px;
   }
-  .preloader .preloaderCheck.animation {
-    width: 20px !important;
-  }
   .preloader .preloaderCheck.active .circle {
     left: calc(100% - 43px);
   }
@@ -5211,6 +5327,56 @@ input {
     left: -15px;
     width: calc(100% + 30px);
   }
+  .menuArrow {
+    display: none;
+  }
+  body.hidden {
+    overflow: hidden;
+  }
+  .header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  .siteWrapper {
+    padding-top: 80px;
+  }
+  .menuDropWrapper {
+    height: 100vh;
+  }
+  .menuDrop {
+    position: static;
+    min-height: 100vh;
+    overflow: auto;
+    margin-top: 100px;
+    padding-top: 0;
+    height: 100%;
+    padding-bottom: 140px;
+  }
+  .titlePage {
+    padding: 30px 0 10px;
+  }
+  .indexPage .content::after {
+    display: none;
+  }
+  .tabs .tabsHead {
+    overflow-x: auto;
+    display: block;
+    white-space: nowrap;
+    left: -15px;
+    position: relative;
+    padding: 0 15px;
+    margin: 0;
+    width: calc(100% + 30px);
+  }
+  .tabs .tabsHead li {
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .tabs .tabsHead a {
+    white-space: nowrap;
+  }
 }
 @media (max-width: 767px) {
   .container {
@@ -5220,11 +5386,41 @@ input {
     margin-left: auto;
     margin-right: 10px;
   }
-  .greeting .rightSide {
-    display: none;
+  .greetingSection {
+    padding-top: 50px;
   }
   .greeting {
-    padding: 70px 0;
+    min-height: 520px;
+    padding-top: 260px;
+    padding-bottom: 0;
+  }
+  .greeting .leftSide {
+    text-align: center;
+  }
+  .greeting .leftSide .textSimple {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .greeting .leftSide .caption {
+    padding-left: 0;
+  }
+  .greeting .leftSide .btn {
+    margin: 20px auto 0;
+  }
+  .greeting .rightSide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    bottom: auto;
+    right: auto;
+    height: 250px;
+  }
+  .greeting .rightSide .picture {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
   .greeting .caption {
     font-size: 35px;
@@ -5402,6 +5598,15 @@ input {
     padding-left: 0;
     width: 100%;
   }
+  .calendarWrapper .calendarNext {
+    display: flex;
+  }
+  .calendarWrapper .calendarPrev {
+    display: flex;
+  }
+  .listMount {
+    display: none;
+  }
   .preloader {
     min-height: 450px;
   }
@@ -5411,6 +5616,39 @@ input {
   }
   .preloader .text::before {
     right: 31px;
+  }
+  .ourDeveloperSection + .youPartnersSection {
+    padding: 100px 0 0;
+  }
+  .tabsInformation .controls {
+    position: relative;
+    left: 0;
+    top: 50%;
+    display: flex !important;
+    width: 100%;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+  }
+  .tabsInformation .controls .prev {
+    display: none;
+  }
+  .tabsInformation .controls .next {
+    width: auto;
+    height: 50px;
+  }
+  .tabsInformation .controls .next:hover {
+    color: #e95a0c;
+  }
+  .contactsPage {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-bottom: 50px;
+    width: 100%;
+  }
+  .contactsPage .captionInvis {
+    display: none;
   }
 }
 @media (max-width: 639px) {
@@ -5559,10 +5797,10 @@ input {
     margin-top: 15px;
   }
   .titlePage .caption {
-    margin-top: 10px;
+    margin-top: 40px;
   }
   .solutionsSection {
-    padding: 5px 0 50px;
+    padding: 30px 0 50px;
   }
   .packList .item {
     width: calc(50% - 20px);
@@ -5605,7 +5843,7 @@ input {
     width: 100%;
   }
   .developersSection {
-    padding: 10px 0 120px;
+    padding: 30px 0 120px;
   }
   .developerBlock {
     padding: 20px 15px;
@@ -5741,6 +5979,27 @@ input {
   .teamWrapper {
     padding-bottom: 100px;
   }
+  .swiper-pagination {
+    margin-top: 30px;
+  }
+  .tabsInformation .tabsBody {
+    padding: 20px;
+  }
+  .tabsInformation .picture {
+    width: 180px;
+    right: 0;
+  }
+  .calendarWrapper .calendarTitle {
+    justify-content: center;
+    gap: 5px;
+    padding-left: 55px;
+  }
+  .calendarWrapper .calendarNext {
+    display: flex;
+  }
+  .calendarWrapper .calendarPrev {
+    display: flex;
+  }
 }
 @media (max-width: 479px) {
   .headerContent {
@@ -5788,31 +6047,27 @@ input {
   .whyList {
     padding: 30px 0;
   }
-  .whyList .item {
-    width: 100%;
-    text-align: center;
-  }
-  .tabsInformation .tabsHead li {
-    width: 100%;
+  .tabsInformation .tabsHead .name {
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 23px;
   }
   .tabsInformation .tabsBody {
     padding: 30px 15px;
   }
   .tabsInformation .btn {
-    margin-top: 20px;
+    margin-top: 150px;
     width: 100%;
   }
-  .listOurDev .item {
-    padding-left: 0;
+  .tabsInformation .picture {
+    width: 210px;
+    bottom: 90px;
+    left: 50%;
+    right: auto;
+    margin-left: -100px;
   }
   .listOurDev .item + .item {
     margin-top: 10px;
-  }
-  .listOurDev .item .icon {
-    top: 0;
-    margin-top: 0;
-    position: relative;
-    margin-bottom: 10px;
   }
   .configurator .inputWrapper {
     margin-bottom: 10px;
@@ -5933,9 +6188,6 @@ input {
   .textSimple {
     line-height: 20px;
   }
-  .developerBlock .picture {
-    display: none;
-  }
   .offersSliderWrapper {
     max-width: calc(100% - 15px);
   }
@@ -5985,7 +6237,7 @@ input {
     line-height: 20px;
   }
   .calendarWrapper .calendarTitle {
-    padding: 15px 45px;
+    padding: 15px 45px 15px 55px;
     font-size: 16px;
   }
   .modalText {
@@ -6042,6 +6294,119 @@ input {
   }
   .greeting .textSimple {
     max-width: 280px;
+  }
+  .siteWrapper {
+    padding-top: 106px;
+  }
+  .menuDrop {
+    margin-top: 90px;
+  }
+  .greetingSection {
+    padding-top: 30px;
+  }
+  .breadCrumbs li {
+    margin-right: 20px;
+  }
+  .breadCrumbs li::before {
+    right: -19px;
+  }
+  .breadCrumbs span,
+  .breadCrumbs a {
+    font-size: 13px;
+  }
+  .developerBlock .picture {
+    position: static !important;
+    right: auto;
+    left: auto;
+    bottom: 170px;
+    width: 250px;
+    margin: 0 auto;
+    display: table;
+  }
+  .developerBlock .controls {
+    margin: 20px auto 0;
+  }
+  .education .docLink + .docLink {
+    margin-top: 35px;
+  }
+  .education .docLink + .linkSite {
+    margin-top: 35px;
+  }
+  .docLink {
+    padding-left: 44px;
+  }
+  .docLink .name {
+    padding-right: 45px;
+  }
+  .docLink .icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -20.5px;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+  }
+  .docLink:after {
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+  }
+  .linkSite {
+    padding-left: 45px;
+  }
+  .linkSite::before {
+    font-size: 28px;
+    margin-top: -14px;
+  }
+  .siteWrapper.loader .header .logoWrapper {
+    width: 140px;
+    height: 31px;
+  }
+  .header .logoWrapper {
+    width: 140px;
+    height: 31px;
+  }
+  .header .logoWrapper .logoBurger {
+    top: 1px;
+    left: 22px;
+    width: 17px;
+    height: 17px;
+  }
+  .header .logoWrapper .logoBurger .line + .line {
+    margin-top: 7px;
+  }
+  .preloader .preloaderLogo.position {
+    width: 140px;
+  }
+  .preloader .preloaderLogo.position .logoBurger {
+    top: 1px;
+    left: 22px;
+    width: 17px;
+    height: 17px;
+  }
+  .preloader .preloaderLogo.position .logoBurger .line + .line {
+    margin-top: 7px;
+  }
+  .preloader .preloaderLogo.position .preloaderCheck {
+    left: calc(100% - 17px);
+    top: 2px;
+    height: 18px;
+    width: 17px !important;
+  }
+}
+@media (max-width: 374px) {
+  .whyList .item .icon {
+    font-size: 50px;
+  }
+  .whyList .item .txt {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .tabsInformation .tabsHead .name {
+    font-size: 11px;
+    line-height: 20px;
   }
 }
 

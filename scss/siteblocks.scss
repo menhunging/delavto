@@ -260,8 +260,65 @@
         animation: fadeInUp 1s both 0.3s;
       }
     }
+    .picture,
     .btn {
       animation: fadeInUp 1s both 0.3s;
+    }
+  }
+  .controls {
+    display: none;
+    width: 100%;
+    .prev {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 24px;
+      height: 48px;
+      top: 0;
+      left: 0;
+      @include transition(all 0.3s);
+      color: #acb6c1;
+      align-items: center;
+      justify-content: center;
+      @include after {
+        content: "prev";
+        font-family: swiper-icons;
+        font-size: var(--swiper-navigation-size);
+        text-transform: none !important;
+        letter-spacing: 0;
+        text-transform: none;
+        font-variant: initial;
+        line-height: 1;
+        position: relative;
+      }
+    }
+    .next {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 24px;
+      height: 48px;
+      top: 0;
+      right: 0;
+      @include transition(all 0.3s);
+      color: #acb6c1;
+      align-items: center;
+      justify-content: center;
+      @include after {
+        content: "next";
+        font-family: swiper-icons;
+        font-size: var(--swiper-navigation-size);
+        text-transform: none !important;
+        letter-spacing: 0;
+        text-transform: none;
+        font-variant: initial;
+        line-height: 1;
+        position: relative;
+      }
     }
   }
 }
@@ -391,7 +448,7 @@
 }
 
 .titlePage {
-  padding: 20px 0 6px;
+  padding: 47px 0 10px;
   .breadCrumbs {
   }
   .caption {

@@ -49,37 +49,41 @@
   .whyList {
     padding: 30px 0;
     .item {
-      width: 100%;
-      text-align: center;
     }
   }
 
   .tabsInformation {
     .tabsHead {
       li {
-        width: 100%;
+      }
+      .name {
+        white-space: nowrap;
+        font-size: 14px;
+        line-height: 23px;
       }
     }
     .tabsBody {
       padding: 30px 15px;
     }
     .btn {
-      margin-top: 20px;
+      margin-top: 150px;
       width: 100%;
+    }
+    .picture {
+      width: 210px;
+      bottom: 90px;
+      left: 50%;
+      right: auto;
+      margin-left: -100px;
     }
   }
 
   .listOurDev {
     .item {
-      padding-left: 0;
       & + .item {
         margin-top: 10px;
       }
       .icon {
-        top: 0;
-        margin-top: 0;
-        position: relative;
-        margin-bottom: 10px;
       }
     }
   }
@@ -233,7 +237,6 @@
 
   .developerBlock {
     .picture {
-      display: none;
     }
   }
 
@@ -303,7 +306,7 @@
   }
 
   .calendarWrapper .calendarTitle {
-    padding: 15px 45px;
+    padding: 15px 45px 15px 55px;
     font-size: 16px;
   }
 
@@ -372,5 +375,152 @@
 
   .greeting .textSimple {
     max-width: 280px;
+  }
+  .siteWrapper {
+    padding-top: 106px;
+  }
+
+  .menuDrop {
+    margin-top: 90px;
+  }
+
+  .greetingSection {
+    padding-top: 30px;
+  }
+
+  .breadCrumbs {
+    li {
+      margin-right: 20px;
+      &::before {
+        right: -19px;
+      }
+    }
+    span,
+    a {
+      font-size: 13px;
+    }
+  }
+
+  .developerBlock {
+    .picture {
+      position: static !important;
+      right: auto;
+      left: auto;
+      bottom: 170px;
+      width: 250px;
+      margin: 0 auto;
+      display: table;
+    }
+    .controls {
+      margin: 20px auto 0;
+    }
+  }
+
+  .education {
+    .docLink {
+      & + .docLink {
+        margin-top: 35px;
+      }
+      & + .linkSite {
+        margin-top: 35px;
+      }
+    }
+  }
+
+  .docLink {
+    padding-left: 44px;
+
+    .name {
+      padding-right: 45px;
+    }
+    .icon {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -20.5px;
+      width: 30px;
+      height: 30px;
+      margin-top: -15px;
+    }
+    &:after {
+      width: 40px;
+      height: 40px;
+      margin-top: -20px;
+    }
+  }
+
+  .linkSite {
+    padding-left: 45px;
+    &::before {
+      font-size: 28px;
+      margin-top: -14px;
+    }
+  }
+
+  .siteWrapper.loader .header .logoWrapper {
+    width: 140px;
+    height: 31px;
+  }
+
+  .header {
+    .logoWrapper {
+      width: 140px;
+      height: 31px;
+      .logoBurger {
+        top: 1px;
+        left: 22px;
+        width: 17px;
+        height: 17px;
+        .line + .line {
+          margin-top: 7px;
+        }
+      }
+    }
+  }
+
+  .preloader {
+    .preloaderLogo {
+      &.position {
+        width: 140px;
+        .logoBurger {
+          top: 1px;
+          left: 22px;
+          width: 17px;
+          height: 17px;
+          .line + .line {
+            margin-top: 7px;
+          }
+        }
+        .preloaderCheck {
+          left: calc(100% - 17px);
+          top: 2px;
+          height: 18px;
+          width: 17px !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 374px) {
+  .whyList {
+    .item {
+      .icon {
+        font-size: 50px;
+      }
+      .txt {
+        margin-top: 20px;
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+  }
+  .tabsInformation {
+    .tabsHead {
+      .name {
+        font-size: 11px;
+        line-height: 20px;
+      }
+    }
   }
 }

@@ -12,6 +12,12 @@ $(document).ready(function () {
     };
   }
 
+  if ($(".btnArrowUp").length > 0) {
+    $(".btnArrowUp").click(function () {
+      $(window).scrollTop(0);
+    });
+  }
+
   if ($(".menuDropWrapper").length > 0) {
     let menuArrow = $(".menuArrow");
     let menuDrop = $(".menuDropWrapper");
@@ -30,12 +36,16 @@ $(document).ready(function () {
       // $(this).toggleClass("open");
       menuArrow.toggleClass("open");
       menuDrop.toggleClass("open").stop().slideToggle();
+      if ($(window).width() < 992) {
+        $("body").addClass("hidden");
+      }
     });
 
     menuClose.click(function (e) {
       e.preventDefault();
       menuArrow.toggleClass("open");
       menuDrop.toggleClass("open").stop().slideToggle();
+      $("body").removeClass("hidden");
     });
   }
 
@@ -64,6 +74,10 @@ $(document).ready(function () {
       attribute: "href",
       animation: true,
       delay: 100,
+      controls: {
+        prev: " .prev",
+        next: " .next",
+      },
     });
 
     tabsInformation.on("_before", function () {
@@ -72,49 +86,6 @@ $(document).ready(function () {
 
     tabsInformation.on("_after", function () {});
   }
-
-  // if ($(".whyList").length > 0) {
-  //   let scrollOff = false;
-  //   var block_show = null;
-  //   let animationAll = $(".animation");
-  //   let lastDeferr = 0;
-  //   if ($(window).width() > 768) {
-  //     scrollTracking();
-  //   }
-
-  //   function scrollTracking() {
-  //     var wt = $(window).scrollTop();
-  //     var wh = $(window).height();
-  //     var et = $(".whyList").offset().top;
-  //     var eh = $(".whyList").outerHeight();
-
-  //     if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)) {
-  //       if (block_show == null || (block_show == false && !scrollOff)) {
-  //         let promise = new $.Deferred(),
-  //           fn = () => {
-  //             animationAll.map(function (index, item) {
-  //               setTimeout(() => {
-  //                 $(this).addClass("active");
-  //               }, 700 * index);
-  //             });
-  //             return promise;
-  //           };
-  //         lastDeferr ? lastDeferr.then(fn) : fn();
-  //         //запоминаем последнее звено цепочки обещаний
-  //         lastDeferr = promise;
-  //       }
-  //       block_show = true;
-  //     } else {
-  //       block_show = false;
-  //     }
-  //   }
-
-  //   $(window).scroll(function () {
-  //     if ($(window).width() > 768) {
-  //       scrollTracking();
-  //     }
-  //   });
-  // }
 
   if ($(".youPartnerSlider").length > 0) {
     const swiper = new Swiper(".youPartnerSlider", {
@@ -486,6 +457,11 @@ $(document).ready(function () {
     scroll = $(hash).parents(".tabs").offset().top - 100;
     $(hash).parents(".tabs").trigger("show", hash);
 
+    if ($(".tabsHead ").length) {
+      let pos = $(".tabsHead li.active").offset().left;
+      $(".tabsHead").scrollLeft(pos + 80);
+    }
+
     $("html, body").animate(
       {
         scrollTop: scroll,
@@ -569,7 +545,7 @@ $(document).ready(function () {
       }, 4000);
       setTimeout(function () {
         // через 4 сек
-        // preloader.remove();
+        preloader.remove();
       }, 5000);
     });
   } else {

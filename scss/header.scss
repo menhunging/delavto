@@ -59,7 +59,11 @@
       & + .btnSearch {
         width: 23px;
         height: 23px;
-        top: -2px;
+        top: -3px;
+        left: calc(100% - 35px);
+        &::before{
+          content: "\2716";
+        }
       }
       .text {
         opacity: 0;
@@ -263,6 +267,7 @@
           font-size: 14px;
           line-height: 20px;
           color: $colorWhite;
+          display: block;
         }
         & + li {
           margin-top: 24px;

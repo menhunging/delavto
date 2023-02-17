@@ -78,6 +78,15 @@
       min-height: 60px;
       margin-bottom: 20px;
       padding-left: 75px;
+      &:nth-child(2n) {
+        padding-left: 0;
+        padding-right: 75px;
+        text-align: right;
+        .icon {
+          right: 0;
+          left: auto;
+        }
+      }
       .title {
         width: 100%;
       }
