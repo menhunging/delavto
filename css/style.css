@@ -3499,6 +3499,7 @@ input {
 
 .aboutBlock {
   padding-bottom: 80px;
+  padding-top: 30px;
 }
 .aboutBlock .textSimple strong {
   color: #e95a0c;
