@@ -1476,32 +1476,29 @@ input {
   margin-top: 12px;
 }
 .preloader .preloaderLogo.position .preloaderCheck {
-  left: calc(100% - 25px);
-  top: 3px;
-  width: 26px !important;
-  height: 26px;
-  border-width: 2px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  border-radius: 20px;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s;
+  width: 65px;
+  top: 2px;
+  height: 28px;
+  transform: translateX(28px);
 }
 .preloader .preloaderLogo.position .preloaderCheck .circle {
-  left: calc(100% - 22px);
-  height: 20px;
-  width: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  border-radius: 20px;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s;
+  left: calc(100% - 23px);
+  width: 21px;
+  height: 21px;
+}
+.preloader .preloaderLogo.position .preloaderCheck.animation {
+  width: 26px;
+  height: 26px;
+  top: 3px;
+  left: calc(100% - 25px);
+  transform: translateX(0);
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  -ms-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
+.preloader .preloaderLogo.position .preloaderCheck.animation .circle {
+  opacity: 0;
 }
 .preloader .logoBurger {
   left: 56px;
@@ -1547,23 +1544,6 @@ input {
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
-}
-.preloader .preloaderCheck.animation {
-  width: 46px !important;
-  height: 46px;
-  top: 5px;
-  left: calc(100% - 53px);
-  -webkit-border-radius: 50% !important;
-  -moz-border-radius: 50% !important;
-  -ms-border-radius: 50% !important;
-  border-radius: 50% !important;
-}
-.preloader .preloaderCheck.animation .circle {
-  opacity: 0;
-}
-.preloader .preloaderCheck.position {
-  width: 25px !important;
-  border-width: 2px;
 }
 .preloader .preloaderCheck.active .circle {
   left: calc(100% - 43px);
@@ -5294,12 +5274,24 @@ input {
     margin-top: 9px;
   }
   .preloader .preloaderLogo.position .preloaderCheck {
+    width: 57px;
+    top: 0px;
+    height: 26px;
+  }
+  .preloader .preloaderLogo.position .preloaderCheck .circle {
+    width: 18px;
+    height: 18px;
+    top: 1px;
+  }
+  .preloader .preloaderLogo.position .preloaderCheck.animation {
     left: calc(100% - 20px);
+    transform: translateX(0px);
     top: 3px;
     height: 21px;
     width: 20px !important;
+    border-width: 2px;
   }
-  .preloader .preloaderLogo.position .preloaderCheck .circle {
+  .preloader .preloaderLogo.position .preloaderCheck.animation .circle {
     left: calc(100% - 15px);
     height: 14px;
     width: 14px;
@@ -6389,10 +6381,23 @@ input {
     margin-top: 7px;
   }
   .preloader .preloaderLogo.position .preloaderCheck {
+    width: 57px;
+    top: 0px;
+    height: 22px;
+    transform: translateX(35px);
+  }
+  .preloader .preloaderLogo.position .preloaderCheck .circle {
+    left: calc(100% - 16px);
+    width: 15px;
+    height: 15px;
+    top: 0px;
+  }
+  .preloader .preloaderLogo.position .preloaderCheck.animation {
     left: calc(100% - 17px);
     top: 2px;
     height: 18px;
     width: 17px !important;
+    transform: translateX(0);
   }
 }
 @media (max-width: 374px) {

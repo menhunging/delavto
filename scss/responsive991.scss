@@ -403,14 +403,28 @@
           }
         }
         .preloaderCheck {
-          left: calc(100% - 20px);
-          top: 3px;
-          height: 21px;
-          width: 20px !important;
+          width: 57px;
+          // left: calc(100% - 22px);       
+          top: 0px;
+          height: 26px;   
           .circle {
-            left: calc(100% - 15px);
-            height: 14px;
-            width: 14px;
+            // left: calc(100% - 20px);
+            width: 18px;
+            height: 18px;
+            top: 1px;
+          }
+          &.animation {
+            left: calc(100% - 20px);
+            transform: translateX(0px);
+            top: 3px;
+            height: 21px;
+            width: 20px !important;
+            border-width: 2px;
+            .circle {
+              left: calc(100% - 15px);
+              height: 14px;
+              width: 14px;
+            }
           }
         }
       }
@@ -430,9 +444,6 @@
       }
     }
     .preloaderCheck {
-      &.animation {
-        // width: 20px !important;
-      }
       &.active {
         .circle {
           left: calc(100% - 43px);

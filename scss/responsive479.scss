@@ -492,10 +492,23 @@
           }
         }
         .preloaderCheck {
-          left: calc(100% - 17px);
-          top: 2px;
-          height: 18px;
-          width: 17px !important;
+          width: 57px;
+          top: 0px;
+          height: 22px;
+          transform: translateX(35px);
+          .circle {
+            left: calc(100% - 16px);
+            width: 15px;
+            height: 15px;
+            top: 0px;
+          }
+          &.animation {
+            left: calc(100% - 17px);
+            top: 2px;
+            height: 18px;
+            width: 17px !important;
+            transform: translateX(0);
+          }
         }
       }
     }

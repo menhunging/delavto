@@ -504,10 +504,6 @@ $(document).ready(function () {
         // через 1.5 сек
         preloaderText.removeClass("hover");
         preloader.addClass("invisText");
-        preloaderCheck.addClass("animation");
-      }, 1500);
-      setTimeout(function () {
-        // через 2 сек
 
         let logoPosLeft = $(".header .logoWrapper").offset().left;
         let logoPosTop = $(".header .logoWrapper").offset().top;
@@ -531,8 +527,12 @@ $(document).ready(function () {
 
         preloaderLogo.addClass("position").css("left", logoPosLeft);
         preloaderLogo.addClass("position").css("top", logoPosTop);
+      }, 2000);
+      setTimeout(function () {
+        // через 2 сек
+        preloaderCheck.addClass("animation");
         preloader.addClass("finish");
-      }, 3000);
+      }, 3500);
       setTimeout(function () {
         // через 3 сек
         $(".siteWrapper")
@@ -542,11 +542,11 @@ $(document).ready(function () {
         $("body").removeClass("waitingLoad");
         $("html").addClass("fixScroll");
         setInitAOS();
-      }, 4000);
+      }, 4500);
       setTimeout(function () {
         // через 4 сек
-        preloader.remove();
-      }, 5000);
+        // preloader.remove();
+      }, 5500);
     });
   } else {
     $("html").addClass("fixScroll");
