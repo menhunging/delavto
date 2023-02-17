@@ -1,8 +1,43 @@
 .header {
   background-color: #474a51;
   box-shadow: 0px 4px 10px #00000026;
-  position: relative;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
   z-index: 5;
+  @include transition(all 0.3s);
+  height: 135px;
+  &.scroll {
+    height: 85px;
+    .menu {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .menuArrow{
+      opacity: 0;
+      bottom: 15px;
+      pointer-events: none;
+    }
+  }
+}
+
+@media (max-width:991px) {
+  .header {  
+    height: 80px;
+    &.scroll {
+      height: 80px;     
+    }
+  }
+}
+
+@media (max-width:479px) {
+  .header {  
+    height: 106px;
+    &.scroll {
+      height: 106px;     
+    }
+  }
 }
 
 .headerContent {
@@ -61,7 +96,7 @@
         height: 23px;
         top: -3px;
         left: calc(100% - 35px);
-        &::before{
+        &::before {
           content: "\2716";
         }
       }
