@@ -441,7 +441,7 @@ $(document).ready(function () {
   if ($(".modal").length > 0) {
     MicroModal.init({
       openTrigger: "data-custom-open",
-      disableScroll: false,
+      disableScroll: true,
       awaitCloseAnimation: true,
       onShow: () => {
         $(".modal__container").scrollTop(0);
@@ -606,5 +606,3 @@ const setInitAOS = () => {
     }
   }
 };
-
-// $(window).resize(function () {});
