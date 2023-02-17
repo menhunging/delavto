@@ -3306,7 +3306,7 @@ input {
   margin: 0 auto;
   width: 100%;
   padding: 0px 10px;
-  transform: translateX(44px);
+  left: 44px;
 }
 .offersSliderWrapper .caption {
   font-weight: 500;
@@ -3940,7 +3940,22 @@ input {
   justify-content: space-between;
 }
 .education .leftSide {
-  min-width: 825px;
+  position: relative;
+  overflow: hidden;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px;
+  max-width: 825px;
+  padding-top: 25.3333333333%;
+  width: 100%;
+}
+.education .leftSide > * {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  object-fit: contain;
 }
 .education .rightSide {
   width: 425px;
@@ -4449,7 +4464,7 @@ input {
     max-width: 1200px;
     width: 100%;
     padding: 0;
-    transform: translateX(0);
+    left: 0;
   }
   .offersSliderWrapper .swiper-button-prev {
     left: -50px;
@@ -4920,7 +4935,9 @@ input {
     padding-bottom: 50px;
   }
   .education .leftSide {
+    position: relative;
     max-width: 100%;
+    padding-top: 51.0416666667%;
   }
   .education .docLink + .docLink {
     margin-top: 55px;
@@ -6439,6 +6456,9 @@ input {
   .tabsInformation .tabsHead .name {
     font-size: 11px;
     line-height: 20px;
+  }
+  .education .leftSide {
+    min-height: 151px;
   }
 }
 

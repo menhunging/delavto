@@ -291,7 +291,10 @@
 
   .education {
     .leftSide {
+      position: relative;
       max-width: 100%;
+      padding-top: calc(392 / 768 * 100%);
+  
     }
   }
 

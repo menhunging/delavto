@@ -591,7 +591,7 @@ const setInitAOS = () => {
       $("[data-aos]").each((i, el) => {
         $(el).attr("data-aos-offset", 0);
         AOS.init({
-          duration: 2000,
+          duration: 1200,
           once: true,
         });
       });
@@ -599,7 +599,7 @@ const setInitAOS = () => {
       $("[data-aos]").each((i, el) => {
         AOS.init({
           offset: -200,
-          duration: 2000,
+          duration: 1200,
           once: true,
         });
       });
