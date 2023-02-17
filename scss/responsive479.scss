@@ -402,14 +402,28 @@
   }
 
   .developerBlock {
+    &:nth-child(2) {
+      .picture {
+        right: auto;
+        left: 50%;
+        margin-left: calc(-160px / 2);
+      }
+    }
+    .caption {
+      line-height: 24px;
+      margin-bottom: 240px;
+      white-space: nowrap;
+    }
     .picture {
-      position: static !important;
+      position: absolute !important;
       right: auto;
-      left: auto;
-      bottom: 170px;
+      left: 50%;
+      bottom: auto;
       width: 250px;
       margin: 0 auto;
       display: table;
+      top: 65px;
+      margin-left: calc(-250px / 2);
     }
     .controls {
       margin: 20px auto 0;
@@ -443,9 +457,9 @@
       margin-top: -15px;
     }
     &:after {
-      width: 40px;
-      height: 40px;
-      margin-top: -20px;
+      width: 35px;
+      height: 35px;
+      margin-top: -17px;
     }
   }
 
@@ -512,6 +526,10 @@
         }
       }
     }
+  }
+
+  .modal__container {
+    padding: 70px 0;
   }
 }
 

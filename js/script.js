@@ -82,6 +82,9 @@ $(document).ready(function () {
 
     tabsInformation.on("_before", function () {
       $(this).addClass("change");
+      if ($(window).width() < 640) {
+        $(window).scrollTop($(this).offset().top - $(".header").height() - 70);
+      }
     });
 
     tabsInformation.on("_after", function () {});
@@ -440,6 +443,10 @@ $(document).ready(function () {
       openTrigger: "data-custom-open",
       disableScroll: false,
       awaitCloseAnimation: true,
+      onShow: () => {
+        $(".modal__container").scrollTop(0);
+        $(".modalWrap .scroll").scrollTop(-500);
+      },
     });
 
     $("a[data-custom-open]").map(function () {
@@ -545,8 +552,8 @@ $(document).ready(function () {
       }, 4500);
       setTimeout(function () {
         // через 4 сек
-        // preloader.remove();
-      }, 5500);
+        preloader.remove();
+      }, 6500);
     });
   } else {
     $("html").addClass("fixScroll");
