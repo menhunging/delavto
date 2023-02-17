@@ -14,7 +14,7 @@
       opacity: 0;
       pointer-events: none;
     }
-    .menuArrow{
+    .menuArrow {
       opacity: 0;
       bottom: 15px;
       pointer-events: none;
@@ -22,20 +22,20 @@
   }
 }
 
-@media (max-width:991px) {
-  .header {  
+@media (max-width: 991px) {
+  .header {
     height: 80px;
     &.scroll {
-      height: 80px;     
+      height: 80px;
     }
   }
 }
 
-@media (max-width:479px) {
-  .header {  
+@media (max-width: 479px) {
+  .header {
     height: 106px;
     &.scroll {
-      height: 106px;     
+      height: 106px;
     }
   }
 }
