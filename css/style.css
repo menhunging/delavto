@@ -1753,12 +1753,6 @@ input {
   opacity: 0;
   pointer-events: none;
 }
-.header.scroll .menuArrow {
-  opacity: 0;
-  bottom: 15px;
-  pointer-events: none;
-}
-
 @media (max-width: 991px) {
   .header {
     height: 80px;

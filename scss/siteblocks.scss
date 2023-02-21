@@ -953,7 +953,7 @@
   margin: 0 auto;
   width: 100%;
   padding: 0px 10px;
-  left:44px;
+  left: 44px;
   .caption {
     font-weight: 500;
     font-size: 22px;
@@ -1109,7 +1109,7 @@
 
 .aboutBlock {
   padding-bottom: 80px;
-    padding-top: 30px;
+  padding-top: 30px;
   .textSimple {
     strong {
       color: $colorSite1;
@@ -1580,10 +1580,10 @@
     max-width: 825px;
     padding-top: calc(190 / 750 * 100%);
     width: 100%;
-    &>*{
+    & > * {
       position: absolute;
-      left:0;
-      top:0;
+      left: 0;
+      top: 0;
       width: 100%;
       object-fit: contain;
     }
