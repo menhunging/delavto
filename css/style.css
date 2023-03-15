@@ -1763,10 +1763,13 @@ input {
 }
 @media (max-width: 479px) {
   .header {
-    height: 106px;
+    height: 75px;
+  }
+  .header .clientCity {
+    display: none;
   }
   .header.scroll {
-    height: 106px;
+    height: 75px;
   }
 }
 .headerContent {
@@ -2744,6 +2747,11 @@ input {
   text-indent: 200%;
   white-space: nowrap;
 }
+.youPartnerSlider .item img {
+  width: 100%;
+  height: 80px;
+  object-fit: contain;
+}
 
 .configurator {
   background: rgb(255, 255, 255);
@@ -2864,8 +2872,12 @@ input {
   padding: 24px 24px 32px;
   width: calc(33.3333333333% - 20px);
   margin: 0 10px 28px;
+  display: flex;
+  flex-direction: column;
 }
 .solutionsList .picture {
+  position: relative;
+  z-index: 1;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
@@ -2873,14 +2885,35 @@ input {
   position: relative;
   padding-top: 69.7916666667%;
 }
+.solutionsList .picture > a {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 7;
+  overflow: hidden;
+  text-indent: 200%;
+  white-space: nowrap;
+}
 .solutionsList .picture img {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  object-fit: cover;
 }
 .solutionsList .text {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
   margin-top: 34px;
 }
 .solutionsList .text .name {
@@ -2917,9 +2950,10 @@ input {
   font-weight: 700;
   letter-spacing: 0.05em;
   color: #4c535b;
+  margin-bottom: 31px;
 }
 .solutionsList .priceBlock {
-  margin-top: 31px;
+  margin-top: auto;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -3611,6 +3645,7 @@ input {
 
 .sliderReviews .item {
   padding: 10px 10px;
+  height: auto;
 }
 .sliderReviews .userName {
   margin-bottom: 10px;
@@ -3636,6 +3671,9 @@ input {
   font-size: 18px;
   line-height: 26px;
   color: rgb(0, 0, 0);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 .sliderReviews .review {
   background: rgb(255, 255, 255);
@@ -3644,9 +3682,15 @@ input {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   border-radius: 10px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.sliderReviews p {
+  margin-bottom: 16px;
 }
 .sliderReviews .controls {
-  margin-top: 16px;
+  margin-top: auto;
 }
 .sliderReviews .btn {
   padding: 5px 15px;
@@ -3971,6 +4015,9 @@ input {
   align-items: flex-end;
   justify-content: space-between;
 }
+.education.linksFirst {
+  align-items: flex-start;
+}
 .education .leftSide {
   position: relative;
   overflow: hidden;
@@ -4071,6 +4118,7 @@ input {
 }
 .sliderMedia .item {
   padding: 15px;
+  height: auto;
 }
 
 .media {
@@ -4084,6 +4132,9 @@ input {
   font-size: 16px;
   line-height: 25px;
   color: rgb(0, 0, 0);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .media .mediaHead {
   background-color: #cad1d9;
@@ -4101,15 +4152,21 @@ input {
 }
 .media .mediaBody {
   padding: 26px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 .media .mediaBody img {
   margin: 0 auto 19px;
+}
+.media .mediaBody p {
+  margin-bottom: 21px;
 }
 .media .controls {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 21px;
+  margin-top: auto;
 }
 .media .controls .date {
   font-weight: 500;
@@ -5380,9 +5437,6 @@ input {
     left: -15px;
     width: calc(100% + 30px);
   }
-  .menuArrow {
-    display: none;
-  }
   body.hidden {
     overflow: hidden;
   }
@@ -5559,6 +5613,7 @@ input {
     margin-top: 10px;
     font-size: 15px;
     line-height: 18px;
+    margin-bottom: 0;
   }
   .serviceText {
     padding: 15px;
@@ -6068,7 +6123,7 @@ input {
   .search {
     position: absolute;
     right: 30px;
-    top: 30px;
+    top: 25px;
     width: 21px;
     margin: 0;
   }
@@ -6349,7 +6404,7 @@ input {
     max-width: 280px;
   }
   .siteWrapper {
-    padding-top: 106px;
+    padding-top: 75px;
   }
   .menuDrop {
     margin-top: 90px;
@@ -6474,6 +6529,9 @@ input {
   }
   .modal__container {
     padding: 70px 0;
+  }
+  .teamSection .contactsSection {
+    margin-top: 5px;
   }
 }
 @media (max-width: 374px) {

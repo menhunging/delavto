@@ -382,6 +382,12 @@
     align-items: center;
     justify-content: center;
     min-height: 130px;
+
+    img{
+      width: 100%;
+      height: 80px;
+      object-fit: contain;
+    }
   }
 }
 
@@ -509,8 +515,11 @@
     padding: 24px 24px 32px;
     width: calc(100% / 3 - 20px);
     margin: 0 10px 28px;
+    display: flex;
+    flex-direction: column;
   }
   .picture {
+    @include invisLink;
     @include border-radius(10px);
     position: relative;
     padding-top: calc(268 / 384 * 100%);
@@ -520,9 +529,15 @@
       top: 0;
       width: 100%;
       height: 100%;
+      @include border-radius(10px);
+      overflow: hidden;
+      object-fit: cover;
     }
   }
   .text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
     margin-top: 34px;
     .name {
       font-size: 18px;
@@ -556,9 +571,10 @@
     font-weight: 700;
     letter-spacing: 0.05em;
     color: #4c535b;
+    margin-bottom: 31px;
   }
   .priceBlock {
-    margin-top: 31px;
+    margin-top: auto;   
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -577,6 +593,7 @@
   }
   .controls {
     margin-top: 24px;
+  
   }
   .btn {
     min-width: 195px;
@@ -1221,6 +1238,7 @@
 .sliderReviews {
   .item {
     padding: 10px 10px;
+    height: auto;
   }
 
   .userName {
@@ -1246,16 +1264,28 @@
     font-size: 18px;
     line-height: 26px;
     color: $colorBlack;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
 
   .review {
     background: $colorWhite;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
     @include border-radius(10px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  p{
+    margin-bottom: 16px;
+
   }
 
   .controls {
-    margin-top: 16px;
+    margin-top: auto;
+   
   }
 
   .btn {
@@ -1573,6 +1603,10 @@
   flex-wrap: wrap;
   align-items: flex-end;
   justify-content: space-between;
+
+  &.linksFirst{
+    align-items: flex-start;
+  }
   .leftSide {
     position: relative;
     overflow: hidden;
@@ -1677,6 +1711,7 @@
   margin: 0 -15px;
   .item {
     padding: 15px;
+    height: auto;
   }
 }
 
@@ -1688,6 +1723,9 @@
   font-size: 16px;
   line-height: 25px;
   color: $colorBlack;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 
   .mediaHead {
     background-color: #cad1d9;
@@ -1702,15 +1740,23 @@
   }
   .mediaBody {
     padding: 26px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
     img {
       margin: 0 auto 19px;
+    }
+
+    p{
+      margin-bottom: 21px;
     }
   }
   .controls {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 21px;
+    margin-top: auto;
     .date {
       font-weight: 500;
       font-size: 16px;

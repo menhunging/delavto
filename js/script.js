@@ -455,13 +455,16 @@ $(document).ready(function () {
   }
 
   if (location.hash != "" && $(".tabs").length) {
+
+    console.log('123')
+
     let scroll = 0;
     let hash = window.location.hash;
 
     window.location.hash = "";
     history.pushState("", document.title, window.location.pathname);
 
-    scroll = $(hash).parents(".tabs").offset().top - 100;
+    scroll = $(hash).parents(".tabs").offset().top - 300;
     $(hash).parents(".tabs").trigger("show", hash);
 
     if ($(".tabsHead ").length) {
@@ -560,17 +563,17 @@ $(document).ready(function () {
     setInitAOS();
   }
 
-  if ($(".nameInput").length > 0) {
-    $(".nameInput").map(function () {
-      $(this).inputmask({
-        mask: "*{3,20}",
-        showMaskOnHover: false,
-        showMaskOnFocus: true,
-        placeholder: " ",
-        clearIncomplete: true,
-      });
-    });
-  }
+  // if ($(".nameInput").length > 0) {
+  //   $(".nameInput").map(function () {
+  //     $(this).inputmask({
+  //       mask: "*{3,20}",
+  //       showMaskOnHover: false,
+  //       showMaskOnFocus: true,
+  //       placeholder: " ",
+  //       clearIncomplete: true,
+  //     });
+  //   });
+  // }
 
   if ($(".phoneInput").length > 0) {
     $(".phoneInput").map(function () {

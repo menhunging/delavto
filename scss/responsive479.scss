@@ -12,7 +12,7 @@
   .search {
     position: absolute;
     right: 30px;
-    top: 30px;
+    top: 25px;
     width: 21px;
     margin: 0;
     .text {
@@ -377,7 +377,7 @@
     max-width: 280px;
   }
   .siteWrapper {
-    padding-top: 106px;
+    padding-top: 75px;
   }
 
   .menuDrop {
@@ -530,6 +530,12 @@
 
   .modal__container {
     padding: 70px 0;
+  }
+
+  .teamSection {
+    .contactsSection {
+      margin-top: 5px;
+    }
   }
 }
 
