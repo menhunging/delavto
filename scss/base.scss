@@ -297,6 +297,13 @@ input {
 }
 
 .inputWrapper {
+
+  &.error{
+    input{
+      border-color: #ff0000;
+    }
+  }
+
   %stylesInput {
     font-weight: 500;
     font-size: 16px;
@@ -728,6 +735,15 @@ input {
       color: $colorSite1;
     }
   }
+
+  &.error{
+    label{
+      &::before{
+        border-color: #ff0000;
+      }
+    }
+  }
+
   & + .checkBlock {
     margin-top: 2px;
   }

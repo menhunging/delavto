@@ -528,6 +528,9 @@ input {
   border-radius: 10px;
 }
 
+.inputWrapper.error input {
+  border-color: #ff0000;
+}
 .inputWrapper input, .inputWrapper textarea {
   font-weight: 500;
   font-size: 16px;
@@ -1025,6 +1028,9 @@ input {
 }
 .checkBlock .link:hover {
   color: #e95a0c;
+}
+.checkBlock.error label::before {
+  border-color: #ff0000;
 }
 .checkBlock + .checkBlock {
   margin-top: 2px;
