@@ -3119,6 +3119,11 @@ input {
   float: right;
   margin-left: 15px;
   position: relative;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  max-width: 605px;
+  max-height: 318px;
 }
 .serviceText .caption {
   max-width: 300px;
@@ -4041,6 +4046,7 @@ input {
   top: 0;
   width: 100%;
   object-fit: contain;
+  object-position: center;
 }
 .education .rightSide {
   width: 425px;
@@ -4464,6 +4470,11 @@ input {
   -ms-border-radius: 10px;
   border-radius: 10px;
   overflow: hidden;
+}
+.solutionItem .head .picture img {
+  width: 100%;
+  object-position: center;
+  object-fit: cover;
 }
 .solutionItem .head .title {
   display: block;

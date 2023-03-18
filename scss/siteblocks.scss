@@ -722,6 +722,11 @@
     float: right;
     margin-left: 15px;
     position: relative;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    max-width: 605px;
+    max-height: 318px;
   }
   .caption {
     max-width: 300px;
@@ -1620,6 +1625,7 @@
       top: 0;
       width: 100%;
       object-fit: contain;
+      object-position: center;
     }
   }
   .rightSide {
@@ -2008,6 +2014,12 @@
     .picture {
       @include border-radius(10px);
       overflow: hidden;
+      
+      img{
+        width: 100%;
+        object-position: center;
+        object-fit: cover;
+      }
     }
     .title {
       display: block;
