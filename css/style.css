@@ -2417,6 +2417,10 @@ input {
   right: -23px;
   top: 18px;
 }
+.greeting .rightSide img {
+  max-width: 750px;
+}
+
 .whyList {
   display: flex;
   align-items: flex-start;
@@ -2454,6 +2458,7 @@ input {
   -o-transition: all 1s 0.3s;
   transition: all 1s 0.3s;
   font-size: 80px;
+  width: 81px;
 }
 .whyList .icon.aos-animate {
   color: #e95a0c;
@@ -4821,6 +4826,9 @@ input {
   }
   .greeting .rightSide {
     right: 0;
+  }
+  .greeting .rightSide img {
+    max-width: 100%;
   }
 }
 @media (max-width: 1199px) {

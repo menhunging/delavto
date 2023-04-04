@@ -242,7 +242,13 @@
     max-width: 1130px;
   }
 
-  .greeting .rightSide {
-    right: 0;
+  .greeting {
+    .rightSide {
+      right: 0;
+  
+      img{
+        max-width: 100%;
+      }
+    }
   }
 }

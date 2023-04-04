@@ -88,6 +88,7 @@
     right: -23px;
     top: 18px;
     img {
+      max-width: 750px;
     }
   }
 }
@@ -138,6 +139,7 @@
   .icon {
     @include transition(all 1s 0.3s);
     font-size: 80px;
+    width: 81px;
     &.aos-animate {
       color: $colorSite1;
     }
