@@ -6565,6 +6565,9 @@ input {
 @media (max-width: 374px) {
   .whyList .item .icon {
     font-size: 50px;
+    width: 50px;
+    display: block;
+    margin: 0 auto;
   }
   .whyList .item .txt {
     margin-top: 20px;
