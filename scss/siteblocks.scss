@@ -142,6 +142,10 @@
     width: 81px;
     &.aos-animate {
       color: $colorSite1;
+
+      & > path{
+        fill: $colorSite1;
+      }
     }
   }
   .txt {

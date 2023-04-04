@@ -2463,6 +2463,9 @@ input {
 .whyList .icon.aos-animate {
   color: #e95a0c;
 }
+.whyList .icon.aos-animate > path {
+  fill: #e95a0c;
+}
 .whyList .txt {
   display: block;
   font-size: 20px;
