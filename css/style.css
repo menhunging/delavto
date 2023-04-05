@@ -2414,11 +2414,12 @@ input {
 }
 .greeting .rightSide {
   position: absolute;
-  right: -23px;
+  right: 0;
   top: 18px;
 }
 .greeting .rightSide img {
   max-width: 750px;
+  margin: 0 auto;
 }
 
 .whyList {
@@ -4478,6 +4479,7 @@ input {
   -ms-border-radius: 10px;
   border-radius: 10px;
   overflow: hidden;
+  max-width: 630px;
 }
 .solutionItem .head .picture img {
   width: 100%;
@@ -4626,6 +4628,9 @@ input {
   }
   .greeting .rightSide {
     right: -60px;
+  }
+  .solutionItem .head .picture {
+    max-width: 550px;
   }
 }
 @media (max-width: 1399px) {
@@ -6566,6 +6571,7 @@ input {
   .whyList .item .icon {
     font-size: 50px;
     width: 50px;
+    height: 60px;
     display: block;
     margin: 0 auto;
   }

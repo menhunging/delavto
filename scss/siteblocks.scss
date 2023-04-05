@@ -85,10 +85,11 @@
   }
   .rightSide {
     position: absolute;
-    right: -23px;
+    right: 0;
     top: 18px;
     img {
       max-width: 750px;
+      margin: 0 auto;
     }
   }
 }
@@ -2020,6 +2021,7 @@
     .picture {
       @include border-radius(10px);
       overflow: hidden;
+      max-width: 630px;
       
       img{
         width: 100%;
