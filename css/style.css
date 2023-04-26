@@ -3639,6 +3639,31 @@ input {
   margin-bottom: 10px;
   display: block;
 }
+.stepSection.stepNumbers {
+  margin-top: 109px;
+}
+.stepSection.stepNumbers .stepList {
+  justify-content: space-between;
+}
+.stepSection.stepNumbers .stepItem {
+  max-width: 139px;
+  text-align: left;
+  width: calc(20% - 72px);
+}
+.stepSection.stepNumbers .stepItem::before {
+  left: -125px;
+}
+.stepSection.stepNumbers .stepItem::after {
+  left: -120px;
+}
+.stepSection.stepNumbers .stepItem:nth-child(5n)::before, .stepSection.stepNumbers .stepItem:nth-child(5n)::after {
+  display: block;
+}
+.stepSection.stepNumbers .name {
+  font-size: 50px;
+  line-height: 30px;
+  color: #e95a0c;
+}
 
 .reviewsSection {
   padding-bottom: 0;
@@ -4539,6 +4564,276 @@ input {
 
 .packagesWrapper {
   padding-top: 86px;
+}
+
+.textBlockSection .textBlock {
+  position: relative;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  background-image: url("../img/bg-text-block.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.05em;
+  color: #000000;
+  min-height: 339px;
+  padding: 50px 47px;
+  margin-bottom: 106px;
+}
+.textBlockSection .textBlock h2 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 25px;
+  display: block;
+  margin-bottom: 29px;
+  text-transform: uppercase;
+}
+
+.whatAutoSection .listWhat {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 17px;
+}
+.whatAutoSection .itemWhat {
+  width: calc(25% - 17px);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.05em;
+  color: #48494e;
+  padding: 41px 32px;
+  background: #fff;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.27);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+}
+.whatAutoSection .itemWhat .head {
+  display: flex;
+  align-items: center;
+}
+.whatAutoSection .itemWhat .icon {
+  margin-right: 19px;
+}
+.whatAutoSection .itemWhat .title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.15em;
+  color: #e95a0c;
+}
+
+.checkBoxSection {
+  padding: 88px 0;
+}
+
+.checkBoxContent {
+  padding: 56px 40px 40px;
+  background: #fff;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.27);
+  border-radius: 10px;
+  margin-top: 47px;
+}
+.checkBoxContent .list {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.checkBoxContent .list::before {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  width: calc(100% - 14rem);
+  height: 1px;
+  background-color: #bdbdbd;
+  left: 7rem;
+  top: 12px;
+}
+.checkBoxContent .item {
+  width: 33.3333333333%;
+  max-width: 220px;
+  position: relative;
+}
+.checkBoxContent .check input {
+  display: none;
+}
+.checkBoxContent .check input:checked + label {
+  color: #e95a0c;
+}
+.checkBoxContent .check input:checked + label:after {
+  border-color: #e95a0c;
+  background-color: #e95a0c;
+}
+.checkBoxContent .check label {
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0.15em;
+  color: #828282;
+  padding-top: 55px;
+  display: block;
+  text-align: center;
+  position: relative;
+}
+.checkBoxContent .check label::before {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 47px;
+  height: 25px;
+  border: solid 1px #bdbdbd;
+  background-color: #fff;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  border-radius: 20px;
+  left: 50%;
+  top: 0;
+  margin-left: -26.5px;
+}
+.checkBoxContent .check label::after {
+  content: "";
+  position: absolute;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  left: 50%;
+  top: 2px;
+  margin-left: -23px;
+  width: 20px;
+  height: 20px;
+  border: solid 1px #828282;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.checkBoxContentBody {
+  border-top: 1px solid #bdbdbd;
+  padding-top: 37px;
+  margin-top: 62px;
+}
+.checkBoxContentBody .controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.checkBoxContentBody .body {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.05em;
+  color: #000;
+}
+.checkBoxContentBody .controls-text .title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: 0.05em;
+  color: #000;
+}
+.checkBoxContentBody .controls-text .price {
+  font-weight: 750;
+  font-size: 25px;
+  line-height: 28px;
+  letter-spacing: 0.05em;
+  color: #e95a0c;
+}
+.checkBoxContentBody .btn {
+  margin-top: 38px;
+}
+
+.blScaner {
+  padding: 19px 0;
+  display: flex;
+  align-items: center;
+}
+.blScaner img {
+  margin-right: 32px;
+}
+.blScaner .name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #383838;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.blScaner .name:hover {
+  color: rgb(233, 90, 12);
+  text-decoration-color: rgb(233, 90, 12);
+}
+.blScaner .btn {
+  padding: 0;
+  width: 56px;
+  height: 56px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  min-width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+}
+
+.addSection .list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 27px;
+  margin-top: 58px;
+}
+.addSection .item {
+  width: calc(33.3333333333% - 27px);
+  background-color: #fff;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  padding: 34px;
+}
+.addSection .blScaner + .blScaner {
+  border-top: 1px solid #bdbdbd;
+}
+.addSection + * {
+  margin-top: 114px;
+}
+
+.otherSolutions .swiper-slide {
+  margin: 0;
+}
+
+.teamSection .captionInvis.top {
+  bottom: auto;
+  top: -80px;
+  left: calc(50% - 590px);
 }
 
 @media (max-width: 1600px) {
