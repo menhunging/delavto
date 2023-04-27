@@ -297,9 +297,8 @@ input {
 }
 
 .inputWrapper {
-
-  &.error{
-    input{
+  &.error {
+    input {
       border-color: #ff0000;
     }
   }
@@ -736,9 +735,9 @@ input {
     }
   }
 
-  &.error{
-    label{
-      &::before{
+  &.error {
+    label {
+      &::before {
         border-color: #ff0000;
       }
     }
@@ -1293,28 +1292,28 @@ input {
   }
 }
 
-// @media (max-width: 3000px) and (min-width: 1200px) {
-//   html {
-//     zoom: 90%;
-//     margin-right: calc(-1 * (100vw - 90%)) !important;
-//   }
+@media (max-width: 3000px) and (min-width: 1200px) {
+  html {
+    zoom: 90%;
+    margin-right: calc(-1 * (100vw - 90%)) !important;
+  }
 
-//   @-moz-document url-prefix() {
-//     html {
-//       transform: scale(0.9);
-//       transform-origin: left top;
-//       width: calc(100% / 0.9);
-//       height: calc(100% / 0.9);
-//     }
-//     .preloader {
-//       .preloaderCheck {
-//         .circle {
-//           top: 1px;
-//         }
-//       }
-//     }
-//   }
-// }
+  @-moz-document url-prefix() {
+    html {
+      transform: scale(0.9);
+      transform-origin: left top;
+      width: calc(100% / 0.9);
+      height: calc(100% / 0.9);
+    }
+    .preloader {
+      .preloaderCheck {
+        .circle {
+          top: 1px;
+        }
+      }
+    }
+  }
+}
 
 .btnArrowUp {
   position: fixed;

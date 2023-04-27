@@ -1624,6 +1624,23 @@ input {
     bottom: 0;
   }
 }
+@media (max-width: 3000px) and (min-width: 1200px) {
+  html {
+    zoom: 90%;
+    margin-right: calc(-1 * (100vw - 90%)) !important;
+  }
+  @-moz-document url-prefix() {
+    html {
+      transform: scale(0.9);
+      transform-origin: left top;
+      width: 111.1111111111%;
+      height: 111.1111111111%;
+    }
+    .preloader .preloaderCheck .circle {
+      top: 1px;
+    }
+  }
+}
 .btnArrowUp {
   position: fixed;
   right: 20px;
