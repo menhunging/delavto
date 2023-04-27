@@ -429,4 +429,134 @@
       display: flex;
     }
   }
+
+  .textBlockSection {
+    .textBlock {
+      min-height: inherit;
+      font-size: 15px;
+      line-height: 20px;
+
+      h2 {
+        font-size: 16px;
+        line-height: 22px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .whatAutoSection {
+    .itemWhat {
+      width: 100%;
+    }
+  }
+
+  .checkBoxContent {
+    .list {
+      justify-content: center;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    .item {
+      width: 100%;
+
+      & + .item {
+        margin-top: 25px;
+      }
+    }
+
+    .check {
+      label {
+        padding-top: 30px;
+      }
+    }
+  }
+
+  .checkBoxContentBody {
+    .controls {
+      justify-content: center;
+    }
+  }
+
+  .developContent {
+    .developContentHead {
+      padding-bottom: 240px;
+    }
+
+    .developContentBody {
+      .contactsForm {
+        .inputWrapper {
+          width: 100%;
+        }
+
+        .checkBlock {
+          max-width: inherit;
+        }
+      }
+
+      .controls {
+        flex-wrap: wrap;
+        gap: 0;
+
+        .btn {
+        }
+      }
+    }
+
+    .text {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    .picture {
+      bottom: 0;
+      top: auto;
+      left: 50%;
+      margin-left: -125px;
+    }
+  }
+
+  .solNewSection {
+    padding: 30px 0;
+
+    .tabs .tabsHead {
+      margin-bottom: 30px;
+    }
+  }
+
+  .solItem {
+    & + .solItem {
+      margin-top: 50px;
+    }
+    .controls {
+      margin-top: 30px;
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    .priceLine .link {
+      margin-left: 0;
+    }
+
+    .info {
+      gap: 0;
+
+      li {
+        width: 100%;
+        margin-bottom: 0;
+
+        & + li {
+          margin-top: 15px;
+        }
+      }
+    }
+
+    .priceLine {
+      margin-top: 30px;
+    }
+  }
 }

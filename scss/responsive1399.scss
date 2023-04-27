@@ -42,9 +42,9 @@
 
   .captionOne {
     padding-left: 55px;
-    .icon{
+    .icon {
       display: block;
-      left:0!important;
+      left: 0 !important;
     }
   }
 
@@ -245,10 +245,30 @@
   .greeting {
     .rightSide {
       right: 0;
-  
-      img{
+
+      img {
         max-width: 100%;
       }
+    }
+  }
+
+  .blScaner {
+    img {
+      margin-right: 5px;
+    }
+  }
+
+  .stepSection.stepNumbers .name {
+    font-size: 40px;
+  }
+
+  .solItem {
+    gap: 30px;
+  }
+
+  .developContent {
+    .captionOne {
+      padding-left: 0;
     }
   }
 }

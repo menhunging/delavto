@@ -294,7 +294,6 @@
       position: relative;
       max-width: 100%;
       padding-top: calc(392 / 768 * 100%);
-  
     }
   }
 
@@ -337,5 +336,67 @@
 
   .modalProduct .leftSide {
     max-width: 470px;
+  }
+
+  .whatAutoSection {
+    .itemWhat {
+      width: calc(50% - 9px);
+    }
+  }
+
+  .checkBoxContent {
+    padding: 50px 30px;
+  }
+
+  .addSection {
+    .item {
+      width: 100%;
+    }
+  }
+
+  .stepSection.stepNumbers .name {
+    font-size: 25px;
+  }
+
+  .stepSection.stepNumbers .stepItem:nth-child(4n)::after {
+    display: block !important;
+  }
+  .stepSection.stepNumbers .stepItem:before {
+    display: none !important;
+  }
+
+  .solItem {
+    .picture {
+      img {
+        height: auto;
+      }
+    }
+  }
+
+  .developContent {
+    .developContentHead {
+      padding: 50px 30px;
+      min-height: 360px;
+    }
+
+    .developContentBody {
+      .contactsForm {
+        padding: 30px;
+      }
+    }
+
+    .title {
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    .picture {
+      top: 30px;
+      width: 450px;
+    }
+
+    .text {
+      max-width: 50%;
+    }
   }
 }

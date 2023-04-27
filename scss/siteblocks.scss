@@ -2137,6 +2137,7 @@
     min-height: 339px;
     padding: 50px 47px;
     margin-bottom: 87px;
+    background-size: cover;
 
     h2 {
       font-weight: 700;
@@ -2513,7 +2514,8 @@
   }
 
   .picture {
-    width: 685px;
+    max-width: 685px;
+    flex: 1;
 
     img {
       @include border-radius(10px);
@@ -2526,6 +2528,8 @@
 
   .solContent {
     max-width: 572px;
+    flex: 1;
+    width: 100%;
     .caption {
       font-weight: 700;
       font-size: 24px;

@@ -312,10 +312,6 @@ $(document).ready(function () {
       slidesPerView: 3,
       slidesPerGroup: 1,
       spaceBetween: 20,
-      navigation: {
-        nextEl: ".solutionsSection .swiper-button-next",
-        prevEl: ".solutionsSection .swiper-button-prev",
-      },
       pagination: {
         el: ".otherSolutions .swiper-pagination",
         clickable: true,
@@ -325,11 +321,11 @@ $(document).ready(function () {
           slidesPerView: 1,
           slidesPerGroup: 1,
         },
-        992: {
+        640: {
           slidesPerView: 2,
           slidesPerGroup: 1,
         },
-        1500: {
+        1200: {
           slidesPerView: 3,
           slidesPerGroup: 1,
         },
