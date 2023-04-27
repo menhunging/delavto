@@ -452,22 +452,21 @@
 
 .map {
   position: relative;
-  width: 550px;
+  width: 100%;
   height: 510px;
   overflow: hidden;
-  margin-top: 8px;
+  margin-top: 50px;
   filter: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.25));
   @include border-radius(10px);
   background-image: url("../img/map.png");
+  background-position: center;
   background-repeat: no-repeat;
   @include transform(scale(1.5));
-  margin-left: auto;
-  margin-right: auto;
 
   ul {
     position: absolute;
-    left: -190px;
-    top: 14px;
+    left: 0;
+    top: 0;
     width: 100%;
     height: 100%;
 
@@ -494,11 +493,13 @@
         left: 330px;
         top: 265px;
       }
+
       &:nth-child(5) {
         // Саратов
         left: 361px;
         top: 218px;
       }
+
       &:nth-child(6) {
         // Самара
         left: 391px;
@@ -584,9 +585,19 @@
       }
       &:nth-child(19) {
         // Владивосток
-        left: 670px;
-        top: 258px;
-        padding-left: 0;
+        left: 916px;
+        top: 457px;
+        padding-left: 15px;
+        padding-top: 8px;
+        color: #4a4754;
+
+        &::before {
+          top: 0;
+        }
+
+        &:hover {
+          color: #e45b0f;
+        }
       }
     }
   }
@@ -611,7 +622,7 @@
     }
 
     a {
-      font-size: 8px;
+      font-size: 9px;
       @include transition(color 0.3s);
     }
   }
