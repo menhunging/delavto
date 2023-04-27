@@ -2975,7 +2975,7 @@ input {
   border-radius: 50%;
 }
 .map .city a {
-  font-size: 9px;
+  font-size: 8px;
   -webkit-transition: color 0.3s;
   -moz-transition: color 0.3s;
   -o-transition: color 0.3s;
