@@ -468,6 +468,132 @@
     top: 0;
     width: 100%;
     height: 100%;
+
+    .city {
+      &:nth-child(1) {
+        // Москва
+        left: 366px;
+        top: 150px;
+      }
+      &:nth-child(2) {
+        // Сочи
+        left: 272px;
+        top: 233px;
+        padding-left: 19px;
+      }
+      &:nth-child(3) {
+        // Тбилиси
+        left: 278px;
+        top: 274px;
+        padding-left: 8px;
+      }
+      &:nth-child(4) {
+        // Астрахань
+        left: 330px;
+        top: 265px;
+      }
+
+      &:nth-child(5) {
+        // Саратов
+        left: 361px;
+        top: 218px;
+      }
+
+      &:nth-child(6) {
+        // Самара
+        left: 391px;
+        top: 227px;
+        padding-left: 14px;
+      }
+      &:nth-child(7) {
+        // Ульяновск
+        left: 395px;
+        top: 201px;
+        padding-left: 0;
+      }
+      &:nth-child(8) {
+        // Казань
+        left: 437px;
+        top: 190px;
+        padding-left: 9px;
+      }
+      &:nth-child(9) {
+        // Нижний Новгород
+        left: 390px;
+        top: 177px;
+        padding-right: 0;
+      }
+      &:nth-child(10) {
+        // Ухта
+        left: 477px;
+        top: 153px;
+        padding-left: 7px;
+      }
+      &:nth-child(11) {
+        // Старый оскол
+        left: 331px;
+        top: 191px;
+        padding-left: 7px;
+      }
+      &:nth-child(12) {
+        // Белгород
+        left: 320px;
+        top: 173px;
+        padding-left: 15px;
+      }
+      &:nth-child(13) {
+        // Орел
+        left: 338px;
+        top: 153px;
+        padding-left: 0;
+      }
+      &:nth-child(14) {
+        // Колуга
+        left: 341px;
+        top: 133px;
+        padding-left: 15px;
+      }
+      &:nth-child(15) {
+        // Тверь
+        left: 381px;
+        top: 127px;
+        padding-left: 15px;
+      }
+      &:nth-child(16) {
+        // Санкт-Петербург
+        left: 392px;
+        top: 94px;
+        padding-left: 15px;
+      }
+      &:nth-child(17) {
+        // Минск
+        left: 319px;
+        top: 108px;
+        padding-left: 15px;
+      }
+      &:nth-child(18) {
+        // Калининград
+        left: 314px;
+        top: 64px;
+        padding-left: 15px;
+        color: #4a4754;
+
+        &:hover {
+          color: #e45b0f;
+        }
+      }
+      &:nth-child(19) {
+        // Владивосток
+        left: 916px;
+        top: 438px;
+        padding-left: 15px;
+        color: #4a4754;
+
+        &:hover {
+          color: #e45b0f;
+        }
+      }
+    }
   }
 
   .city {
@@ -475,17 +601,23 @@
     left: 0;
     top: 0;
     color: #fff;
+    &:hover {
+      color: #e45b0f;
+    }
 
     @include before {
-      left: 0;
-      top: 0;
-      width: 12px;
-      height: 12px;
+      left: 15px;
+      top: 100%;
+      width: 5px;
+      height: 5px;
       border: solid 1px #e45b0f;
+      background-color: #e45b0f;
       @include border-radius(50%);
     }
 
     a {
+      font-size: 9px;
+      @include transition(color 0.3s);
     }
   }
 }
@@ -2585,6 +2717,7 @@
     max-width: 572px;
     flex: 1;
     width: 100%;
+
     .caption {
       font-weight: 700;
       font-size: 24px;
