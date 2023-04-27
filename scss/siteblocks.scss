@@ -458,6 +458,36 @@
   margin-top: 8px;
   filter: drop-shadow(0px 4px 30px rgba(0, 0, 0, 0.25));
   @include border-radius(10px);
+  background-image: url("../img/map.png");
+  background-position: center;
+  background-repeat: no-repeat;
+
+  ul {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .city {
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #fff;
+
+    @include before {
+      left: 0;
+      top: 0;
+      width: 12px;
+      height: 12px;
+      border: solid 1px #e45b0f;
+      @include border-radius(50%);
+    }
+
+    a {
+    }
+  }
 }
 
 .titlePage {
@@ -2317,11 +2347,36 @@
       line-height: 28px;
       letter-spacing: 0.05em;
       color: #e95a0c;
+      white-space: nowrap;
     }
   }
 
   .btn {
     margin-top: 38px;
+  }
+
+  .scanerList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 17px 92px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #bdbdbd;
+    margin-bottom: 70px;
+  }
+
+  .scanerItem {
+    width: calc((100% / 3) - 62px);
+    border-bottom: 1px solid #bdbdbd;
+
+    &:nth-last-child(2),
+    &:nth-last-child(3),
+    &:nth-last-child(1) {
+      border-bottom: 0;
+    }
+
+    .btn {
+      margin-top: 0;
+    }
   }
 }
 

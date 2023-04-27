@@ -559,4 +559,20 @@
       margin-top: 30px;
     }
   }
+
+  .checkBoxContentBody {
+    .scanerList {
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      gap: 0;
+    }
+
+    .scanerItem {
+      width: 100%;
+    }
+  }
+
+  .controls-text {
+    text-align: center;
+  }
 }
