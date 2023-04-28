@@ -644,6 +644,7 @@
 .solutionsSection {
   padding-bottom: 158px;
   position: relative;
+  margin-top: 50px;
 
   @include after {
     background-image: url("../img/back-content1.svg");

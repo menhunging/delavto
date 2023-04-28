@@ -1664,6 +1664,10 @@ input {
   border-radius: 50%;
 }
 
+.color-green {
+  color: rgb(42, 172, 119);
+}
+
 .btn {
   position: relative;
   cursor: pointer;
@@ -2999,6 +3003,7 @@ input {
 .solutionsSection {
   padding-bottom: 158px;
   position: relative;
+  margin-top: 50px;
 }
 .solutionsSection::after {
   content: "";
@@ -6322,13 +6327,33 @@ input {
     text-align: center;
   }
   .textBlockSection {
-    margin-top: 0;
+    margin-top: 20px;
+    margin-bottom: 50px;
   }
   .textBlockSection .textBlock {
     margin-bottom: 30px;
   }
+  .addSection {
+    margin-top: 20px;
+  }
+  .addSection + * {
+    margin-top: 50px;
+  }
+  .stepSection.stepNumbers {
+    margin-top: 50px;
+  }
+  .stepSection.stepNumbers + * {
+    margin-top: 50px;
+  }
+  .stepSection.stepNumbers + .youPartnersSection .youPartnerSlider {
+    margin-bottom: 50px;
+  }
   .checkBoxSection {
     padding: 30px 0;
+    margin-top: 30px;
+  }
+  .checkBoxSection .textSimple {
+    margin-top: 20px;
   }
   .developContent .developContentHead {
     padding: 30px 20px;
@@ -6825,7 +6850,8 @@ input {
     margin-top: 40px;
   }
   .solutionsSection {
-    padding: 30px 0 50px;
+    padding: 30px 0 80px;
+    margin-top: 0;
   }
   .packList .item {
     width: calc(50% - 20px);
@@ -7554,6 +7580,34 @@ input {
   }
   .developContent .developContentBody .contactsForm {
     padding: 15px;
+  }
+  .blScaner {
+    padding: 5px 0;
+  }
+  .blScaner img {
+    width: 45px;
+  }
+  .blScaner .name {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .blScaner .btn {
+    width: 30px;
+    height: 30px;
+  }
+  .checkBoxContentBody {
+    padding-top: 0;
+    margin-top: 15px;
+  }
+  .stepSection.stepNumbers .stepItem {
+    width: 50%;
+    margin: 0 0 15px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .stepSection.stepNumbers .name {
+    font-size: 20px;
+    margin-bottom: 0;
   }
 }
 @media (max-width: 374px) {

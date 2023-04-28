@@ -1334,3 +1334,7 @@ input {
   background-size: 40%;
   @include border-radius(50%);
 }
+
+.color-green {
+  color: rgba(42, 172, 119, 1);
+}
