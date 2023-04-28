@@ -4868,6 +4868,7 @@ input {
 .checkBoxContent .check input:checked + label:after {
   border-color: #e95a0c;
   background-color: #e95a0c;
+  margin-left: -2px;
 }
 .checkBoxContent .check label {
   cursor: pointer;
