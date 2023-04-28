@@ -463,6 +463,7 @@
 
     .item {
       width: 100%;
+      max-width: 100%;
 
       & + .item {
         margin-top: 25px;
@@ -479,6 +480,7 @@
   .checkBoxContentBody {
     .controls {
       justify-content: center;
+      margin-top: 0;
     }
   }
 
@@ -565,7 +567,7 @@
   .checkBoxContentBody {
     .scanerList {
       padding-bottom: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 0;
       gap: 0;
     }
 
@@ -576,5 +578,19 @@
 
   .controls-text {
     text-align: center;
+  }
+
+  .stepSection {
+    &.stepNumbers {
+      .stepList {
+        margin: 20px 0 -50px;
+      }
+
+      .stepItem {
+        width: calc(100% / 3);
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
   }
 }

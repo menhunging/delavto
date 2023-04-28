@@ -576,8 +576,14 @@
   }
 
   .checkBoxContentBody {
-    padding-top: 0;
+    padding-top: 15px;
     margin-top: 15px;
+
+    .body {
+      & + .body {
+        margin-top: 15px;
+      }
+    }
   }
 
   .stepSection {

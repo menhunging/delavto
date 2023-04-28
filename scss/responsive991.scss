@@ -684,4 +684,15 @@
       width: calc(50% - 46px);
     }
   }
+
+  .checkBoxContentBody {
+    .scanerList {
+      border-bottom: 0;
+    }
+  }
+  .checkBoxContentBody .scanerItem:nth-last-child(2),
+  .checkBoxContentBody .scanerItem:nth-last-child(3),
+  .checkBoxContentBody .scanerItem:nth-last-child(1) {
+    border-bottom: 1px solid #bdbdbd;
+  }
 }

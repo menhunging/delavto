@@ -4843,6 +4843,22 @@ input {
   max-width: 220px;
   position: relative;
 }
+.checkBoxContent .check {
+  position: relative;
+  z-index: 1;
+}
+.checkBoxContent .check > a {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 7;
+  overflow: hidden;
+  text-indent: 200%;
+  white-space: nowrap;
+}
 .checkBoxContent .check input {
   display: none;
 }
@@ -6403,6 +6419,14 @@ input {
   .checkBoxContentBody .scanerItem {
     width: calc(50% - 46px);
   }
+  .checkBoxContentBody .scanerList {
+    border-bottom: 0;
+  }
+  .checkBoxContentBody .scanerItem:nth-last-child(2),
+  .checkBoxContentBody .scanerItem:nth-last-child(3),
+  .checkBoxContentBody .scanerItem:nth-last-child(1) {
+    border-bottom: 1px solid #bdbdbd;
+  }
 }
 @media (max-width: 767px) {
   .container {
@@ -6699,6 +6723,9 @@ input {
   .developContent .text {
     font-size: 15px;
     line-height: 21px;
+  }
+  .solutionsSection .swiper-pagination {
+    margin-top: 40px;
   }
 }
 @media (max-width: 639px) {
@@ -7070,6 +7097,7 @@ input {
   }
   .checkBoxContent .item {
     width: 100%;
+    max-width: 100%;
   }
   .checkBoxContent .item + .item {
     margin-top: 25px;
@@ -7079,6 +7107,7 @@ input {
   }
   .checkBoxContentBody .controls {
     justify-content: center;
+    margin-top: 0;
   }
   .developContent .developContentHead {
     padding-bottom: 240px;
@@ -7137,7 +7166,7 @@ input {
   }
   .checkBoxContentBody .scanerList {
     padding-bottom: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     gap: 0;
   }
   .checkBoxContentBody .scanerItem {
@@ -7145,6 +7174,14 @@ input {
   }
   .controls-text {
     text-align: center;
+  }
+  .stepSection.stepNumbers .stepList {
+    margin: 20px 0 -50px;
+  }
+  .stepSection.stepNumbers .stepItem {
+    width: 33.3333333333%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media (max-width: 479px) {
@@ -7596,7 +7633,10 @@ input {
     height: 30px;
   }
   .checkBoxContentBody {
-    padding-top: 0;
+    padding-top: 15px;
+    margin-top: 15px;
+  }
+  .checkBoxContentBody .body + .body {
     margin-top: 15px;
   }
   .stepSection.stepNumbers .stepItem {

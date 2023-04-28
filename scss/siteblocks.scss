@@ -2396,6 +2396,8 @@
   }
 
   .check {
+    @include invisLink;
+
     input {
       display: none;
 

@@ -66,6 +66,17 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".checkBoxContent ").length > 0) {
+    $(".checkBoxContent ").tabslet({
+      mouseevent: "click",
+      animation: true,
+    });
+
+    $(".checkBoxContent").on("_before", function (e) {
+      $(e.target).find("input").prop("checked", true);
+    });
+  }
+
   if ($(".tabsInformation").length > 0) {
     let tabsInformation = $(".tabsInformation");
 
