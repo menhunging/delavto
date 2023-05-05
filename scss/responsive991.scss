@@ -695,4 +695,17 @@
   .checkBoxContentBody .scanerItem:nth-last-child(1) {
     border-bottom: 1px solid #bdbdbd;
   }
+
+  .stepSection.stepNumbers.whyNew {
+    .stepItem {
+      font-size: 16px;
+      line-height: 20px;
+  
+      .icon {
+        font-size: 55px;
+        width: 70px;
+        height: 70px;
+      }
+    }
+  }
 }

@@ -2857,9 +2857,8 @@
 
         svg {
           @include transform(scale(1, -1));
-         
 
-          path{
+          path {
             stroke: #e95a0c;
           }
         }
@@ -2915,6 +2914,39 @@
 
     li {
       width: calc(100% / 3);
+    }
+  }
+}
+
+.stepSection.stepNumbers.whyNew {
+  .stepItem {
+    min-height: 200px;
+
+    .icon {
+      @include transition(all 1s 0.3s);
+      font-size: 80px;
+      width: 81px;     
+      color: $colorSite1;
+  
+        & > path {
+          fill: $colorSite1;
+        }
+    }
+
+    .icon{
+      fill: #e95a0c;
+      color: #e95a0c;
+    }
+
+    &::after {
+      left: -130px;
+      top: 50%;
+      margin-top: -1px;
+    }
+    &::before {
+      left: -135px;
+      top: 50%;
+      margin-top: -6px;
     }
   }
 }

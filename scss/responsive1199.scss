@@ -407,4 +407,13 @@
   .mapMobile {
     display: block;
   }
+
+  .stepSection.stepNumbers.whyNew {
+    .stepItem {
+      &::after,
+      &:before {
+        display: none!important;
+      }
+    }
+  }
 }

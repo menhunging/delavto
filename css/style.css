@@ -5353,6 +5353,36 @@ input {
   width: 33.3333333333%;
 }
 
+.stepSection.stepNumbers.whyNew .stepItem {
+  min-height: 200px;
+}
+.stepSection.stepNumbers.whyNew .stepItem .icon {
+  -webkit-transition: all 1s 0.3s;
+  -moz-transition: all 1s 0.3s;
+  -o-transition: all 1s 0.3s;
+  transition: all 1s 0.3s;
+  font-size: 80px;
+  width: 81px;
+  color: #e95a0c;
+}
+.stepSection.stepNumbers.whyNew .stepItem .icon > path {
+  fill: #e95a0c;
+}
+.stepSection.stepNumbers.whyNew .stepItem .icon {
+  fill: #e95a0c;
+  color: #e95a0c;
+}
+.stepSection.stepNumbers.whyNew .stepItem::after {
+  left: -130px;
+  top: 50%;
+  margin-top: -1px;
+}
+.stepSection.stepNumbers.whyNew .stepItem::before {
+  left: -135px;
+  top: 50%;
+  margin-top: -6px;
+}
+
 @media (max-width: 1600px) {
   .calendarWrapper {
     position: relative;
@@ -5666,6 +5696,20 @@ input {
     background-position: calc(50% + 83px) center;
     left: -75px;
   }
+  .stepSection.stepNumbers.whyNew .stepItem {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .stepSection.stepNumbers.whyNew .stepItem::after {
+    left: -110px;
+  }
+  .stepSection.stepNumbers.whyNew .stepItem:before {
+    left: -115px;
+  }
+  .stepSection.stepNumbers.whyNew .stepItem .icon {
+    font-size: 70px;
+    width: 71px;
+  }
 }
 @media (max-width: 1199px) {
   .container {
@@ -5962,6 +6006,9 @@ input {
   }
   .mapMobile {
     display: block;
+  }
+  .stepSection.stepNumbers.whyNew .stepItem::after, .stepSection.stepNumbers.whyNew .stepItem:before {
+    display: none !important;
   }
 }
 @media (max-width: 991px) {
@@ -6512,6 +6559,15 @@ input {
   .checkBoxContentBody .scanerItem:nth-last-child(1) {
     border-bottom: 1px solid #bdbdbd;
   }
+  .stepSection.stepNumbers.whyNew .stepItem {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .stepSection.stepNumbers.whyNew .stepItem .icon {
+    font-size: 55px;
+    width: 70px;
+    height: 70px;
+  }
 }
 @media (max-width: 767px) {
   .container {
@@ -6829,6 +6885,18 @@ input {
   }
   .mapMobile .contactsInfo li br {
     display: none;
+  }
+  .stepSection.stepNumbers.whyNew .stepItem {
+    min-height: inherit;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .stepSection.stepNumbers.whyNew .stepItem .icon {
+    font-size: 50px;
+    width: 50px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
   }
 }
 @media (max-width: 639px) {
@@ -7296,6 +7364,9 @@ input {
   .mapMobile .contactsInfo li .link {
     font-size: 14px;
     line-height: 16px;
+  }
+  .stepSection.stepNumbers.whyNew .stepItem .icon {
+    font-size: 60px;
   }
 }
 @media (max-width: 479px) {
@@ -7765,13 +7836,6 @@ input {
   }
 }
 @media (max-width: 374px) {
-  .whyList .item .icon {
-    font-size: 50px;
-    width: 50px;
-    height: 60px;
-    display: block;
-    margin: 0 auto;
-  }
   .whyList .item .txt {
     margin-top: 20px;
     font-size: 14px;

@@ -276,4 +276,24 @@
     background-position: calc(50% + 83px) center;
     left: -75px;
   }
+
+  .stepSection.stepNumbers.whyNew {
+    .stepItem {
+      font-size: 18px;
+      line-height: 20px;
+
+      &::after{
+        left: -110px;
+      }
+
+      &:before{
+        left: -115px;
+      }
+  
+      .icon {
+        font-size: 70px;
+        width: 71px;
+      }
+    }
+  }
 }

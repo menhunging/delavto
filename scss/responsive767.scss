@@ -395,4 +395,21 @@
       }
     }
   }
+
+  
+  .stepSection.stepNumbers.whyNew {
+    .stepItem {
+      min-height: inherit;
+      font-size: 14px;
+      line-height: 18px;
+  
+      .icon {
+        font-size: 50px;
+        width: 50px;
+        height: 60px;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
 }
