@@ -5379,12 +5379,12 @@ input {
   color: #e95a0c;
 }
 .stepSection.stepNumbers.whyNew .stepItem::after {
-  left: -130px;
+  left: -120px;
   top: 50%;
   margin-top: -1px;
 }
 .stepSection.stepNumbers.whyNew .stepItem::before {
-  left: -135px;
+  left: -125px;
   top: 50%;
   margin-top: -6px;
 }
