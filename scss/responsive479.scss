@@ -620,6 +620,7 @@
       }
     }
   }
+
   .tabsInformation {
     .tabsHead {
       .name {
@@ -628,9 +629,25 @@
       }
     }
   }
+
   .education {
     .leftSide {
       min-height: 151px;
+    }
+  }
+
+  .mapMobile {
+  
+
+    &__name {
+      font-size: 14px;
+      line-height: 20px;
+    }
+
+    .contactsInfo {
+      li {
+        width: 100%;
+      }
     }
   }
 }

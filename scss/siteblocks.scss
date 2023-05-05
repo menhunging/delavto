@@ -2409,7 +2409,6 @@
             border-color: #e95a0c;
             background-color: #e95a0c;
             margin-left: -2px;
-
           }
         }
       }
@@ -2832,5 +2831,88 @@
 .solutionsInner {
   &::after {
     display: none !important;
+  }
+}
+
+.mapMobile__line {
+  & + .mapMobile__line {
+    margin-top: 15px;
+  }
+}
+
+.mapMobile {
+  display: none;
+  margin-top: 30px;
+
+  &__line {
+    background-color: #fff;
+    border: 1px solid #cacaca;
+    border-radius: 10px;
+
+    &.active {
+      .mapMobile__arrow {
+        background-color: transparent;
+
+        svg {
+          @include transform(scale(1, -1));
+         
+
+          path{
+            stroke: #e95a0c;
+          }
+        }
+      }
+    }
+  }
+
+  &__head {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 21px;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #383838;
+  }
+
+  &__arrow {
+    border: solid 1px #e95a0c;
+    background-color: #e95a0c;
+    width: 39px;
+    height: 39px;
+    @include border-radius(50%);
+    @include transition(background-color 0.3s);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      @include transition(transform 0.3s);
+    }
+  }
+
+  &__body {
+    display: none;
+  }
+
+  &__info {
+    padding: 0px 21px;
+  }
+
+  .contactsInfo {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+
+    li {
+      width: calc(100% / 3);
+    }
   }
 }

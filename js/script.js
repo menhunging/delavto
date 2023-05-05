@@ -417,20 +417,6 @@ $(document).ready(function () {
       document.querySelector(".calendarTitle .year").dataset.year =
         D.getFullYear();
 
-      // if (document.querySelectorAll("#" + id + " .tbody .tr").length < 6) {
-      //   // чтобы при перелистывании месяцев не "подпрыгивала" вся страница, добавляется ряд пустых клеток. Итог: всегда 6 строк для цифр
-      //   document.querySelector(
-      //     "#" + id + " .tbody"
-      //   ).innerHTML += `<div class='tr'>
-      //     <div class='td'>&nbsp;</div>
-      //     <div class='td'>&nbsp;</div>
-      //     <div class='td'>&nbsp;</div>
-      //     <div class='td'>&nbsp;</div>
-      //     <div class='td'>&nbsp;</div>
-      //     <div class='td'>&nbsp;</div>
-      //     <div class='td'>&nbsp;</div>
-      //     </div>`;
-      // }
 
       // переключение месяцев
       if ($(".listMount").length > 0) {
@@ -599,18 +585,6 @@ $(document).ready(function () {
     setInitAOS();
   }
 
-  // if ($(".nameInput").length > 0) {
-  //   $(".nameInput").map(function () {
-  //     $(this).inputmask({
-  //       mask: "*{3,20}",
-  //       showMaskOnHover: false,
-  //       showMaskOnFocus: true,
-  //       placeholder: " ",
-  //       clearIncomplete: true,
-  //     });
-  //   });
-  // }
-
   if ($(".phoneInput").length > 0) {
     $(".phoneInput").map(function () {
       $(this).inputmask({
@@ -630,6 +604,29 @@ $(document).ready(function () {
       $(".header").removeClass("scroll");
     }
   });
+
+  if ($(".mapMobile").length) {
+    let name = $(".mapMobile__head");
+
+    name.click(function () {
+      if ($(this).parents(".mapMobile__line").hasClass("active")) {
+        $(".mapMobile__line").stop().removeClass("active");
+        $(".mapMobile__body").stop().slideUp();
+        return false;
+      }
+
+      $(".mapMobile__line").stop().removeClass("active");
+      $(".mapMobile__body").stop().slideUp();
+
+      $(this)
+        .parents(".mapMobile__line")
+        .stop()
+        .toggleClass("active")
+        .find(".mapMobile__body")
+        .stop()
+        .slideDown();
+    });
+  }
 });
 
 const setInitAOS = () => {

@@ -370,4 +370,27 @@
       margin-top: 40px;
     }
   }
+
+  .mapMobile {
+    &__head {
+      padding: 15px;
+    }
+
+    .contactsInfo {
+      justify-content: space-between;
+
+      li {
+        width: calc(50% - 10px);
+
+        &:nth-last-child(2),
+        &:nth-last-child(1) {
+          width: 100%;
+        }
+
+        br {
+          display: none;
+        }
+      }
+    }
+  }
 }

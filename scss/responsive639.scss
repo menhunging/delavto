@@ -153,6 +153,7 @@
       margin: 0 auto;
     }
   }
+
   .solutionsList {
     .item {
       padding: 15px;
@@ -590,6 +591,26 @@
         width: calc(100% / 3);
         margin-left: auto;
         margin-right: auto;
+      }
+    }
+  }
+
+  .mapMobile {
+    &__info {
+      padding: 0px 15px;
+    }
+
+    .contactsInfo {
+      li {
+        .link {
+          white-space: nowrap;
+        }
+
+        .data,
+        .link {
+          font-size: 14px;
+          line-height: 16px;
+        }
       }
     }
   }

@@ -5272,6 +5272,85 @@ input {
   display: none !important;
 }
 
+.mapMobile__line + .mapMobile__line {
+  margin-top: 15px;
+}
+
+.mapMobile {
+  display: none;
+  margin-top: 30px;
+}
+.mapMobile__line {
+  background-color: #fff;
+  border: 1px solid #cacaca;
+  border-radius: 10px;
+}
+.mapMobile__line.active .mapMobile__arrow {
+  background-color: transparent;
+}
+.mapMobile__line.active .mapMobile__arrow svg {
+  -moz-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  -webkit-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+.mapMobile__line.active .mapMobile__arrow svg path {
+  stroke: #e95a0c;
+}
+.mapMobile__head {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 21px;
+}
+.mapMobile__name {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #383838;
+}
+.mapMobile__arrow {
+  border: solid 1px #e95a0c;
+  background-color: #e95a0c;
+  width: 39px;
+  height: 39px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mapMobile__arrow svg {
+  -webkit-transition: transform 0.3s;
+  -moz-transition: transform 0.3s;
+  -o-transition: transform 0.3s;
+  transition: transform 0.3s;
+}
+.mapMobile__body {
+  display: none;
+}
+.mapMobile__info {
+  padding: 0px 21px;
+}
+.mapMobile .contactsInfo {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+.mapMobile .contactsInfo li {
+  width: 33.3333333333%;
+}
+
 @media (max-width: 1600px) {
   .calendarWrapper {
     position: relative;
@@ -5878,6 +5957,9 @@ input {
   }
   .map {
     display: none;
+  }
+  .mapMobile {
+    display: block;
   }
 }
 @media (max-width: 991px) {
@@ -6728,6 +6810,21 @@ input {
   .solutionsSection .swiper-pagination {
     margin-top: 40px;
   }
+  .mapMobile__head {
+    padding: 15px;
+  }
+  .mapMobile .contactsInfo {
+    justify-content: space-between;
+  }
+  .mapMobile .contactsInfo li {
+    width: calc(50% - 10px);
+  }
+  .mapMobile .contactsInfo li:nth-last-child(2), .mapMobile .contactsInfo li:nth-last-child(1) {
+    width: 100%;
+  }
+  .mapMobile .contactsInfo li br {
+    display: none;
+  }
 }
 @media (max-width: 639px) {
   .captionOne {
@@ -7183,6 +7280,17 @@ input {
     width: 33.3333333333%;
     margin-left: auto;
     margin-right: auto;
+  }
+  .mapMobile__info {
+    padding: 0px 15px;
+  }
+  .mapMobile .contactsInfo li .link {
+    white-space: nowrap;
+  }
+  .mapMobile .contactsInfo li .data,
+  .mapMobile .contactsInfo li .link {
+    font-size: 14px;
+    line-height: 16px;
   }
 }
 @media (max-width: 479px) {
@@ -7670,6 +7778,13 @@ input {
   }
   .education .leftSide {
     min-height: 151px;
+  }
+  .mapMobile__name {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .mapMobile .contactsInfo li {
+    width: 100%;
   }
 }
 
