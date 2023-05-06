@@ -2805,10 +2805,6 @@
       @include border-radius(5px);
       @include transition(all 0.3s);
 
-      &:hover {
-        background-color: #e95a0c;
-        color: #fff;
-      }
     }
   }
 

@@ -5251,10 +5251,6 @@ input {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-.solItem .priceLine .link:hover {
-  background-color: #e95a0c;
-  color: #fff;
-}
 .solItem .controls {
   margin-top: 36px;
   display: flex;
@@ -5978,8 +5974,26 @@ input {
   .checkBoxContent {
     padding: 50px 30px;
   }
+  .addSection .list {
+    gap: 0;
+    background-color: #fff;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+  }
   .addSection .item {
     width: 100%;
+    background-color: transparent;
+    box-shadow: none;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+  }
+  .addSection .item + .item .blScaner:first-child {
+    border-top: 1px solid #bdbdbd;
   }
   .stepSection.stepNumbers .name {
     font-size: 25px;
@@ -7294,6 +7308,9 @@ input {
   .checkBoxContentBody .controls {
     justify-content: center;
     margin-top: 0;
+  }
+  .developContent {
+    margin-top: 15px;
   }
   .developContent .developContentHead {
     padding-bottom: 240px;

@@ -349,8 +349,26 @@
   }
 
   .addSection {
+    .list {
+      gap: 0;
+      background-color: #fff;
+      box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.15);
+      @include border-radius(10px);
+    }
+
     .item {
       width: 100%;
+      background-color: transparent;
+      box-shadow: none;
+      @include border-radius(0);
+
+      & + .item {
+        .blScaner {
+          &:first-child {
+            border-top: 1px solid #bdbdbd;
+          }
+        }
+      }
     }
   }
 
@@ -409,17 +427,16 @@
   }
 
   .stepSection.stepNumbers.whyNew {
-
     .stepList {
       margin-left: 0;
       margin-right: 0;
       margin-top: 50px;
-   }
+    }
 
     .stepItem {
       &::after,
       &:before {
-        display: none!important;
+        display: none !important;
       }
     }
   }
