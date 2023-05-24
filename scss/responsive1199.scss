@@ -348,6 +348,11 @@
     padding: 50px 30px;
   }
 
+  .stepSection.stepNumbers .stepItem::after {
+    left: -90px;
+    width: 60px;
+  }
+
   .addSection {
     .list {
       gap: 0;

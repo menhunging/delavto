@@ -417,7 +417,6 @@ $(document).ready(function () {
       document.querySelector(".calendarTitle .year").dataset.year =
         D.getFullYear();
 
-
       // переключение месяцев
       if ($(".listMount").length > 0) {
         $(".listMount li").eq(D.getMonth()).addClass("active");
@@ -466,20 +465,23 @@ $(document).ready(function () {
       openTrigger: "data-custom-open",
       disableScroll: true,
       awaitCloseAnimation: true,
-      onShow: () => {
+      onShow: (e,target) => {
+        $('html').addClass('modalOpen')
         $(".modal__container").scrollTop(0);
         $(".modalWrap .scroll").scrollTop(-500);
       },
+      onClose: (e,target) => {
+        $('html').removeClass('modalOpen')
+  
+      },
     });
 
-    $("a[data-custom-open]").map(function () {
-      $(this).click((e) => e.preventDefault());
+    $("[data-custom-open]").click(function (e) {
+      e.preventDefault();
     });
   }
 
   if (location.hash != "" && $(".tabs").length) {
-    console.log("123");
-
     let scroll = 0;
     let hash = window.location.hash;
 
@@ -599,6 +601,7 @@ $(document).ready(function () {
 
   $(window).scroll(function () {
     if ($(window).scrollTop() > 1) {
+
       $(".header").addClass("scroll");
     } else {
       $(".header").removeClass("scroll");
