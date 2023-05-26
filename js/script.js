@@ -471,8 +471,7 @@ $(document).ready(function () {
         $(".modalWrap .scroll").scrollTop(-500);
       },
       onClose: (e,target) => {
-        $('html').removeClass('modalOpen')
-  
+        $('html').removeClass('modalOpen')  
       },
     });
 
@@ -482,6 +481,7 @@ $(document).ready(function () {
   }
 
   if (location.hash != "" && $(".tabs").length) {
+
     let scroll = 0;
     let hash = window.location.hash;
 
@@ -495,6 +495,25 @@ $(document).ready(function () {
       let pos = $(".tabsHead li.active").offset().left;
       $(".tabsHead").scrollLeft(pos + 80);
     }
+
+    $("html, body").animate(
+      {
+        scrollTop: scroll,
+      },
+      300
+    );
+  }
+
+  if (location.hash != "" && !$(".tabs").length) {
+
+    let scroll = 0;
+    let hash = window.location.hash;
+
+    window.location.hash = "";
+    history.pushState("", document.title, window.location.pathname);
+
+    let minus = $(window).width() > 767 ? 200 : 0
+    scroll = $(hash).offset().top - $('.header').height() - minus;
 
     $("html, body").animate(
       {
