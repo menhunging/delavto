@@ -398,10 +398,17 @@
 
   
   .stepSection.stepNumbers.whyNew {
+
+    .stepList{
+      gap: 20px;
+    }
+
     .stepItem {
       min-height: inherit;
       font-size: 14px;
       line-height: 18px;
+      word-break: break-word;
+      overflow: hidden;
   
       .icon {
         font-size: 50px;

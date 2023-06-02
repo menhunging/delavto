@@ -6949,10 +6949,15 @@ input {
   .mapMobile .contactsInfo li br {
     display: none;
   }
+  .stepSection.stepNumbers.whyNew .stepList {
+    gap: 20px;
+  }
   .stepSection.stepNumbers.whyNew .stepItem {
     min-height: inherit;
     font-size: 14px;
     line-height: 18px;
+    word-break: break-word;
+    overflow: hidden;
   }
   .stepSection.stepNumbers.whyNew .stepItem .icon {
     font-size: 50px;
